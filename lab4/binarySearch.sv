@@ -12,27 +12,28 @@ module binarySearch(clk, Reset, A, Start, Loc, Found, Done);
 	enum { idle, search, done } ps, ns; 
 	always_comb begin 
 		case(ps) 
-			idle: begin Done = 0;
+			idle: begin Done = 0; Found = 0;
 					if (Start) ns = search;
 					else ns = idle;
 					end
 					
-			search: begin Done = 0;
-					  if ((currRamOut == A)||(L > R)) ns = done;
+			search: begin Done = 0; Found = 0;
+					  if ((currRamOut == A) || (L > R)) ns = done;
 					  else ns = search;
 					  end
 					  
-			done: begin Done = 1;
+			done: begin Done = 1; Found = 0;
 					if (Start) 
 						ns = done;
 					else 
 						ns = idle;
+					if (currRamOut == A) Found = 1;
 					end
 		endcase
 	end
 	
 	
-	
+	assign Loc = (R + L) / 5'd2;
 	
 	always_ff @(posedge clk) begin
 		
@@ -46,28 +47,16 @@ module binarySearch(clk, Reset, A, Start, Loc, Found, Done);
 		if ((ps == idle) && ~Start) begin
 			L <= 5'd0;
 			R <= 5'd31;
-		end
-			
-			
+		end	
 	
-		if ((ps == search)) begin
-			
-			Loc <= ((L + R) / 5'd2);
+		if (ps == search) begin
 			if (currRamOut < A)
 				L <= Loc + 5'd1;
 			else if (currRamOut > A)
 				R <= Loc - 5'd1;
-			else
-				Found <= 1'd1;
-				ps <= done;
 		end
-		
-		if (L > R) begin
-			Found <= 0;
-			ps <= done;
-		end
-		
 	end
+	
 	
 	ram32x8port1 myArrayMif(.address(Loc), .clock(clk), .data(8'd0), .wren(0), .q(currRamOut));
 	
@@ -76,7 +65,7 @@ module binarySearch(clk, Reset, A, Start, Loc, Found, Done);
 endmodule 
 
 
-
+`timescale 1 ps / 1 ps
 module binarySearch_testbench();
 
 	logic clk, Reset, Start;
@@ -92,11 +81,11 @@ module binarySearch_testbench();
 		forever #50 clk = ~clk;
 	end // initial	
 	
-	
+	assign A = 8'd33;
 	initial begin 
 		Reset <= 1; @(posedge clk);
 		Reset <= 0; Start <= 0; repeat(2) @(posedge clk);
-		Start <= 1; repeat(10) @(posedge clk);
+		Start <= 1; repeat(15) @(posedge clk);
 	
 	
 	$stop;
