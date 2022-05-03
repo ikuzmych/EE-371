@@ -1,0 +1,129 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Illya Kuzmych/Desktop/UW Spring 2022/EE 371/lab4
+vbitCount
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1651550468
+!i10b 1
+!s100 D;=BI[3E^g2mM1n_IJK3?0
+ILY<C_g>;?3Xk<3iWa2@_k2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 bitCount_sv_unit
+S1
+R0
+Z5 w1651549167
+Z6 8./bitCount.sv
+Z7 F./bitCount.sv
+L0 1
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1651550468.000000
+Z10 !s107 ./bitCount.sv|
+Z11 !s90 -reportprogress|300|./bitCount.sv|
+!i113 1
+Z12 tCvgOpt 0
+nbit@count
+vbitCount_testbench
+R1
+R2
+!i10b 1
+!s100 Rjc14@A^fk;=;i4C=<ZEN3
+Im3o=k4of?jBa1=neFPoAT0
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 81
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+nbit@count_testbench
+vDE1_SoC
+R1
+R2
+!i10b 1
+!s100 JfNnB9hVG3aZU;Q3d0^>K0
+IU:C6@P?;NY=Xi:`78RILo0
+R3
+Z13 !s105 DE1_SoC_sv_unit
+S1
+R0
+Z14 w1651550461
+Z15 8./DE1_SoC.sv
+Z16 F./DE1_SoC.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z17 !s107 ./DE1_SoC.sv|
+Z18 !s90 -reportprogress|300|./DE1_SoC.sv|
+!i113 1
+R12
+n@d@e1_@so@c
+vDE1_SoC_testbench
+R1
+R2
+!i10b 1
+!s100 fjjMDhK=JJi7?DSoanJeg0
+IYj>dMO@Ncn3L_6IoEckC]2
+R3
+R13
+S1
+R0
+R14
+R15
+R16
+L0 29
+R8
+r1
+!s85 0
+31
+R9
+R17
+R18
+!i113 1
+R12
+n@d@e1_@so@c_testbench
+vseg7
+R1
+R2
+!i10b 1
+!s100 jj9HOZ_?ONU=EkYa?Y1[J2
+IOHV<;HWWTn3d95DFVdPKk1
+R3
+!s105 seg7_sv_unit
+S1
+R0
+w1650755183
+8./seg7.sv
+F./seg7.sv
+L0 10
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./seg7.sv|
+!s90 -reportprogress|300|./seg7.sv|
+!i113 1
+R12

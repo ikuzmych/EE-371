@@ -1,0 +1,6 @@
+module DE1_SoC(SW, LEDR, HEX0);
+
+
+
+
+endmodule

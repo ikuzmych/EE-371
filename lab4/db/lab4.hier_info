@@ -1,0 +1,107 @@
+|DE1_SoC
+CLOCK_50 => bitCount:countOnes.clk
+SW[0] => bitCount:countOnes.A[0]
+SW[1] => bitCount:countOnes.A[1]
+SW[2] => bitCount:countOnes.A[2]
+SW[3] => bitCount:countOnes.A[3]
+SW[4] => bitCount:countOnes.A[4]
+SW[5] => bitCount:countOnes.A[5]
+SW[6] => bitCount:countOnes.A[6]
+SW[7] => bitCount:countOnes.A[7]
+LEDR[9] <= bitCount:countOnes.done
+HEX0[0] <= seg7:hexOut.leds[0]
+HEX0[1] <= seg7:hexOut.leds[1]
+HEX0[2] <= seg7:hexOut.leds[2]
+HEX0[3] <= seg7:hexOut.leds[3]
+HEX0[4] <= seg7:hexOut.leds[4]
+HEX0[5] <= seg7:hexOut.leds[5]
+HEX0[6] <= seg7:hexOut.leds[6]
+KEY[0] => bitCount:countOnes.reset
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => bitCount:countOnes.s
+
+
+|DE1_SoC|bitCount:countOnes
+clk => Q[0].CLK
+clk => Q[1].CLK
+clk => Q[2].CLK
+clk => Q[3].CLK
+clk => Q[4].CLK
+clk => Q[5].CLK
+clk => Q[6].CLK
+clk => Q[7].CLK
+clk => result[0]~reg0.CLK
+clk => result[1]~reg0.CLK
+clk => result[2]~reg0.CLK
+clk => result[3]~reg0.CLK
+clk => ps[0].CLK
+clk => ps[1].CLK
+clk => ps[2].CLK
+clk => ps[3].CLK
+clk => ps[4].CLK
+clk => ps[5].CLK
+clk => ps[6].CLK
+clk => ps[7].CLK
+clk => ps[8].CLK
+clk => ps[9].CLK
+clk => ps[10].CLK
+clk => ps[11].CLK
+clk => ps[12].CLK
+clk => ps[13].CLK
+clk => ps[14].CLK
+clk => ps[15].CLK
+clk => ps[16].CLK
+clk => ps[17].CLK
+clk => ps[18].CLK
+clk => ps[19].CLK
+clk => ps[20].CLK
+clk => ps[21].CLK
+clk => ps[22].CLK
+clk => ps[23].CLK
+clk => ps[24].CLK
+clk => ps[25].CLK
+clk => ps[26].CLK
+clk => ps[27].CLK
+clk => ps[28].CLK
+clk => ps[29].CLK
+clk => ps[30].CLK
+clk => ps[31].CLK
+reset => ps.OUTPUTSELECT
+reset => ps.OUTPUTSELECT
+reset => result.OUTPUTSELECT
+reset => result.OUTPUTSELECT
+reset => result.OUTPUTSELECT
+reset => result.OUTPUTSELECT
+s => Selector1.IN5
+s => Selector0.IN5
+s => always1.IN1
+A[0] => Q.DATAB
+A[1] => Q.DATAB
+A[2] => Q.DATAB
+A[3] => Q.DATAB
+A[4] => Q.DATAB
+A[5] => Q.DATAB
+A[6] => Q.DATAB
+A[7] => Q.DATAB
+result[0] <= result[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+done <= Equal3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DE1_SoC|seg7:hexOut
+hex[0] => Decoder0.IN3
+hex[1] => Decoder0.IN2
+hex[2] => Decoder0.IN1
+hex[3] => Decoder0.IN0
+leds[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+leds[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
