@@ -1,5 +1,9 @@
 |DE1_SoC
 CLOCK_50 => bitCount:countOnes.clk
+CLOCK_50 => newKey3.CLK
+CLOCK_50 => oldKey3.CLK
+CLOCK_50 => newKey0.CLK
+CLOCK_50 => oldKey0.CLK
 SW[0] => bitCount:countOnes.A[0]
 SW[1] => bitCount:countOnes.A[1]
 SW[2] => bitCount:countOnes.A[2]
@@ -16,10 +20,10 @@ HEX0[3] <= seg7:hexOut.leds[3]
 HEX0[4] <= seg7:hexOut.leds[4]
 HEX0[5] <= seg7:hexOut.leds[5]
 HEX0[6] <= seg7:hexOut.leds[6]
-KEY[0] => bitCount:countOnes.reset
+KEY[0] => oldKey0.DATAIN
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
-KEY[3] => bitCount:countOnes.s
+KEY[3] => oldKey3.DATAIN
 
 
 |DE1_SoC|bitCount:countOnes

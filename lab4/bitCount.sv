@@ -13,6 +13,8 @@ module bitCount(clk, reset, s, A, result, done);
 	// register to hold loaded-in value (if s is true)
 	
 	
+	
+	
 	always_comb begin 
 		case(ps) 
 			S1: begin done = 0; 

@@ -11,9 +11,22 @@ module DE1_SoC(CLOCK_50, SW, LEDR, HEX0, KEY);
 	logic [6:0] leds;
 	logic [3:0] seg7in;
 	logic [7:0] A;
+	logic oldKey0, newKey0;
+	logic oldKey3, newKey3;
 	
-	assign reset = ~KEY[0];
-	assign s = ~KEY[3];
+	// 2 DFFs to prevent metastability
+	always_ff @(posedge clk) begin
+		oldKey0 <= ~KEY[0];
+		newKey0 <= oldKey0;
+		
+		oldKey3 <= ~KEY[3];
+		newKey3 <= oldKey3;
+	
+	end // always_ff
+	
+	
+	assign reset = newKey0;
+	assign s = newKey3;
 	assign clk = CLOCK_50;
 	assign A = SW[7:0];
 	
