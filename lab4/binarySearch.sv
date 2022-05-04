@@ -57,7 +57,10 @@ module binarySearch(clk, Reset, A, Start, Loc, Found, Done);
 	/* the current location to check in the ROM */
 	assign Loc = (R + L) / 6'd2;
 
-	
+	/* datapath flip-flop for the binary search algorithm 
+	 * If reset is high, reset the values of L and R and go back to idle
+	 * While in the search state, continues checking the proper conditions
+	 */
 	always_ff @(posedge clk) begin
 		// Loc <= (R + L) / 6'd2;
 		if (Reset) begin

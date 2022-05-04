@@ -1,1275 +1,56 @@
 # Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
-# Load canceled
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:55:10 on May 03,2022
+# Start time: 18:45:54 on May 03,2022
 # vlog -reportprogress 300 ./bitCount.sv 
 # -- Compiling module bitCount
 # -- Compiling module bitCount_testbench
 # 
 # Top level modules:
 # 	bitCount_testbench
-# End time: 14:55:10 on May 03,2022, Elapsed time: 0:00:00
+# End time: 18:45:54 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:55:10 on May 03,2022
+# Start time: 18:45:54 on May 03,2022
 # vlog -reportprogress 300 ./seg7.sv 
 # -- Compiling module seg7
 # 
 # Top level modules:
 # 	seg7
-# End time: 14:55:10 on May 03,2022, Elapsed time: 0:00:00
+# End time: 18:45:55 on May 03,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:55:10 on May 03,2022
+# Start time: 18:45:55 on May 03,2022
 # vlog -reportprogress 300 ./DE1_SoC.sv 
 # -- Compiling module DE1_SoC
 # -- Compiling module DE1_SoC_testbench
 # 
 # Top level modules:
 # 	DE1_SoC_testbench
-# End time: 14:55:10 on May 03,2022, Elapsed time: 0:00:00
+# End time: 18:45:55 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:55:10 on May 03,2022
+# Start time: 18:45:55 on May 03,2022
 # vlog -reportprogress 300 ./ram32x8port1.v 
 # -- Compiling module ram32x8port1
 # 
 # Top level modules:
 # 	ram32x8port1
-# End time: 14:55:10 on May 03,2022, Elapsed time: 0:00:00
+# End time: 18:45:55 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:55:10 on May 03,2022
+# Start time: 18:45:55 on May 03,2022
 # vlog -reportprogress 300 ./binarySearch.sv 
 # -- Compiling module binarySearch
 # -- Compiling module binarySearch_testbench
 # 
 # Top level modules:
 # 	binarySearch_testbench
-# End time: 14:55:10 on May 03,2022, Elapsed time: 0:00:00
+# End time: 18:45:55 on May 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench 
-# Start time: 14:55:11 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# ** Error: (vsim-3033) ./ram32x8port1.v(63): Instantiation of 'altsyncram' failed. The design unit was not found.
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-#         Searched libraries:
-#             C:/Users/stlp/Documents/GitHub/EE-371/lab4/work
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./runlab.do PAUSED at line 17
-vsim -voptargs=\"+acc\" -t 1ps -lib work work.binarySearch_testbench -Lf altera_mf_ver
-# vsim -voptargs=""+acc"" -t 1ps -lib work work.binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 14:55:11 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(72): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-do r
-# Cannot open macro file: r
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:36 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 14:56:36 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:36 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 14:56:37 on May 03,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:37 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 14:56:37 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:37 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 14:56:37 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:37 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 14:56:37 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:56:37 on May 03,2022, Elapsed time: 0:01:26
-# Errors: 2, Warnings: 1
 # vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 14:56:37 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(72): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# ** Error: Cannot open macro file: binarySearch_wave.do
-# Error in macro ./runlab.do line 22
-# Cannot open macro file: binarySearch_wave.do
-#     while executing
-# "do binarySearch_wave.do"
-add wave -position end  sim:/binarySearch_testbench/clk
-add wave -position end  sim:/binarySearch_testbench/Reset
-add wave -position end  sim:/binarySearch_testbench/Start
-add wave -position end  sim:/binarySearch_testbench/A
-add wave -position end  sim:/binarySearch_testbench/Loc
-add wave -position end  sim:/binarySearch_testbench/Found
-add wave -position end  sim:/binarySearch_testbench/Done
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab4/binarySearch_wave.do
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:57 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 14:56:57 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:58 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 14:56:58 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:58 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 14:56:58 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:58 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 14:56:58 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:56:58 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 14:56:58 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:56:58 on May 03,2022, Elapsed time: 0:00:21
-# Errors: 3, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 14:56:58 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(72): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(102)
-#    Time: 1300 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 102
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:57:22 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 14:57:22 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:57:22 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 14:57:22 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:57:22 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 14:57:22 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:57:22 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 14:57:22 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:57:22 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 14:57:22 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:57:23 on May 03,2022, Elapsed time: 0:00:25
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 14:57:23 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(72): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(102)
-#    Time: 1300 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 102
-add wave -position end  sim:/binarySearch_testbench/dut/L
-add wave -position end  sim:/binarySearch_testbench/dut/R
-add wave -position end  sim:/binarySearch_testbench/dut/currRamOut
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab4/binarySearch_wave.do
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:13 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 14:58:13 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:13 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 14:58:13 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:13 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 14:58:13 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:13 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 14:58:13 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:13 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 14:58:13 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:58:14 on May 03,2022, Elapsed time: 0:00:51
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 14:58:14 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(72): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(102)
-#    Time: 1300 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 102
-add wave -position end  sim:/binarySearch_testbench/dut/ps
-add wave -position end  sim:/binarySearch_testbench/dut/ns
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab4/binarySearch_wave.do
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:39 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 14:58:39 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:39 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 14:58:39 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:39 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 14:58:39 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:39 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 14:58:39 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:58:39 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 14:58:39 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:58:40 on May 03,2022, Elapsed time: 0:00:26
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 14:58:40 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(72): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(102)
-#    Time: 1300 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 102
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:02:45 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:02:45 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:02:45 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:02:45 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:02:45 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:02:45 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:02:45 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:02:45 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:02:45 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:02:45 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:02:50 on May 03,2022, Elapsed time: 0:04:10
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:02:50 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(74): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(104)
-#    Time: 1300 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 104
-# WARNING: No extended dataflow license exists
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:07:51 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:07:51 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:07:51 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:07:51 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:07:51 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:07:51 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:07:51 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:07:51 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:07:51 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:07:51 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:07:53 on May 03,2022, Elapsed time: 0:05:03
-# Errors: 0, Warnings: 2
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:07:53 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(74): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(104)
-#    Time: 1300 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 104
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:11:28 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:11:28 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:11:28 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:11:28 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:11:28 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:11:28 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:11:28 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:11:28 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:11:28 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:11:28 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:11:31 on May 03,2022, Elapsed time: 0:03:38
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:11:31 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(76): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(106)
-#    Time: 1300 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 106
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:12:57 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:12:57 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:12:57 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:12:57 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:12:57 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:12:57 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:12:57 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:12:57 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:12:57 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:12:57 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:12:57 on May 03,2022, Elapsed time: 0:01:26
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:12:57 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(76): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(106)
-#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 106
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab4/binarySearch_wave.do
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:14:13 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:14:14 on May 03,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:14:14 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:14:14 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:14:14 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:14:14 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:14:14 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:14:14 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:14:14 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:14:14 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:14:14 on May 03,2022, Elapsed time: 0:01:17
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:14:14 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(76): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(106)
-#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 106
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:15:16 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:15:16 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:15:16 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:15:16 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:15:16 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:15:16 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:15:16 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:15:16 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:15:16 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:15:16 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:15:19 on May 03,2022, Elapsed time: 0:01:05
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:15:19 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(76): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(106)
-#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 106
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:19:40 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:19:40 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:19:40 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:19:41 on May 03,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:19:41 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:19:41 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:19:41 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:19:41 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:19:41 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:19:41 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:19:43 on May 03,2022, Elapsed time: 0:04:24
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:19:43 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(74): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(104)
-#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 104
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:26:52 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:26:52 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:26:52 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:26:52 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:26:52 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:26:52 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:26:52 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:26:52 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:26:52 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:26:52 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:26:53 on May 03,2022, Elapsed time: 0:07:10
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:26:53 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(71): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(101)
-#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 101
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:29:46 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:29:46 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:29:46 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:29:46 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:29:46 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:29:46 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:29:47 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:29:47 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:29:47 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:29:47 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:29:47 on May 03,2022, Elapsed time: 0:02:54
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:29:47 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(93)
-#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
-# WARNING: No extended dataflow license exists
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:41:53 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:41:53 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:41:53 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:41:53 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:41:53 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:41:54 on May 03,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:41:54 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:41:54 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:41:54 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:41:54 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:41:55 on May 03,2022, Elapsed time: 0:12:08
-# Errors: 0, Warnings: 2
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:41:55 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(93)
-#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:42:07 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:42:07 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:42:07 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:42:07 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:42:07 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:42:07 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:42:07 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:42:07 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:42:07 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:42:07 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:42:09 on May 03,2022, Elapsed time: 0:00:14
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:42:09 on May 03,2022
-# Loading sv_std.std
-# Loading work.binarySearch_testbench
-# Loading work.binarySearch
-# Loading work.ram32x8port1
-# Loading altera_mf_ver.altsyncram
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./binarySearch.sv(93)
-#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
-# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:22 on May 03,2022
-# vlog -reportprogress 300 ./bitCount.sv 
-# -- Compiling module bitCount
-# -- Compiling module bitCount_testbench
-# 
-# Top level modules:
-# 	bitCount_testbench
-# End time: 15:45:22 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:22 on May 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 15:45:22 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:22 on May 03,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:45:22 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:22 on May 03,2022
-# vlog -reportprogress 300 ./ram32x8port1.v 
-# -- Compiling module ram32x8port1
-# 
-# Top level modules:
-# 	ram32x8port1
-# End time: 15:45:23 on May 03,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:45:23 on May 03,2022
-# vlog -reportprogress 300 ./binarySearch.sv 
-# -- Compiling module binarySearch
-# -- Compiling module binarySearch_testbench
-# 
-# Top level modules:
-# 	binarySearch_testbench
-# End time: 15:45:23 on May 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:45:25 on May 03,2022, Elapsed time: 0:03:16
-# Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
-# Start time: 15:45:25 on May 03,2022
+# Start time: 18:45:55 on May 03,2022
 # Loading sv_std.std
 # Loading work.binarySearch_testbench
 # Loading work.binarySearch
@@ -1280,21 +61,2846 @@ do runlab.do
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
 # ** Warning: (vsim-3015) ./binarySearch.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
 #    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft4hreef".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4hreef
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
 # ** Note: $stop    : ./binarySearch.sv(91)
 #    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
 # Break in Module binarySearch_testbench at ./binarySearch.sv line 91
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:53:15 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 18:53:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:53:15 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 18:53:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:53:15 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 18:53:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:53:15 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 18:53:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:53:15 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 18:53:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:53:17 on May 03,2022, Elapsed time: 0:07:22
+# Errors: 0, Warnings: 4
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 18:53:17 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftyan42r".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftyan42r
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(91)
+#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 91
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:55:15 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 18:55:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:55:15 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 18:55:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:55:15 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 18:55:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:55:15 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 18:55:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:55:15 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 18:55:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:55:16 on May 03,2022, Elapsed time: 0:01:59
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 18:55:16 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft7h37ei".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7h37ei
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(91)
+#    Time: 1800 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 91
+dor un
+# invalid command name "dor"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:57:21 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 18:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:57:21 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 18:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:57:21 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 18:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:57:21 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 18:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:57:21 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 18:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:57:22 on May 03,2022, Elapsed time: 0:02:06
+# Errors: 1, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 18:57:22 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft15fjjm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft15fjjm
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(91)
+#    Time: 360 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 91
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:13 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:00:13 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:13 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:00:13 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:13 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:00:13 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:13 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:00:13 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:00:13 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:00:13 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:00:14 on May 03,2022, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:00:14 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftre3k60".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftre3k60
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(91)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 91
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:02:11 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:02:11 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:02:11 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:02:11 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:02:11 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:02:11 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:02:11 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:02:11 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:02:11 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:02:11 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:02:12 on May 03,2022, Elapsed time: 0:01:58
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:02:12 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlfth8jgrd".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfth8jgrd
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(93)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
+add wave -position 10  sim:/binarySearch_testbench/dut/currRamOut
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:03:04 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:03:04 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:03:04 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:03:04 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:03:04 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:03:04 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:03:04 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:03:04 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:03:04 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:03:04 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:03:05 on May 03,2022, Elapsed time: 0:00:53
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:03:05 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftdk3ckt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdk3ckt
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(93)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:40 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:05:40 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:40 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:05:40 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:40 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:05:40 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:40 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:05:40 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:05:40 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:05:40 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:05:41 on May 03,2022, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:05:41 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft0z6ez6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0z6ez6
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(93)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:12 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:06:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:12 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:06:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:12 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:06:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:12 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:06:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:06:12 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:06:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:06:13 on May 03,2022, Elapsed time: 0:00:32
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:06:13 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftxdz9i7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxdz9i7
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(93)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
+add wave -position end  sim:/binarySearch_testbench/dut/ramOutHold
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:07:34 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:07:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:07:34 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:07:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:07:34 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:07:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:07:34 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:07:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:07:34 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:07:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:07:35 on May 03,2022, Elapsed time: 0:01:22
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:07:35 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftvm9kkf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvm9kkf
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(93)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
+add wave -position end  sim:/binarySearch_testbench/dut/ramOutHold
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4/binarySearch_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:08:31 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:08:31 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:08:31 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:08:31 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:08:31 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:08:31 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:08:31 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# ** Warning: ./ram32x8port1.v(47): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(49): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# ** Warning: ./ram32x8port1.v(51): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:08:31 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:08:31 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:08:31 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:08:32 on May 03,2022, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 6
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:08:32 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft3xyd9j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3xyd9j
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(93)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:09:42 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:09:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:09:42 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:09:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:09:42 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:09:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:09:42 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:09:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:09:42 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:09:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:09:44 on May 03,2022, Elapsed time: 0:01:12
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:09:44 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(63): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftc3rbqy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftc3rbqy
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(93)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 93
 # WARNING: No extended dataflow license exists
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
-# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:39:54 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:39:54 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:39:54 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:39:54 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:39:54 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:39:54 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:39:54 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:39:54 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:39:54 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:39:54 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:39:55 on May 03,2022, Elapsed time: 0:30:11
+# Errors: 3, Warnings: 4
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:39:55 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftkk5340".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftkk5340
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(96)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 96
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:40:46 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:40:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:40:46 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:40:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:40:46 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:40:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:40:46 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:40:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:40:46 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:40:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:40:48 on May 03,2022, Elapsed time: 0:00:53
+# Errors: 3, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:40:48 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft7z8vaf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7z8vaf
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(96)
+#    Time: 320 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 96
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:41:21 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:41:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:41:21 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:41:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:41:21 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:41:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:41:21 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:41:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:41:21 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:41:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:41:22 on May 03,2022, Elapsed time: 0:00:34
+# Errors: 3, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:41:22 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft9v8g7v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9v8g7v
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(96)
+#    Time: 420 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 96
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:42:27 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:42:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:42:27 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:42:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:42:27 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:42:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:42:27 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:42:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:42:27 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:42:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:42:28 on May 03,2022, Elapsed time: 0:01:06
+# Errors: 3, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:42:28 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8port1
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./binarySearch.sv(66): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: ./ram32x8port1.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut/myArrayMif File: ./ram32x8port1.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft9j6fk8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9j6fk8
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(96)
+#    Time: 420 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 96
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:54:55 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:54:55 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:54:55 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:54:55 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:54:55 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:54:55 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:54:55 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:54:55 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:54:55 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:54:55 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:54:55 on May 03,2022, Elapsed time: 0:12:27
+# Errors: 3, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:54:55 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# ** Error: (vsim-3033) ./binarySearch.sv(66): Instantiation of 'ram32x8async' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut File: ./binarySearch.sv
+#         Searched libraries:
+#             C:/intelFPGA_lite/17.0/modelsim_ase/altera/verilog/altera_mf
+#             C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4/work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 17
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:22 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:56:22 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:22 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:56:22 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:22 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:56:22 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:22 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:56:22 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:22 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:56:22 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:56:22 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./ram32x8async.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 19:56:22 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 12
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./ram32x8async.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:20 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:57:20 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:21 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:21 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:21 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:21 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:21 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 19:57:21 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:54:55 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# ** Error: (vsim-3037) ./binarySearch.sv(66): Missing instance name in instantiation of 'ram32x8async'.
+#    Time: 0 ps  Iteration: 0  Instance: /binarySearch_testbench/dut File: ./binarySearch.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 17
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:45 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:57:45 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:46 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:57:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:46 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:57:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:46 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:57:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:46 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:57:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:57:46 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 19:57:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:54:55 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftcbhzhs".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcbhzhs
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(94)
+#    Time: 420 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 94
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:59:15 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 19:59:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:59:15 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 19:59:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:59:16 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 19:59:16 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:59:16 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 19:59:16 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:59:16 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 19:59:16 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 19:59:16 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 19:59:16 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 19:59:18 on May 03,2022, Elapsed time: 0:04:23
+# Errors: 5, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 19:59:18 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftbee9qm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbee9qm
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(94)
+#    Time: 420 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 94
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:00:26 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:00:26 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:00:26 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:00:26 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:00:27 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:00:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:00:27 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:00:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:00:27 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:00:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:00:27 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:00:27 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:00:28 on May 03,2022, Elapsed time: 0:01:10
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 20:00:28 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft53xze6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft53xze6
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(94)
+#    Time: 420 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 94
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:34 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:01:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:34 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:01:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:34 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:01:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:34 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:01:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:34 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:01:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:34 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:01:34 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:01:35 on May 03,2022, Elapsed time: 0:01:07
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 20:01:35 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftybd6aa".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftybd6aa
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(94)
+#    Time: 420 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 94
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:58 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:01:58 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:58 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:01:58 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:58 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:01:58 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:58 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:01:58 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:58 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:01:58 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:01:58 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:01:58 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:01:59 on May 03,2022, Elapsed time: 0:00:24
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 20:01:59 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftc9t9md".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftc9t9md
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(94)
+#    Time: 420 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 94
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:06:46 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:06:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:06:46 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:06:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:06:46 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:06:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:06:46 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:06:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:06:46 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:06:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:06:46 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:06:46 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:06:47 on May 03,2022, Elapsed time: 0:04:48
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 20:06:47 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft95h9yn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft95h9yn
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(96)
+#    Time: 700 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 96
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:12 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:07:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:12 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:07:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:12 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:07:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:12 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:07:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:12 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:07:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:07:12 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:07:12 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:07:13 on May 03,2022, Elapsed time: 0:00:26
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 20:07:13 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft1ebg3n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1ebg3n
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(96)
+#    Time: 620 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 96
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:08:09 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:08:09 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:08:09 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:08:09 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:08:09 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:08:09 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:08:09 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:08:09 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:08:09 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:08:09 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:08:09 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:08:09 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:08:10 on May 03,2022, Elapsed time: 0:00:57
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 20:08:10 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlft7hdk9g".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7hdk9g
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(96)
+#    Time: 740 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 96
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:41 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:10:41 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:41 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:10:41 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:42 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:10:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:42 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:10:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:42 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:10:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:10:42 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:10:42 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:10:43 on May 03,2022, Elapsed time: 0:02:33
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 20:10:43 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftib3r76".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftib3r76
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(99)
+#    Time: 1080 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 99
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:12:15 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:12:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:12:15 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:12:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:12:15 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:12:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:12:15 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:12:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:12:15 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:12:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:12:15 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:12:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:12:16 on May 03,2022, Elapsed time: 0:01:33
+# Errors: 3, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver 
+# Start time: 20:12:16 on May 03,2022
+# Loading sv_std.std
+# Loading work.binarySearch_testbench
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftifb2av".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftifb2av
+# ** Error: (vish-4014) No objects found matching '/binarySearch_testbench/dut/ramOutHold'.
+# Executing ONERROR command at macro ./binarySearch_wave.do line 15
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./binarySearch.sv(99)
+#    Time: 1080 ps  Iteration: 1  Instance: /binarySearch_testbench
+# Break in Module binarySearch_testbench at ./binarySearch.sv line 99
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:36 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:28:36 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:36 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:28:36 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:36 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# ** Warning: ./DE1_SoC.sv(97): (vlog-2576) [BSOB] - Bit-select into 'SW' is out of bounds.
+# ** Warning: ./DE1_SoC.sv(103): (vlog-2576) [BSOB] - Bit-select into 'SW' is out of bounds.
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:28:36 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:36 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:28:36 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:36 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:28:36 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:28:36 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:28:36 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:28:37 on May 03,2022, Elapsed time: 0:16:21
+# Errors: 3, Warnings: 4
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench -Lf altera_mf_ver 
+# Start time: 20:28:37 on May 03,2022
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.bitCount
+# Loading work.seg7
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'DE1_SoC_testbench' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/algorithm/intheinstatiation File: ./ram32x8async.v
+# Loading altera_mf_ver.altsyncram
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 17
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:29:15 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:29:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:29:15 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:29:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:29:15 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# ** Warning: ./DE1_SoC.sv(97): (vlog-2576) [BSOB] - Bit-select into 'SW' is out of bounds.
+# ** Warning: ./DE1_SoC.sv(103): (vlog-2576) [BSOB] - Bit-select into 'SW' is out of bounds.
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:29:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 2
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:29:15 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:29:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:29:15 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:29:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:29:15 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:29:15 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench -Lf altera_mf_ver 
+# Start time: 20:28:37 on May 03,2022
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.bitCount
+# Loading work.seg7
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Error: (vsim-8378) ./DE1_SoC.sv(88): Port size (10) does not match connection size (8) for implicit .name connection port 'SW'. The port definition is at: ./DE1_SoC.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut File: ./DE1_SoC.sv
+# ** Error: (vsim-8378) ./DE1_SoC.sv(88): Port size (10) does not match connection size (1) for implicit .name connection port 'LEDR'. The port definition is at: ./DE1_SoC.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut File: ./DE1_SoC.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(49): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut0 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (4) does not match connection size (1) for port 'hex'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 17
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:30:19 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:30:19 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:30:19 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:30:19 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:30:19 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:30:19 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:30:19 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:30:19 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:30:19 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:30:19 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:30:19 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:30:19 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench -Lf altera_mf_ver 
+# Start time: 20:28:37 on May 03,2022
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.bitCount
+# Loading work.seg7
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(49): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut0 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (4) does not match connection size (1) for port 'hex'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftqd76jr".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqd76jr
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(106)
+#    Time: 3600 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 106
+add wave -position end  sim:/DE1_SoC_testbench/dut/algorithm/ps
+add wave -position 3  sim:/DE1_SoC_testbench/HEX1
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4/DE1_SoC_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:32:37 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:32:37 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:32:37 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:32:37 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:32:37 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:32:37 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:32:37 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:32:37 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:32:37 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:32:37 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:32:37 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:32:37 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:32:38 on May 03,2022, Elapsed time: 0:04:01
+# Errors: 3, Warnings: 8
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench -Lf altera_mf_ver 
+# Start time: 20:32:38 on May 03,2022
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.bitCount
+# Loading work.seg7
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(49): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut0 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (4) does not match connection size (1) for port 'hex'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftma2crm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftma2crm
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(106)
+#    Time: 3600 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 106
+add wave -position end  sim:/DE1_SoC_testbench/dut/algorithm/Found
+add wave -position end  sim:/DE1_SoC_testbench/dut/algorithm/Done
+add wave -position end  sim:/DE1_SoC_testbench/dut/algorithm/Start
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4/DE1_SoC_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:35:45 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:35:45 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:35:45 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:35:45 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:35:45 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:35:45 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:35:45 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:35:45 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:35:45 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:35:45 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:35:45 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:35:45 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:35:47 on May 03,2022, Elapsed time: 0:03:09
+# Errors: 0, Warnings: 5
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench -Lf altera_mf_ver 
+# Start time: 20:35:47 on May 03,2022
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.bitCount
+# Loading work.seg7
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(49): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut0 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (4) does not match connection size (1) for port 'hex'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftmrjg2n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmrjg2n
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(106)
+#    Time: 3600 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 106
+add wave -position end  sim:/DE1_SoC_testbench/dut/algorithm/Loc
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4/DE1_SoC_wave.do}
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4/DE1_SoC_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:36:33 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:36:33 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:36:33 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:36:33 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:36:33 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:36:33 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:36:33 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:36:33 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:36:33 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:36:33 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:36:33 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:36:33 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:36:34 on May 03,2022, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 5
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench -Lf altera_mf_ver 
+# Start time: 20:36:34 on May 03,2022
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.bitCount
+# Loading work.seg7
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(49): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut0 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (4) does not match connection size (1) for port 'hex'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(50): [PCDPC] - Port size (7) does not match connection size (1) for port 'leds'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftga86c7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftga86c7
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(106)
+#    Time: 3600 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 106
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:38:49 on May 03,2022
+# vlog -reportprogress 300 ./bitCount.sv 
+# -- Compiling module bitCount
+# -- Compiling module bitCount_testbench
+# 
+# Top level modules:
+# 	bitCount_testbench
+# End time: 20:38:49 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:38:49 on May 03,2022
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# 
+# Top level modules:
+# 	seg7
+# End time: 20:38:49 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:38:49 on May 03,2022
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 20:38:49 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:38:49 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8port1.v 
+# -- Compiling module ram32x8port1
+# 
+# Top level modules:
+# 	ram32x8port1
+# End time: 20:38:49 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:38:49 on May 03,2022
+# vlog -reportprogress 300 ./binarySearch.sv 
+# -- Compiling module binarySearch
+# -- Compiling module binarySearch_testbench
+# 
+# Top level modules:
+# 	binarySearch_testbench
+# End time: 20:38:49 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:38:49 on May 03,2022
+# vlog -reportprogress 300 ./ram32x8async.v 
+# -- Compiling module ram32x8async
+# 
+# Top level modules:
+# 	ram32x8async
+# End time: 20:38:49 on May 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 20:38:50 on May 03,2022, Elapsed time: 0:02:16
+# Errors: 0, Warnings: 5
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench -Lf altera_mf_ver 
+# Start time: 20:38:50 on May 03,2022
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.bitCount
+# Loading work.seg7
+# Loading work.binarySearch
+# Loading work.ram32x8async
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) ./DE1_SoC.sv(51): [PCDPC] - Port size (4) does not match connection size (1) for port 'hex'. The port definition is at: ./seg7.sv(10).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/hexOut1 File: ./seg7.sv
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: stlp  Hostname: STLP-0187  ProcessID: 16148
+#           Attempting to use alternate WLF file "./wlftezt1jw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftezt1jw
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(107)
+#    Time: 3600 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 107
