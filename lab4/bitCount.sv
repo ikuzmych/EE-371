@@ -1,3 +1,17 @@
+/* Bit-counting algorithm to count number of present "1"s in an 8-bit number
+ * 
+ * Inputs:
+ *   clk    - 1-bit clock input
+ *   Reset    - 1-bit reset input from KEY[0], 1-bit start input from KEY[3]
+ *   A     - used as an 8-bit signal to determine input value "A" in both tasks, and SW[9] used to toggle between which task is active
+ *
+ * Output:
+ * 	Start      - 1-bit input to initialize the start of the algorithm. Connected to KEY[3] in top-level module   
+ * 	Loc     - 5-bit address output that outputs the address of the found number. Connected to HEX0 and HEX1 in top-level module
+ * 	Found   - 1-bit output that is high if the number is found. Connected to LEDR[0] in top-level module
+ * 	Done    - 1-bit output that is high if the algorithm finishes running. Connected to LEDR[9] in top-level module
+ */
+
 module bitCount(clk, reset, s, A, result, done);
 	parameter N = 8;
 	input logic clk, reset, s;

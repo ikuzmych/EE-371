@@ -49,7 +49,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE DE1_SoC.sv
 set_global_assignment -name SYSTEMVERILOG_FILE bitCount.sv
 set_global_assignment -name SYSTEMVERILOG_FILE seg7.sv
 set_global_assignment -name SYSTEMVERILOG_FILE binarySearch.sv
-set_global_assignment -name QIP_FILE ram32x8port1.qip
 set_global_assignment -name MIF_FILE my_array.mif
 set_global_assignment -name QIP_FILE ram32x8async.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
