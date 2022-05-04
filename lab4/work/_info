@@ -10,15 +10,15 @@ cModel Technology
 dC:/Users/Illya Kuzmych/Desktop/UW Spring 2022/EE 371/lab4
 vbinarySearch
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1651617923
+Z1 !s110 1651635529
 !i10b 1
-!s100 [bV3HF7amoYz0<KRagEmd3
-ICDlNYXinJhD@Lg`dHU@_a1
+!s100 A7FAIOZ:H_GP7iG[f?MCG1
+IiWKahBK@H@?2<cDbWE5Re0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 !s105 binarySearch_sv_unit
 S1
-Z4 dC:/Users/stlp/Documents/GitHub/EE-371/lab4
-Z5 w1651617904
+Z4 dC:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4
+Z5 w1651633932
 Z6 8./binarySearch.sv
 Z7 F./binarySearch.sv
 L0 1
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1651617923.000000
+Z9 !s108 1651635529.000000
 Z10 !s107 ./binarySearch.sv|
 Z11 !s90 -reportprogress|300|./binarySearch.sv|
 !i113 1
@@ -36,8 +36,8 @@ vbinarySearch_testbench
 R0
 R1
 !i10b 1
-!s100 ]`AaOW=ilKl`<nZYG=CDm2
-IXa6Z@cg?aPgfLMRIN3DEM0
+!s100 B3e7ARHkfnH=fEdbPmU2m3
+I[@khEKc9cEb1_577z>5Wj2
 R2
 R3
 S1
@@ -45,7 +45,7 @@ R4
 R5
 R6
 R7
-L0 69
+L0 72
 R8
 r1
 !s85 0
@@ -58,100 +58,120 @@ R12
 nbinary@search_testbench
 vbitCount
 R0
-Z13 !s110 1651617922
+R1
 !i10b 1
 !s100 P:;9437<C:H:4>NjQIl;;2
 IS7Mj5_AJJIc:OEBF2Y?Hz2
 R2
-Z14 !s105 bitCount_sv_unit
+Z13 !s105 bitCount_sv_unit
 S1
 R4
-Z15 w1651609245
-Z16 8./bitCount.sv
-Z17 F./bitCount.sv
+Z14 w1651628724
+Z15 8./bitCount.sv
+Z16 F./bitCount.sv
 L0 1
 R8
 r1
 !s85 0
 31
-Z18 !s108 1651617922.000000
-Z19 !s107 ./bitCount.sv|
-Z20 !s90 -reportprogress|300|./bitCount.sv|
+R9
+Z17 !s107 ./bitCount.sv|
+Z18 !s90 -reportprogress|300|./bitCount.sv|
 !i113 1
 R12
 nbit@count
 vbitCount_testbench
 R0
-R13
+R1
 !i10b 1
 !s100 1TSU3:MM8dDEM]l9oPBA@1
 I=iM_[6j5UAdC4_R7T;Hzm3
 R2
-R14
+R13
 S1
 R4
+R14
 R15
 R16
-R17
 L0 83
 R8
 r1
 !s85 0
 31
+R9
+R17
 R18
-R19
-R20
 !i113 1
 R12
 nbit@count_testbench
 vDE1_SoC
 R0
-R13
+R1
 !i10b 1
-!s100 4<^3529hI<O1Q:]b=UWSN3
-IPALNngGz6B`PInSX=N=>?0
+!s100 mY1X:SODJbj<[iW??]^K50
+IeMS`3b@keRef3k3S9^LmY1
 R2
-Z21 !s105 DE1_SoC_sv_unit
+Z19 !s105 DE1_SoC_sv_unit
 S1
 R4
-Z22 w1651609398
-Z23 8./DE1_SoC.sv
-Z24 F./DE1_SoC.sv
+Z20 w1651635520
+Z21 8./DE1_SoC.sv
+Z22 F./DE1_SoC.sv
 L0 1
 R8
 r1
 !s85 0
 31
-R18
-Z25 !s107 ./DE1_SoC.sv|
-Z26 !s90 -reportprogress|300|./DE1_SoC.sv|
+R9
+Z23 !s107 ./DE1_SoC.sv|
+Z24 !s90 -reportprogress|300|./DE1_SoC.sv|
 !i113 1
 R12
 n@d@e1_@so@c
 vDE1_SoC_testbench
 R0
-R13
+R1
 !i10b 1
-!s100 znV2_o8AXXiEm^3SzB1[_0
-I>ecToGd=fhaEG^CoA=UEE0
+!s100 XI9QKDBOUjGMAF_:_e@=R3
+I1m[<I5N>E6>LU<DWz3ee61
 R2
-R21
+R19
 S1
 R4
+R20
+R21
 R22
-R23
-R24
-L0 42
+L0 81
 R8
 r1
 !s85 0
 31
-R18
-R25
-R26
+R9
+R23
+R24
 !i113 1
 R12
 n@d@e1_@so@c_testbench
+vram32x8async
+R1
+!i10b 1
+!s100 4^I=LjS_6fTf1:XRWgBgB0
+IP?_B>ATo?HE53>Kj=QM@V0
+R2
+R4
+w1651632813
+8./ram32x8async.v
+F./ram32x8async.v
+Z25 L0 40
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./ram32x8async.v|
+!s90 -reportprogress|300|./ram32x8async.v|
+!i113 1
+R12
 vram32x8port1
 R1
 !i10b 1
@@ -159,22 +179,22 @@ R1
 IT4XEdCNN:GU1_41ikO<3i0
 R2
 R4
-w1651610620
+w1651630151
 8./ram32x8port1.v
 F./ram32x8port1.v
-L0 40
+R25
 R8
 r1
 !s85 0
 31
-R18
+R9
 !s107 ./ram32x8port1.v|
 !s90 -reportprogress|300|./ram32x8port1.v|
 !i113 1
 R12
 vseg7
 R0
-R13
+R1
 !i10b 1
 !s100 jj9HOZ_?ONU=EkYa?Y1[J2
 IOHV<;HWWTn3d95DFVdPKk1
@@ -182,7 +202,7 @@ R2
 !s105 seg7_sv_unit
 S1
 R4
-w1651608967
+w1650755183
 8./seg7.sv
 F./seg7.sv
 L0 10
@@ -190,7 +210,7 @@ R8
 r1
 !s85 0
 31
-R18
+R9
 !s107 ./seg7.sv|
 !s90 -reportprogress|300|./seg7.sv|
 !i113 1

@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue May 03 15:45:16 2022
+Analysis & Synthesis Status : Successful - Tue May 03 20:38:50 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : lab4
-Top-level Entity Name : binarySearch
+Top-level Entity Name : DE1_SoC
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 12
-Total pins : 18
+Total registers : 35
+Total pins : 39
 Total virtual pins : 0
-Total block memory bits : 128
+Total block memory bits : 0
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

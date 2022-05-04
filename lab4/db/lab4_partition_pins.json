@@ -4,71 +4,111 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Loc[0]",
+					"name" : "LEDR[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Loc[1]",
+					"name" : "LEDR[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Loc[2]",
+					"name" : "HEX0[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Loc[3]",
+					"name" : "HEX0[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Found",
+					"name" : "HEX0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Done",
+					"name" : "HEX0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "A[2]",
+					"name" : "HEX0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "A[3]",
+					"name" : "HEX0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "A[4]",
+					"name" : "HEX0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "A[5]",
+					"name" : "HEX1[0]",
 					"strict" : false
 				},
 				{
-					"name" : "A[6]",
+					"name" : "HEX1[1]",
 					"strict" : false
 				},
 				{
-					"name" : "A[7]",
+					"name" : "HEX1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "A[0]",
+					"name" : "HEX1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "A[1]",
+					"name" : "HEX1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "HEX1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Start",
+					"name" : "SW[2]",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[3]",
 					"strict" : false
 				}
 			]

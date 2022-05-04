@@ -1,5 +1,5 @@
 Flow report for lab4
-Tue May 03 15:45:16 2022
+Tue May 03 20:38:50 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue May 03 15:45:16 2022       ;
+; Flow Status                     ; Successful - Tue May 03 20:38:50 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; lab4                                        ;
-; Top-level Entity Name           ; binarySearch                                ;
+; Top-level Entity Name           ; DE1_SoC                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 12                                          ;
-; Total pins                      ; 18                                          ;
+; Total registers                 ; 35                                          ;
+; Total pins                      ; 39                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 128                                         ;
+; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -68,25 +68,26 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/03/2022 15:45:06 ;
+; Start date & time ; 05/03/2022 20:38:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lab4                ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                         ;
-+-------------------------------------+----------------------------------------+---------------+--------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name  ; Section Id ;
-+-------------------------------------+----------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 4620357877770.165161790515964          ; --            ; --           ; --         ;
-; MISC_FILE                           ; ram32x8port1_bb.v                      ; --            ; --           ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; binarySearch ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; binarySearch ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; binarySearch ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --           ; --         ;
-; TOP_LEVEL_ENTITY                    ; binarySearch                           ; lab4          ; --           ; --         ;
-+-------------------------------------+----------------------------------------+---------------+--------------+------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 264086601753399.165163552205676        ; --            ; --          ; --         ;
+; MISC_FILE                           ; ram32x8port1_bb.v                      ; --            ; --          ; --         ;
+; MISC_FILE                           ; ram32x8async_bb.v                      ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE1_SoC     ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE1_SoC     ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; DE1_SoC     ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; DE1_SoC                                ; lab4          ; --          ; --         ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -94,8 +95,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4829 MB             ; 00:00:24                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:24                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4888 MB             ; 00:00:16                           ;
+; Total                ; 00:00:07     ; --                      ; --                  ; 00:00:16                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -104,7 +105,7 @@ agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; STLP-0187        ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-A34POL5  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

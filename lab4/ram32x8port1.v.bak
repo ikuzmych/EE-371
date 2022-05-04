@@ -44,9 +44,9 @@ module ram32x8port1 (
 	wren,
 	q);
 
-	input [4:0]  address;
+	input	[4:0]  address;
 	input	  clock;
-	input [7:0]  data;
+	input	[7:0]  data;
 	input	  wren;
 	output	[7:0]  q;
 `ifndef ALTERA_RESERVED_QIS

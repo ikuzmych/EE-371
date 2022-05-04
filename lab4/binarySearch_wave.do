@@ -12,8 +12,9 @@ add wave -noupdate -radix unsigned /binarySearch_testbench/dut/R
 add wave -noupdate -radix unsigned /binarySearch_testbench/dut/currRamOut
 add wave -noupdate /binarySearch_testbench/dut/ps
 add wave -noupdate /binarySearch_testbench/dut/ns
+add wave -noupdate /binarySearch_testbench/dut/ramOutHold
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1695 ps} 0}
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -29,4 +30,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {850 ps} {1850 ps}
+WaveRestoreZoom {0 ps} {1 ns}
