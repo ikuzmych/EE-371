@@ -95,17 +95,16 @@ module bitCount_testbench();
 		forever #50 clk = ~clk;
 	end // initial
 	
-	assign A = 8'b11111111;
 	
 	/* Simple testbench to test function of bitCount
 	 * Counts the number of present 1s in an 8 bit number successfully
 	 */
-	initial begin 
-		reset <= 1; @(posedge clk);
-		reset <= 0; s <= 0; repeat(2) @(posedge clk);
+	initial begin
+		reset <= 1; A <= 8'b11111111; @(posedge clk);
+		reset <= 0; s <= 0; repeat(2) @(posedge clk); // turn off reset, load in A
+		s <= 1; repeat(12) @(posedge clk); // allow the algorithm to run for a few cycles
+		s <= 0; A <= 8'b10100001; repeat(2) @(posedge clk); // load in new value
 		s <= 1; repeat(12) @(posedge clk);
-		s <= 0; repeat(2) @(posedge clk);
-		s <= 1;         @(posedge clk);
 		
 	$stop;
 	end // initial

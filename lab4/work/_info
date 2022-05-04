@@ -10,23 +10,23 @@ cModel Technology
 dC:/Users/Illya Kuzmych/Desktop/UW Spring 2022/EE 371/lab4
 vbinarySearch
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1651635529
+Z1 !s110 1651639773
 !i10b 1
-!s100 A7FAIOZ:H_GP7iG[f?MCG1
-IiWKahBK@H@?2<cDbWE5Re0
+!s100 L52:m>@;B?[B]J=]FjnlE3
+ID;?2GFP>0aKncGXVEo1lf3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 !s105 binarySearch_sv_unit
 S1
 Z4 dC:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4
-Z5 w1651633932
+Z5 w1651637951
 Z6 8./binarySearch.sv
 Z7 F./binarySearch.sv
-L0 1
+L0 15
 Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1651635529.000000
+Z9 !s108 1651639773.000000
 Z10 !s107 ./binarySearch.sv|
 Z11 !s90 -reportprogress|300|./binarySearch.sv|
 !i113 1
@@ -36,8 +36,8 @@ vbinarySearch_testbench
 R0
 R1
 !i10b 1
-!s100 B3e7ARHkfnH=fEdbPmU2m3
-I[@khEKc9cEb1_577z>5Wj2
+!s100 RMQ3YT7[InNmDkPUgzQ273
+INFkfRa>zUZQoEJWZ^A6^91
 R2
 R3
 S1
@@ -45,7 +45,7 @@ R4
 R5
 R6
 R7
-L0 72
+L0 95
 R8
 r1
 !s85 0
@@ -60,16 +60,16 @@ vbitCount
 R0
 R1
 !i10b 1
-!s100 P:;9437<C:H:4>NjQIl;;2
-IS7Mj5_AJJIc:OEBF2Y?Hz2
+!s100 Ga78]:Z6X6MF>]M6jF=R^0
+I@HidO>EDVGn<Ih<dULL:R1
 R2
 Z13 !s105 bitCount_sv_unit
 S1
 R4
-Z14 w1651628724
+Z14 w1651639690
 Z15 8./bitCount.sv
 Z16 F./bitCount.sv
-L0 1
+L0 14
 R8
 r1
 !s85 0
@@ -84,8 +84,8 @@ vbitCount_testbench
 R0
 R1
 !i10b 1
-!s100 1TSU3:MM8dDEM]l9oPBA@1
-I=iM_[6j5UAdC4_R7T;Hzm3
+!s100 J;AO]Fld2]NFiFml?AG4z0
+I^HO`AjCz07fEmZ<?<JE712
 R2
 R13
 S1
@@ -93,7 +93,7 @@ R4
 R14
 R15
 R16
-L0 83
+L0 82
 R8
 r1
 !s85 0
@@ -108,16 +108,16 @@ vDE1_SoC
 R0
 R1
 !i10b 1
-!s100 mY1X:SODJbj<[iW??]^K50
-IeMS`3b@keRef3k3S9^LmY1
+!s100 z?FFb=l>?bKHXX5oR5l4X0
+InHd?2MMNBIaO7iEG^9JX;1
 R2
 Z19 !s105 DE1_SoC_sv_unit
 S1
 R4
-Z20 w1651635520
+Z20 w1651636961
 Z21 8./DE1_SoC.sv
 Z22 F./DE1_SoC.sv
-L0 1
+L0 13
 R8
 r1
 !s85 0
@@ -132,8 +132,8 @@ vDE1_SoC_testbench
 R0
 R1
 !i10b 1
-!s100 XI9QKDBOUjGMAF_:_e@=R3
-I1m[<I5N>E6>LU<DWz3ee61
+!s100 iWVM7z_Bol5dQgm:^je0>2
+Ib[^i2?<Jlo@8ekHPlJZD<0
 R2
 R19
 S1
@@ -141,7 +141,7 @@ R4
 R20
 R21
 R22
-L0 81
+L0 109
 R8
 r1
 !s85 0
