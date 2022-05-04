@@ -101,7 +101,7 @@ module DE1_SoC(CLOCK_50, SW, LEDR, KEY, HEX0, HEX1);
 		end // else
 	end // always_comb
 	
-endmodule
+endmodule // DE1_SoC
 
 
 /* DE1_SoC top level testbench */
