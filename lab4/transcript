@@ -246,3 +246,5 @@ do runlab.do
 # ** Note: $stop    : ./binarySearch.sv(129)
 #    Time: 1240 ps  Iteration: 1  Instance: /binarySearch_testbench
 # Break in Module binarySearch_testbench at ./binarySearch.sv line 129
+# End time: 01:12:33 on May 04,2022, Elapsed time: 1:59:41
+# Errors: 3, Warnings: 2
