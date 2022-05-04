@@ -10,7 +10,7 @@ cModel Technology
 dC:/Users/Illya Kuzmych/Desktop/UW Spring 2022/EE 371/lab4
 vbinarySearch
 Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z1 !s110 1651639773
+Z1 !s110 1651644769
 !i10b 1
 !s100 L52:m>@;B?[B]J=]FjnlE3
 ID;?2GFP>0aKncGXVEo1lf3
@@ -18,7 +18,7 @@ Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 !s105 binarySearch_sv_unit
 S1
 Z4 dC:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab4
-Z5 w1651637951
+Z5 w1651644754
 Z6 8./binarySearch.sv
 Z7 F./binarySearch.sv
 L0 15
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1651639773.000000
+Z9 !s108 1651644769.000000
 Z10 !s107 ./binarySearch.sv|
 Z11 !s90 -reportprogress|300|./binarySearch.sv|
 !i113 1
@@ -36,8 +36,8 @@ vbinarySearch_testbench
 R0
 R1
 !i10b 1
-!s100 RMQ3YT7[InNmDkPUgzQ273
-INFkfRa>zUZQoEJWZ^A6^91
+!s100 8lOoboaQgX9SYB[?G0?UL1
+IZA>XJ9Gz==IAeK]j0J<5:2
 R2
 R3
 S1
@@ -114,7 +114,7 @@ R2
 Z19 !s105 DE1_SoC_sv_unit
 S1
 R4
-Z20 w1651636961
+Z20 w1651643391
 Z21 8./DE1_SoC.sv
 Z22 F./DE1_SoC.sv
 L0 13
@@ -173,7 +173,7 @@ R9
 !i113 1
 R12
 vram32x8port1
-R1
+!s110 1651639773
 !i10b 1
 !s100 ]UdX[GWzfh]^bLB:3N;Zk3
 IT4XEdCNN:GU1_41ikO<3i0
@@ -187,7 +187,7 @@ R8
 r1
 !s85 0
 31
-R9
+!s108 1651639773.000000
 !s107 ./ram32x8port1.v|
 !s90 -reportprogress|300|./ram32x8port1.v|
 !i113 1

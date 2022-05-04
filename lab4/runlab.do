@@ -7,19 +7,18 @@ vlib work
 vlog "./bitCount.sv"
 vlog "./seg7.sv"
 vlog "./DE1_SoC.sv"
-vlog "./ram32x8port1.v"
 vlog "./binarySearch.sv"
 vlog "./ram32x8async.v"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-vsim -voptargs="+acc" -t 1ps -lib work bitCount_testbench
+vsim -voptargs="+acc" -t 1ps -lib work binarySearch_testbench -Lf altera_mf_ver
 
 # Source the wave do file
 #     This should be the file that sets up the signal window for
 #     the module you are testing.
-do bitCount_wave.do
+do binarySearch_wave.do
 
 # Set the window types
 view wave

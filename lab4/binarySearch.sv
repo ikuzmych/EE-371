@@ -118,11 +118,13 @@ module binarySearch_testbench();
 		Reset <= 0; Start <= 1; repeat(16) @(posedge clk);
 		
 		Start <= 0; A <= 8'd0; repeat(2) @(posedge clk);
-		Start <= 1; repeat(18) @(posedge clk);
+		Start <= 1; repeat(12) @(posedge clk);
 		
 		Start <= 0; A <= 8'd255; repeat(2) @(posedge clk);
-		Start <= 1; repeat(15) @(posedge clk);
+		Start <= 1; repeat(12) @(posedge clk);
 		
+		Start <= 0; A <= 8'd98; repeat(2) @(posedge clk);
+		Start <= 1; repeat(15) @(posedge clk);
 		
 	$stop;
 	end // initial
