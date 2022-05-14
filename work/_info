@@ -8,35 +8,36 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371
-vline_drawer
+vDE1_SoC
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1652511270
+Z2 !s110 1652558812
 !i10b 1
-!s100 `ledg[9;I39ASO0FD<eF51
-IMSjK<mn1iKP]g5hBP_a;>1
+!s100 79zeDFMi1[QK<9F]m][X;1
+IlGhCO^aYldXc2:1?<EhSn3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 !s105 line_drawer_sv_unit
+Z4 !s105 DE1_SoC_sv_unit
 S1
 R0
-Z5 w1652511229
-Z6 8./line_drawer.sv
-Z7 F./line_drawer.sv
-L0 18
+Z5 w1652558809
+Z6 8./DE1_SoC.sv
+Z7 F./DE1_SoC.sv
+L0 21
 Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1652511270.000000
-Z10 !s107 ./line_drawer.sv|
-Z11 !s90 -reportprogress|300|./line_drawer.sv|
+Z9 !s108 1652558812.000000
+Z10 !s107 ./DE1_SoC.sv|
+Z11 !s90 -reportprogress|300|./DE1_SoC.sv|
 !i113 1
 Z12 tCvgOpt 0
-vline_drawer_testbench
+n@d@e1_@so@c
+vDE1_SoC_testbench
 R1
 R2
 !i10b 1
-!s100 lGZB1kge6V=`eXnh3OO]P3
-Im24c`:YED4RbHl8WFF_Ii0
+!s100 dm1ckc1;P[2b2`K[Lc22D1
+I<ANUHcCi?3mPdEL0i3g2@2
 R3
 R4
 S1
@@ -44,7 +45,7 @@ R0
 R5
 R6
 R7
-L0 96
+L0 179
 R8
 r1
 !s85 0
@@ -54,3 +55,74 @@ R10
 R11
 !i113 1
 R12
+n@d@e1_@so@c_testbench
+vline_drawer
+R1
+R2
+!i10b 1
+!s100 M`PnLl2Ab5`6TmaTc:gC63
+IKXZ<iR0fgnHDH=z7CPjbF0
+R3
+Z13 !s105 line_drawer_sv_unit
+S1
+R0
+Z14 w1652558755
+Z15 8./line_drawer.sv
+Z16 F./line_drawer.sv
+L0 18
+R8
+r1
+!s85 0
+31
+R9
+Z17 !s107 ./line_drawer.sv|
+Z18 !s90 -reportprogress|300|./line_drawer.sv|
+!i113 1
+R12
+vline_drawer_testbench
+R1
+R2
+!i10b 1
+!s100 _LHEHMT>XL49Z8mZVObZ01
+IX9kGM>n?JFj<b9^S?Qae62
+R3
+R13
+S1
+R0
+R14
+R15
+R16
+L0 101
+R8
+r1
+!s85 0
+31
+R9
+R17
+R18
+!i113 1
+R12
+vVGA_framebuffer
+R1
+R2
+!i10b 1
+!s100 =Q5TgKY`BUmH8o5G5hG6z2
+I0:fX4B8afNCQ@_c:KA4HG3
+R3
+!s105 VGA_framebuffer_sv_unit
+S1
+R0
+w1652558475
+8./VGA_framebuffer.sv
+F./VGA_framebuffer.sv
+L0 32
+R8
+r1
+!s85 0
+31
+R9
+!s107 ./VGA_framebuffer.sv|
+!s90 -reportprogress|300|./VGA_framebuffer.sv|
+!i113 1
+R12
+n@v@g@a_framebuffer

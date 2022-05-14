@@ -17,16 +17,16 @@
  */
 module line_drawer(clk, reset, x0, y0, x1, y1, x, y, done);
 	input logic clk, reset;
-	input logic signed [10:0]	x0, y0, x1, y1;
+	input logic signed [11:0]	x0, y0, x1, y1;
 	output logic done;
-	output logic signed [10:0]	x, y;
+	output logic signed [11:0]	x, y;
 	
 	/* You'll need to create some registers to keep track of things
 	 * such as error and direction.
 	 */
 	logic signed [11:0] error;  // example - feel free to change/delete
 	logic signed [12:0] e2;
-	logic signed [10:0] dx, dy;
+	logic signed [11:0] dx, dy;
 	logic signed [2:0] sx, sy;
 	
 	/** 
@@ -100,9 +100,9 @@ endmodule  // line_drawer
 /* line_drawer testbench */
 module line_drawer_testbench();
 	logic clk, reset;
-	logic signed [10:0]	x0, y0, x1, y1;
+	logic signed [11:0]	x0, y0, x1, y1;
 	logic done;
-	logic signed [10:0] x, y;
+	logic signed [11:0] x, y;
 
 	line_drawer dut(.*);
 	
