@@ -45,7 +45,7 @@ module VGA_framebuffer(clk50, reset, x, y, pixel_color, pixel_write,
                 VTOTAL       = VACTIVE + VFRONT_PORCH + VSYNC + VBACK_PORCH; // 525
     
     input logic clk50, reset;
-    input logic signed [10:0] x, y;  // Pixel coordinates
+    input logic [10:0] x, y;  // Pixel coordinates
     input logic pixel_color, pixel_write;
     output logic [7:0] VGA_R, VGA_G, VGA_B;
     output logic VGA_CLK, VGA_HS, VGA_VS, VGA_BLANK_n, VGA_SYNC_n;
