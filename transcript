@@ -1240,3 +1240,5 @@ do runlab.do
 # ** Note: $stop    : ./line_drawer.sv(117)
 #    Time: 6010 ps  Iteration: 1  Instance: /line_drawer_testbench
 # Break in Module line_drawer_testbench at ./line_drawer.sv line 117
+# End time: 00:06:30 on May 14,2022, Elapsed time: 0:11:58
+# Errors: 0, Warnings: 0
