@@ -48,3 +48,8 @@ output_files/lab5.map.summary
 *.qtl
 *.qdb
 *.flock
+*.wlf
+work/_lib.qdb
+work/_info
+vsim.wlf
+transcript

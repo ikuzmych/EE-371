@@ -1,556 +1,88 @@
 # Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
-do urn
-# Cannot open macro file: urn
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:02 on May 15,2022
+# Start time: 15:18:54 on May 16,2022
 # vlog -reportprogress 300 ./VGA_framebuffer.sv 
 # -- Compiling module VGA_framebuffer
 # 
 # Top level modules:
 # 	VGA_framebuffer
-# End time: 15:46:02 on May 15,2022, Elapsed time: 0:00:00
+# End time: 15:18:54 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:02 on May 15,2022
+# Start time: 15:18:54 on May 16,2022
 # vlog -reportprogress 300 ./line_drawer.sv 
 # -- Compiling module line_drawer
 # -- Compiling module line_drawer_testbench
 # 
 # Top level modules:
 # 	line_drawer_testbench
-# End time: 15:46:02 on May 15,2022, Elapsed time: 0:00:00
+# End time: 15:18:54 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:02 on May 15,2022
+# Start time: 15:18:54 on May 16,2022
 # vlog -reportprogress 300 ./DE1_SoC.sv 
 # -- Compiling module DE1_SoC
 # -- Compiling module DE1_SoC_testbench
 # 
 # Top level modules:
 # 	DE1_SoC_testbench
-# End time: 15:46:02 on May 15,2022, Elapsed time: 0:00:00
+# End time: 15:18:54 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:02 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 15:46:02 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 15:46:02 on May 15,2022
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 15:18:55 on May 16,2022
 # Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
+# Loading work.line_drawer_testbench
 # Loading work.line_drawer
 # WARNING: No extended dataflow license exists
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(171)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 171
-add wave -position 10  sim:/DE1_SoC_testbench/dut/pixel_color
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/DE1_SoC_wave.do}
+# ** Note: $stop    : ./line_drawer.sv(131)
+#    Time: 770 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 131
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:26 on May 15,2022
+# Start time: 15:20:21 on May 16,2022
 # vlog -reportprogress 300 ./VGA_framebuffer.sv 
 # -- Compiling module VGA_framebuffer
 # 
 # Top level modules:
 # 	VGA_framebuffer
-# End time: 15:46:26 on May 15,2022, Elapsed time: 0:00:00
+# End time: 15:20:21 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:26 on May 15,2022
+# Start time: 15:20:21 on May 16,2022
 # vlog -reportprogress 300 ./line_drawer.sv 
 # -- Compiling module line_drawer
 # -- Compiling module line_drawer_testbench
 # 
 # Top level modules:
 # 	line_drawer_testbench
-# End time: 15:46:26 on May 15,2022, Elapsed time: 0:00:00
+# End time: 15:20:21 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:26 on May 15,2022
+# Start time: 15:20:21 on May 16,2022
 # vlog -reportprogress 300 ./DE1_SoC.sv 
 # -- Compiling module DE1_SoC
 # -- Compiling module DE1_SoC_testbench
 # 
 # Top level modules:
 # 	DE1_SoC_testbench
-# End time: 15:46:26 on May 15,2022, Elapsed time: 0:00:00
+# End time: 15:20:21 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:46:26 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 15:46:26 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:46:27 on May 15,2022, Elapsed time: 0:00:25
+# End time: 15:20:24 on May 16,2022, Elapsed time: 0:01:29
 # Errors: 0, Warnings: 1
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 15:46:27 on May 15,2022
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 15:20:24 on May 16,2022
 # Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
+# Loading work.line_drawer_testbench
 # Loading work.line_drawer
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(171)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 171
-add wave -position end  sim:/DE1_SoC_testbench/dut/lines/error
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/DE1_SoC_wave.do}
- do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:49:06 on May 15,2022
-# vlog -reportprogress 300 ./VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 15:49:06 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:49:06 on May 15,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 15:49:06 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:49:06 on May 15,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:49:07 on May 15,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:49:07 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 15:49:07 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:49:07 on May 15,2022, Elapsed time: 0:02:40
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 15:49:07 on May 15,2022
-# Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
-# Loading work.line_drawer
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(171)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 171
-add wave -position end  sim:/DE1_SoC_testbench/dut/lines/e2
-add wave -position end  sim:/DE1_SoC_testbench/dut/lines/dx
-add wave -position end  sim:/DE1_SoC_testbench/dut/lines/dy
-add wave -position end  sim:/DE1_SoC_testbench/dut/lines/sx
-add wave -position end  sim:/DE1_SoC_testbench/dut/lines/sy
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/DE1_SoC_wave.do}
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:49:39 on May 15,2022
-# vlog -reportprogress 300 ./VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 15:49:39 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:49:39 on May 15,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 15:49:39 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:49:39 on May 15,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:49:39 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:49:40 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 15:49:40 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:49:40 on May 15,2022, Elapsed time: 0:00:33
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 15:49:40 on May 15,2022
-# Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
-# Loading work.line_drawer
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(171)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 171
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:52:44 on May 15,2022
-# vlog -reportprogress 300 ./VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 15:52:44 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:52:44 on May 15,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 15:52:44 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:52:44 on May 15,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 15:52:44 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:52:44 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 15:52:44 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 15:52:45 on May 15,2022, Elapsed time: 0:03:05
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 15:52:45 on May 15,2022
-# Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
-# Loading work.line_drawer
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(175)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 175
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:59:37 on May 15,2022
-# vlog -reportprogress 300 ./VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 15:59:37 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:59:37 on May 15,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 15:59:37 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:59:37 on May 15,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# ** Error: (vlog-13069) ./DE1_SoC.sv(100): near "if": syntax error, unexpected if, expecting ';'.
-# ** Error: (vlog-13069) ./DE1_SoC.sv(101): near "else": syntax error, unexpected else.
-# ** Error (suppressible): ./DE1_SoC.sv(104): (vlog-2720) A generate begin/end pair has been found outside of generate construct.
-# ** Error: ./DE1_SoC.sv(104): 'updateregister' already exists; must not be redefined as a generate block
-# ** Error: (vlog-13069) ./DE1_SoC.sv(104): near "=": syntax error, unexpected '='.
-# ** Error: ./DE1_SoC.sv(104): (vlog-13205) Syntax error found in the scope following 'ns'. Is there a missing '::'?
-# End time: 15:59:37 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 6, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 9
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./DE1_SoC.sv""
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:00:35 on May 15,2022
-# vlog -reportprogress 300 ./VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 16:00:35 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:00:35 on May 15,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 16:00:35 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:00:35 on May 15,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 16:00:35 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:00:35 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 16:00:35 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 16:00:37 on May 15,2022, Elapsed time: 0:07:52
-# Errors: 8, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 16:00:37 on May 15,2022
-# Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
-# Loading work.line_drawer
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(181)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 181
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:01:13 on May 15,2022
-# vlog -reportprogress 300 ./VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 16:01:13 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:01:13 on May 15,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 16:01:13 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:01:13 on May 15,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 16:01:13 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:01:13 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 16:01:13 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 16:01:15 on May 15,2022, Elapsed time: 0:00:38
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 16:01:15 on May 15,2022
-# Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
-# Loading work.line_drawer
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(181)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 181
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:03:21 on May 15,2022
-# vlog -reportprogress 300 ./VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 16:03:21 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:03:21 on May 15,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 16:03:21 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:03:21 on May 15,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 16:03:21 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:03:21 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 16:03:21 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 16:03:22 on May 15,2022, Elapsed time: 0:02:07
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 16:03:22 on May 15,2022
-# Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
-# Loading work.line_drawer
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(183)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 183
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:06 on May 15,2022
-# vlog -reportprogress 300 ./VGA_framebuffer.sv 
-# -- Compiling module VGA_framebuffer
-# 
-# Top level modules:
-# 	VGA_framebuffer
-# End time: 16:04:06 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:06 on May 15,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 16:04:06 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:06 on May 15,2022
-# vlog -reportprogress 300 ./DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# -- Compiling module DE1_SoC_testbench
-# 
-# Top level modules:
-# 	DE1_SoC_testbench
-# End time: 16:04:06 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 16:04:06 on May 15,2022
-# vlog -reportprogress 300 ./clock_divider.sv 
-# -- Compiling module clock_divider
-# 
-# Top level modules:
-# 	clock_divider
-# End time: 16:04:06 on May 15,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 16:04:08 on May 15,2022, Elapsed time: 0:00:46
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
-# Start time: 16:04:08 on May 15,2022
-# Loading sv_std.std
-# Loading work.DE1_SoC_testbench
-# Loading work.DE1_SoC
-# Loading work.clock_divider
-# Loading work.VGA_framebuffer
-# Loading work.line_drawer
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./DE1_SoC.sv(183)
-#    Time: 515 ps  Iteration: 1  Instance: /DE1_SoC_testbench
-# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 183
-# End time: 18:20:25 on May 15,2022, Elapsed time: 2:16:17
-# Errors: 0, Warnings: 0
+# ** Note: $stop    : ./line_drawer.sv(131)
+#    Time: 530 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 131

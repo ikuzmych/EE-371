@@ -100,6 +100,7 @@ module line_drawer(clk, reset, start, x0, y0, x1, y1, x, y, done);
 	end // always_ff
 endmodule  // line_drawer
 
+
 /* line_drawer testbench */
 module line_drawer_testbench();
 	logic clk, reset;
@@ -115,13 +116,17 @@ module line_drawer_testbench();
 		forever #10 clk <= ~clk;
 	end // initial
 
-	
+	/**
+	 *
+	 *
+	 */
 	initial begin
-		reset <= 1; x0 <= 0; y0 <= 100; x1 <= 200; y1 <= 0; @(posedge clk);
-		reset <= 0; repeat(300) @(posedge clk);
-		// reset <= 1; @(posedge clk);
-		// reset <= 0; repeat(15) @(posedge clk);
-		// reset <= 1; repeat(2); @(posedge clk);
+		reset <= 1; x0 <= 0; y0 <= 0; x1 <= 5; y1 <= 5; @(posedge clk);
+		reset <= 0; repeat(8) @(posedge clk);
+		reset <= 1; x0 <= 5; y0 <= 5; x1 <= 0; y1 <= 0; @(posedge clk);
+		reset <= 0; repeat(8) @(posedge clk);
+		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 100; y1 <= 105; @(posedge clk);
+		reset <= 0; repeat(8) @(posedge clk);
 	
 	$stop;
 	end // initial

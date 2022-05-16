@@ -10,11 +10,11 @@ cModel Technology
 Z0 dC:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371
 vclock_divider
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1652655846
+!s110 1652655846
 !i10b 1
 !s100 J9B:MHkm7>>^@abfk5OSG2
 IWXV[Bd`N5=GPCD=QOD;]Q0
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 !s105 clock_divider_sv_unit
 S1
 R0
@@ -22,116 +22,116 @@ w1644295477
 8./clock_divider.sv
 F./clock_divider.sv
 L0 3
-Z4 OV;L;10.5b;63
+Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1652655846.000000
+!s108 1652655846.000000
 !s107 ./clock_divider.sv|
 !s90 -reportprogress|300|./clock_divider.sv|
 !i113 1
-Z6 tCvgOpt 0
+Z4 tCvgOpt 0
 vDE1_SoC
 R1
-R2
+Z5 !s110 1652739621
 !i10b 1
-!s100 ^b<Z_TPDU88TTPgOKa6m?1
-IDSNl=W9^d2oG`gTja?U>U3
-R3
-Z7 !s105 DE1_SoC_sv_unit
+!s100 69Kj5kOKE=jZRP=09PnQC1
+IG;0Bnk@Na06ULHT0jL0MX2
+R2
+Z6 !s105 DE1_SoC_sv_unit
 S1
 R0
-Z8 w1652655842
-Z9 8./DE1_SoC.sv
-Z10 F./DE1_SoC.sv
+Z7 w1652739340
+Z8 8./DE1_SoC.sv
+Z9 F./DE1_SoC.sv
 L0 21
-R4
+R3
 r1
 !s85 0
 31
-R5
+Z10 !s108 1652739621.000000
 Z11 !s107 ./DE1_SoC.sv|
 Z12 !s90 -reportprogress|300|./DE1_SoC.sv|
 !i113 1
-R6
+R4
 n@d@e1_@so@c
 vDE1_SoC_testbench
 R1
-R2
+R5
 !i10b 1
-!s100 ?QTbb<B:c:]elB2Zz]VHW3
-IQbUjm;CmOO[Znho5]6VaJ2
-R3
-R7
+!s100 ?mIM[dJg^i=OA?T]gNHG92
+IE4Aajz4IBDPdQYIEP@Bl>2
+R2
+R6
 S1
 R0
+R7
 R8
 R9
-R10
-L0 157
-R4
+L0 99
+R3
 r1
 !s85 0
 31
-R5
+R10
 R11
 R12
 !i113 1
-R6
+R4
 n@d@e1_@so@c_testbench
 vline_drawer
 R1
-R2
+R5
 !i10b 1
 !s100 ]?IPah>1fBR@^=6XAYXff3
 IMYm?HGPYfSV8Om:U37l^l0
-R3
+R2
 Z13 !s105 line_drawer_sv_unit
 S1
 R0
-Z14 w1652652243
+Z14 w1652739617
 Z15 8./line_drawer.sv
 Z16 F./line_drawer.sv
 L0 18
-R4
+R3
 r1
 !s85 0
 31
-R5
+R10
 Z17 !s107 ./line_drawer.sv|
 Z18 !s90 -reportprogress|300|./line_drawer.sv|
 !i113 1
-R6
+R4
 vline_drawer_testbench
 R1
-R2
+R5
 !i10b 1
-!s100 Ji5HbJZ]WcMn?4E[?N2650
-IaG@]Z6KLWJ4;oA`H3hSF61
-R3
+!s100 ONB4G?m2l3f=Jd7CNiB^^3
+I0>liXf10kT<C^S>@N?IDR2
+R2
 R13
 S1
 R0
 R14
 R15
 R16
-L0 104
-R4
+L0 105
+R3
 r1
 !s85 0
 31
-R5
+R10
 R17
 R18
 !i113 1
-R6
+R4
 vVGA_framebuffer
 R1
-R2
+R5
 !i10b 1
 !s100 nLO;OSAH_Dgb2M7a7SnTE2
 IcZREG_V]kOgQea4gi>3ec2
-R3
+R2
 !s105 VGA_framebuffer_sv_unit
 S1
 R0
@@ -139,13 +139,13 @@ w1652651726
 8./VGA_framebuffer.sv
 F./VGA_framebuffer.sv
 L0 32
-R4
+R3
 r1
 !s85 0
 31
-R5
+R10
 !s107 ./VGA_framebuffer.sv|
 !s90 -reportprogress|300|./VGA_framebuffer.sv|
 !i113 1
-R6
+R4
 n@v@g@a_framebuffer

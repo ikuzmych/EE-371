@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab5
-Mon May 16 15:11:37 2022
+Mon May 16 15:18:40 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -52,7 +52,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 16 15:11:37 2022       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 16 15:18:40 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; lab5                                        ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
@@ -487,7 +487,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon May 16 15:11:29 2022
+    Info: Processing started: Mon May 16 15:18:32 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab5 -c lab5
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -495,7 +495,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file vga_fra
     Info (12023): Found entity 1: VGA_framebuffer File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/VGA_framebuffer.sv Line: 32
 Info (12021): Found 2 design units, including 2 entities, in source file line_drawer.sv
     Info (12023): Found entity 1: line_drawer File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/line_drawer.sv Line: 18
-    Info (12023): Found entity 2: line_drawer_testbench File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/line_drawer.sv Line: 104
+    Info (12023): Found entity 2: line_drawer_testbench File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/line_drawer.sv Line: 105
 Info (12021): Found 2 design units, including 2 entities, in source file de1_soc.sv
     Info (12023): Found entity 1: DE1_SoC File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/DE1_SoC.sv Line: 21
     Info (12023): Found entity 2: DE1_SoC_testbench File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/DE1_SoC.sv Line: 99
@@ -620,9 +620,9 @@ Info (21057): Implemented 573 device resources after synthesis - the final resou
     Info (21061): Implemented 448 logic cells
     Info (21064): Implemented 38 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 4891 megabytes
-    Info: Processing ended: Mon May 16 15:11:37 2022
+    Info: Peak virtual memory: 4890 megabytes
+    Info: Processing ended: Mon May 16 15:18:40 2022
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
 
 
