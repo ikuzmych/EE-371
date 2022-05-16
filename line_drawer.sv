@@ -134,5 +134,3 @@ module line_drawer_testbench();
 endmodule // line_drawer_testbench
 
 
-
-
