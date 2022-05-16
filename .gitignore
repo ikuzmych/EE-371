@@ -47,3 +47,4 @@ output_files/lab5.map.summary
 *.qdb
 *.qtl
 *.qdb
+*.flock
