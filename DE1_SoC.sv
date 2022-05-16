@@ -43,28 +43,21 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 	assign HEX3 = '1;
 	assign HEX4 = '1;
 	assign HEX5 = '1;
-	assign LEDR[8:0] = SW[8:0];
+	// assign LEDR[8:0] = SW[8:0];
 	
-	logic signed [11:0] x0, y0, x1, y1, x, y;
-	logic white, black;
-	assign white = 1;
-	assign black = 0;
-	logic moveRight, moveLeft, moveDown, moveUp;
-	
-	assign moveRight = ~KEY[0];
-	assign moveLeft = ~KEY[1];
-	assign moveDown = ~KEY[2];
-	assign moveUp = ~KEY[3];
-	logic in;
+	logic signed [10:0] x0, y0, x1, y1, x, y;
+
 	logic reset;
 	logic [31:0] div_clk;
 	
+	logic systemclock;
+	// assign systemclock = div_clk[12];
+	assign systemclock = CLOCK_50;
 	
 	clock_divider dividedClocks(.clock(CLOCK_50), .reset(1'b0), .divided_clocks(div_clk));
 	
 	
 	
-	assign in = moveRight | moveLeft | moveDown | moveUp;
 	VGA_framebuffer fb (
 		.clk50			(CLOCK_50), 
 		.reset			(1'b0), 
@@ -81,73 +74,148 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 		.VGA_BLANK_n	(VGA_BLANK_N),
 		.VGA_SYNC_n		(VGA_SYNC_N));
 				
-	logic done, doneMoving;
+	logic done;
+	logic start;
+	logic clearScreen;
+	logic [32:0] counter;
+	
+	/* Logic to completely clear out the VGA screen */
+	assign clearScreen = SW[0];
+	
 	assign LEDR[9] = done;
 
 	assign reset = ~KEY[0];
 	
-//	enum { drawOriginalLine, colorblack, drawNewLine, Done } ps, ns;
-//	always_comb begin 
-//		case(ps) 
-//			
-//			drawOriginalLine: if (in) ns = colorblack;
-//									else ns = drawOriginalLine;
-//									
-//			colorblack: if (in) ns = drawNewLine;
-//							else ns = colorblack;
-//							
-//			drawNewLine: if (doneMoving) ns = Done;
-//							 else ns = drawNewLine;
-//							 
-//			Done: if (reset) ns = drawOriginalLine;
-//					else ns = Done;
-//			
-//		endcase
-//	
-//	end
+	assign LEDR[5] = (ps == clear);
+	
+	enum { clear, draw, pause, erase, updateReg1, updateReg2 } ps, ns;
+	
 
-	enum { draw, erase } ps, ns;
-	
-	
+	/**
+	 *
+	 *
+	 *
+	 */
 	always_comb begin 
 		case(ps)
-			draw: if (done) ns = erase;
-					else ns = draw;
+			
+			clear: begin start = 1;
+					 
+					 if ((x0 == 639) & done) ns = draw; 
+					 
+					 else ns = updateReg1;
+					 
+					 end
+			draw: begin start = 1;
+					if (clearScreen) ns = clear;
+					
+					else if (done) ns = pause;
 	
-			erase: if (done) ns = draw;
+					else ns = draw;
+					end
+			
+			
+			pause: begin start = 0;
+						if (clearScreen) ns = clear;
+						
+						else if (counter >= 10000000) ns = erase;
+						
+						else ns = pause;
+			       end
+			
+			
+			erase: begin start = 1;
+					 if (clearScreen) ns = clear;
+					 
+					 else if (done) begin ns = updateReg1; start = 0;
+					 end
+					 
 					 else ns = erase;
+					 end
+			
+			updateReg1: begin start = 0; ns = updateReg2;
+												  end
+			updateReg2: begin start = 0;
+								 
+								 if (clearScreen) ns = clear;
+								 else ns = draw;
+								 end
 		endcase
 	end
 	
-	always_ff @(posedge div_clk[10]) begin
+	/**
+	 *
+	 *
+	 *
+	 */
+	always_ff @(posedge systemclock) begin
 		if (reset)
 			ps <= draw;
-		else 
+		else
 			ps <= ns;	
-	
 	end
 	
+	/** 
+	 *
+	 *
+	 *
+	 */
 	always_comb begin
 		if (ps == draw)
-			pixel_color = white;
-		else 
-			pixel_color = black;
+			pixel_color = 1;
+		else
+			pixel_color = 0;
 	end
 	
-	
-	always_ff @(posedge div_clk[24]) begin
-		if (reset) begin
+	/** 
+	 *
+	 *
+	 *
+	 */	
+	always_ff @(posedge systemclock) begin
+		if (reset & ~clearScreen) begin
 			x0 <= 100;
+			x1 <= 200;
 			y0 <= 100;
-			x1 <= 300;
-			y1 <= 300;
-		end else if ((ps == erase) && (ns == draw))
+			y1 <= 250;
+			counter <= 0;
+		end
+		
+		if ((ns == clear) & (ps != clear)) begin
+			x0 <= 0;
+			y0 <= 0;
+			x1 <= 0;
+			y1 <= 459;
+		end
+		
+		if ((ps == clear) & done) begin
 			x0 <= x0 + 1;
 			x1 <= x1 + 1;
+		end
+		
+		if ((ns == pause) & (ps == draw)) counter <= 0;
+		
+		if (ps == pause) counter <= counter + 1;
+		
+		
+		
+		if ((ps == erase) & (ns == updateReg1) & ~clearScreen) begin
+			x0 <= x0 + 1;
+			x1 <= x1 + 1;
+			y0 <= y0 + 1;
+			y1 <= y1 + 1;
+		
+			if (((x1 > 639) | (y1 > 479))  & (~clearScreen)) begin
+				x0 <= 100;
+				y0 <= 100;
+				x1 <= 200;
+				y1 <= 250;
+			end
+		end
 	end
 	
 	
-	line_drawer lines (.clk(div_clk[10]), .reset(reset | done), .x0, .y0, .x1, .y1, .x, .y, .done);
+	line_drawer lines (.clk(systemclock), .reset(reset | done), .start, .x0, .y0, .x1, .y1, .x, .y, .done);
 	
 	
 	/** 
@@ -155,15 +223,11 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 	 * Draw a line first, then when want to move, color it black, and draw the same line shifted in a specified
 	 * direction
 	 */
-
 	
-	
-
-	// assign pixel_color = colorselect;
 	
 endmodule  // DE1_SoC
 
-/*
+
 module DE1_SoC_testbench();
 	logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
 	logic [9:0] LEDR;
@@ -178,7 +242,6 @@ module DE1_SoC_testbench();
 	logic VGA_HS;
 	logic VGA_SYNC_N;
 	logic VGA_VS;
-	logic clk;
 	
 	DE1_SoC dut(.*);
 	
@@ -188,15 +251,12 @@ module DE1_SoC_testbench();
 	end
 	
 	initial begin 
-		SW[0] <= 1; KEY[0] <= 1; KEY[1] <= 1; KEY[2] <= 1; KEY[3] <= 1; @(posedge CLOCK_50);
-		SW[0] <= 0; repeat (50) @(posedge CLOCK_50); // draw the original line
-		KEY[3] <= 0; repeat(3) @(posedge CLOCK_50); // draw new line moved up one
-		KEY[3] <= 1; repeat(20) @(posedge CLOCK_50);
+		KEY[0] <= 0; KEY[1] <= 0; repeat (2) @(posedge CLOCK_50);
+		KEY[0] <= 1; repeat(50) @(posedge CLOCK_50);
+		
 	$stop;
 	end
 
 endmodule
 
-
-*/
 
