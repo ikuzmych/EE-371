@@ -2,6 +2,7 @@ onerror {resume}
 quietly WaveActivateNextPane {} 0
 add wave -noupdate /line_drawer_testbench/clk
 add wave -noupdate -radix binary /line_drawer_testbench/reset
+add wave -noupdate /line_drawer_testbench/start
 add wave -noupdate -radix decimal /line_drawer_testbench/x0
 add wave -noupdate -radix decimal /line_drawer_testbench/y0
 add wave -noupdate -radix decimal /line_drawer_testbench/x1
@@ -16,7 +17,7 @@ add wave -noupdate -radix decimal /line_drawer_testbench/dut/dy
 add wave -noupdate -radix decimal /line_drawer_testbench/dut/sx
 add wave -noupdate -radix decimal /line_drawer_testbench/dut/sy
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {105 ps} 0}
+WaveRestoreCursors {{Cursor 1} {590 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 149
 configure wave -valuecolwidth 100
@@ -32,4 +33,4 @@ configure wave -griddelta 2
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {1020 ps}
+WaveRestoreZoom {120 ps} {1140 ps}

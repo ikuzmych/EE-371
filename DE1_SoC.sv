@@ -73,29 +73,22 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 	logic start;
 	logic clearScreen, clearState;
 	
-	/* Logic to completely clear out the VGA screen */
+	/* assignments to the DE1_SoC board for clearing the screen */
 	assign clearScreen = SW[0];
 	assign LEDR[0] = clearState;
 	
 	assign reset = ~KEY[0];
 	
 	
+	/* instantiations of the animation and line_drawer */
 	
 	animation customAnimation(.clk(systemclock), .reset, .start, .pixel_color, .clearScreen, .clearState, .done, .x0, .y0, .x1, .y1);
 	
 	line_drawer lines (.clk(systemclock), .reset(reset | done), .start, .x0, .y0, .x1, .y1, .x, .y, .done);
-	
-	
-	/** 
-	 * Animation pseudo-code: 
-	 * Draw a line first, then when want to move, color it black, and draw the same line shifted in a specified
-	 * direction
-	 */
-	
-	
+
 endmodule  // DE1_SoC
 
-
+/* DE1_SoC testbench */
 module DE1_SoC_testbench();
 	logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
 	logic [9:0] LEDR;
@@ -125,4 +118,4 @@ module DE1_SoC_testbench();
 	$stop;
 	end
 
-endmodule
+endmodule // DE1_SoC testbench
