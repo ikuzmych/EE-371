@@ -54,7 +54,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 	// assign systemclock = div_clk[12];
 	assign systemclock = CLOCK_50;
 	
-	clock_divider dividedClocks(.clock(CLOCK_50), .reset(1'b0), .divided_clocks(div_clk));
+//	clock_divider dividedClocks(.clock(CLOCK_50), .reset(1'b0), .divided_clocks(div_clk));
 	
 	
 	
@@ -83,7 +83,8 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 	assign clearScreen = SW[0];
 	
 	assign LEDR[9] = done;
-
+	assign LEDR[0] = (x0 == 0);
+	assign LEDR[1] = (x1 == 0);
 	assign reset = ~KEY[0];
 	
 	assign LEDR[5] = (ps == clear);
@@ -103,11 +104,13 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 					 
 					 if ((x0 == 639) & done) ns = draw; 
 					 
-					 else ns = updateReg1;
+					 else if (done) ns = updateReg1;
+					 
+					 else ns = clear;
 					 
 					 end
 			draw: begin start = 1;
-					if (clearScreen) ns = clear;
+					if (clearScreen) ns = updateReg1;
 					
 					else if (done) ns = pause;
 	
@@ -116,7 +119,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 			
 			
 			pause: begin start = 0;
-						if (clearScreen) ns = clear;
+						if (clearScreen) ns = updateReg1;
 						
 						else if (counter >= 10000000) ns = erase;
 						
@@ -125,7 +128,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 			
 			
 			erase: begin start = 1;
-					 if (clearScreen) ns = clear;
+					 if (clearScreen) ns = updateReg1;
 					 
 					 else if (done) begin ns = updateReg1; start = 0;
 					 end
@@ -174,25 +177,30 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 	 */	
 	always_ff @(posedge systemclock) begin
 		if (reset & ~clearScreen) begin
-			x0 <= 100;
-			x1 <= 200;
-			y0 <= 100;
-			y1 <= 250;
+			x0 <= 55;
+			x1 <= 440;
+			y0 <= 175;
+			y1 <= 15;
 			counter <= 0;
 		end
 		
-		if ((ns == clear) & (ps != clear)) begin
+		if ((ns == clear) & (ps != clear) & (ps != updateReg1) & (ps != updateReg2)) begin
 			x0 <= 0;
 			y0 <= 0;
 			x1 <= 0;
 			y1 <= 459;
 		end
 		
-		if ((ps == clear) & done) begin
+		if ((ps == clear) & (ns == updateReg1)) begin
 			x0 <= x0 + 1;
 			x1 <= x1 + 1;
 		end
-		
+		if ((ps == clear) & (ns != clear)) begin
+			x0 <= 55;
+			x1 <= 440;
+			y0 <= 175;
+			y1 <= 15;
+		end
 		if ((ns == pause) & (ps == draw)) counter <= 0;
 		
 		if (ps == pause) counter <= counter + 1;
@@ -200,17 +208,48 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 		
 		
 		if ((ps == erase) & (ns == updateReg1) & ~clearScreen) begin
-			x0 <= x0 + 1;
-			x1 <= x1 + 1;
-			y0 <= y0 + 1;
-			y1 <= y1 + 1;
-		
-			if (((x1 > 639) | (y1 > 479))  & (~clearScreen)) begin
-				x0 <= 100;
-				y0 <= 100;
-				x1 <= 200;
-				y1 <= 250;
+//			x0 <= x0 + 1;
+//			x1 <= x1 + 1;
+//			y0 <= y0 + 1;
+//			y1 <= y1 + 1;
+//		
+//			if (((x1 > 639) | (y1 > 479))  & (~clearScreen)) begin
+//				x0 <= 100;
+//				y0 <= 100;
+//				x1 <= 200;
+//				y1 <= 250;
+//			end
+			if (x0 == 55 & x1 == 440) begin
+				x0 <= 440;
+				x1 <= 500;
+				y0 <= 15;
+				y1 <= 300;
 			end
+			else if (x0 == 440 & x1 == 500) begin
+				x0 <= 500;
+				x1 <= 500;
+				y0 <= 300;
+				y1 <= 450;
+			end
+			else if (x0 == 500 & x1 == 500) begin
+				x0 <= 500;
+				x1 <= 15;
+				y0 <= 450;
+				y1 <= 450;
+			end
+			else if (x0 == 500 & x1 == 15) begin
+				x0 <= 15;
+				x1 <= 55;
+				y0 <= 450;
+				y1 <= 175;
+			end
+			else if (x0 == 15 & x1 == 55) begin
+				x0 <= 55;
+				x1 <= 440;
+				y0 <= 175;
+				y1 <= 15;
+			end			
+			
 		end
 	end
 	
@@ -258,5 +297,3 @@ module DE1_SoC_testbench();
 	end
 
 endmodule
-
-
