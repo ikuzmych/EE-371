@@ -70,14 +70,24 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW, CLOCK_50,
 		.VGA_SYNC_n		(VGA_SYNC_N));
 				
 	logic done;
-	logic start;
+	logic start, oldSW, newSW, oldKey, newKey;
 	logic clearScreen, clearState;
 	
+	/* always_ff block to take care of metastability for any manual inputs */
+	always_ff @(posedge systemclock) begin
+		oldSW <= SW[0];
+		newSW <= oldSW;
+		
+		oldKey <= ~KEY[0];
+		newKey <= oldKey;
+	end
+	
+	
 	/* assignments to the DE1_SoC board for clearing the screen */
-	assign clearScreen = SW[0];
+	assign clearScreen = newSW;
 	assign LEDR[0] = clearState;
 	
-	assign reset = ~KEY[0];
+	assign reset = newKey;
 	
 	
 	/* instantiations of the animation and line_drawer */

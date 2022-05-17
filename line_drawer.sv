@@ -156,7 +156,7 @@ module line_drawer_testbench();
 		/* horizontal line drawing towards the right */
 		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 105; y1 <= 100; @(posedge clk);
 		reset <= 0; repeat(8) @(posedge clk);
-		
+
 
 
 	$stop;
