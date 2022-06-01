@@ -61,18 +61,16 @@ module line_drawer(clk, reset, start, x0, y0, x1, y1, x, y, done);
 	/**
 	 * always_ff block to control dataflow of the algorithm
 	 */
-	logic [23:0] counter;
 	always_ff @(posedge clk) begin 
-		counter <= counter + 1;
 		if (reset | ~start) begin
 			done <= 0;
 			x <= x0;
 			y <= y0;
 			error <= dx + dy;
-			counter <= 0;
+
 		end // if
-		else if (counter == 24'd1000000) begin
-			counter <= 0;
+		else begin
+
 			if ((x == x1) && (y == y1))
 				done <= 1;
 			else begin

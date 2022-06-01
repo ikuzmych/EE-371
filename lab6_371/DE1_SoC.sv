@@ -27,10 +27,14 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 			 
 	
 	logic [23:0] counter;
-	logic unsigned [9:0] x0, x_paddle1_left, x_paddle1_right;
-	logic unsigned [8:0] y0, y_paddle1_bottom, y_paddle1_top;
+	logic unsigned [9:0] circle_width, x_paddle1_left, x_paddle1_right;
+	logic unsigned [8:0] circle_height, y_paddle1_bottom, y_paddle1_top;
 	logic rst;
-	logic moveUp, moveDown;
+	
+	logic signed [10:0] x0, x1;
+	logic signed [10:0] y0, y1;
+	logic done, start;
+	
 	assign rst = SW[0];
 	assign moveUp = ~KEY[0];
 	assign moveDown = ~KEY[1];
@@ -40,6 +44,33 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 	Click onepress1(.clock(CLOCK_50), .reset(rst), .in(~KEY[3]), .out(moveLeft));
 	Click onepress2(.clock(CLOCK_50), .reset(rst), .in(~KEY[2]), .out(moveRight));
 	
+
+	always_comb begin
+		
+		
+	
+	end
+	
+	always_ff @(posedge CLOCK_50) begin
+		start <= 1;
+		if (rst) begin
+			x0 <= 0;
+			x1 <= 320;
+			y0 <= 0;
+			y1 <= 450;
+			start <= 0;
+		end
+		else if (done) begin
+			x0 <= x1;
+			x1 <= 639;
+			y0 <= y1;
+			y1 <= 0;
+			start <= 0;
+		end
+	end
+	
+	
+	line_drawer circleTesting(.clk(CLOCK_50), .reset(rst), .start(), .x0, .y0, .x1, .y1, .x(circle_width), .y(circle_height), .done);
 	
 	
 	always_ff @(posedge CLOCK_50) begin
@@ -49,8 +80,6 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 		b <= 8'd0;
 		
 		if (rst) begin
-			x0 <= 10'd330;
-			y0 <= 9'd240;
 			counter <= 24'd0;
 			y_paddle1_bottom <= 9'd479;
 			y_paddle1_top <= 9'd460;
@@ -59,8 +88,6 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 		end
 		
 		if (counter == 24'd1000000) begin
-			x0 <= x0 + 10'd1;
-			y0 <= y0 + 9'd1;
 			counter <= 24'd0;
 		end
 		
@@ -78,7 +105,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 			b <= 8'd255;
 		end
 
-		if ((((x - x0)**2) + ((y - y0)**2)) <= (10**2)) begin
+		if ((((x - circle_width)**2) + ((y - circle_height)**2)) <= (10**2)) begin
 			r <= 8'd255;
 			g <= 8'd255;
 			b <= 8'd255;
