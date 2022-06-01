@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Wed Jun 01 12:12:14 2022
+Wed Jun 01 13:01:35 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -56,13 +56,13 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jun 01 12:12:14 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 01 13:01:35 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 137                                         ;
+; Total registers                 ; 205                                         ;
 ; Total pins                      ; 96                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -177,7 +177,13 @@ agreement for further details.
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -202,16 +208,16 @@ agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                                        ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 119                                                                                                          ;
+; Estimate of Logic utilization (ALMs needed) ; 251                                                                                                          ;
 ;                                             ;                                                                                                              ;
-; Combinational ALUT usage for logic          ; 216                                                                                                          ;
+; Combinational ALUT usage for logic          ; 442                                                                                                          ;
 ;     -- 7 input functions                    ; 1                                                                                                            ;
-;     -- 6 input functions                    ; 17                                                                                                           ;
-;     -- 5 input functions                    ; 12                                                                                                           ;
-;     -- 4 input functions                    ; 28                                                                                                           ;
-;     -- <=3 input functions                  ; 158                                                                                                          ;
+;     -- 6 input functions                    ; 55                                                                                                           ;
+;     -- 5 input functions                    ; 49                                                                                                           ;
+;     -- 4 input functions                    ; 67                                                                                                           ;
+;     -- <=3 input functions                  ; 270                                                                                                          ;
 ;                                             ;                                                                                                              ;
-; Dedicated logic registers                   ; 137                                                                                                          ;
+; Dedicated logic registers                   ; 205                                                                                                          ;
 ;                                             ;                                                                                                              ;
 ; I/O pins                                    ; 96                                                                                                           ;
 ;                                             ;                                                                                                              ;
@@ -221,9 +227,9 @@ agreement for further details.
 ;     -- PLLs                                 ; 1                                                                                                            ;
 ;                                             ;                                                                                                              ;
 ; Maximum fan-out node                        ; video_driver:v1|CLOCK25_PLL:c25_gen|CLOCK25_PLL_0002:clock25_pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 116                                                                                                          ;
-; Total fan-out                               ; 1263                                                                                                         ;
-; Average fan-out                             ; 2.30                                                                                                         ;
+; Maximum fan-out                             ; 117                                                                                                          ;
+; Total fan-out                               ; 2403                                                                                                         ;
+; Average fan-out                             ; 2.85                                                                                                         ;
 +---------------------------------------------+--------------------------------------------------------------------------------------------------------------+
 
 
@@ -232,14 +238,15 @@ agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name                       ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |DE1_SoC                                        ; 216 (100)           ; 137 (19)                  ; 0                 ; 4          ; 96   ; 0            ; |DE1_SoC                                                                                               ; DE1_SoC                           ; work         ;
+; |DE1_SoC                                        ; 442 (166)           ; 205 (27)                  ; 0                 ; 4          ; 96   ; 0            ; |DE1_SoC                                                                                               ; DE1_SoC                           ; work         ;
 ;    |Click:onepress1|                            ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|Click:onepress1                                                                               ; Click                             ; work         ;
 ;    |Click:onepress2|                            ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|Click:onepress2                                                                               ; Click                             ; work         ;
-;    |video_driver:v1|                            ; 112 (71)            ; 114 (59)                  ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1                                                                               ; video_driver                      ; work         ;
+;    |line_drawer:circleTesting|                  ; 158 (158)           ; 59 (59)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|line_drawer:circleTesting                                                                     ; line_drawer                       ; work         ;
+;    |video_driver:v1|                            ; 114 (72)            ; 115 (60)                  ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1                                                                               ; video_driver                      ; work         ;
 ;       |CLOCK25_PLL:c25_gen|                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1|CLOCK25_PLL:c25_gen                                                           ; CLOCK25_PLL                       ; CLOCK25_PLL  ;
 ;          |CLOCK25_PLL_0002:clock25_pll_inst|    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1|CLOCK25_PLL:c25_gen|CLOCK25_PLL_0002:clock25_pll_inst                         ; CLOCK25_PLL_0002                  ; CLOCK25_PLL  ;
 ;             |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1|CLOCK25_PLL:c25_gen|CLOCK25_PLL_0002:clock25_pll_inst|altera_pll:altera_pll_i ; altera_pll                        ; work         ;
-;       |altera_up_avalon_video_vga_timing:video| ; 41 (41)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1|altera_up_avalon_video_vga_timing:video                                       ; altera_up_avalon_video_vga_timing ; work         ;
+;       |altera_up_avalon_video_vga_timing:video| ; 42 (42)             ; 55 (55)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1|altera_up_avalon_video_vga_timing:video                                       ; altera_up_avalon_video_vga_timing ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -266,68 +273,52 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+----------------------------------------------+-----------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                ;
-+------------------------------------------+----------------------------------------+
-; Register name                            ; Reason for Removal                     ;
-+------------------------------------------+----------------------------------------+
-; y_paddle1_top[0,1]                       ; Stuck at GND due to stuck port data_in ;
-; y_paddle1_top[2,3]                       ; Stuck at VCC due to stuck port data_in ;
-; y_paddle1_top[4,5]                       ; Stuck at GND due to stuck port data_in ;
-; y_paddle1_top[6..8]                      ; Stuck at VCC due to stuck port data_in ;
-; y_paddle1_bottom[0..4]                   ; Stuck at VCC due to stuck port data_in ;
-; y_paddle1_bottom[5]                      ; Stuck at GND due to stuck port data_in ;
-; y_paddle1_bottom[6..8]                   ; Stuck at VCC due to stuck port data_in ;
-; line_drawer:circleTesting|error[0..11]   ; Lost fanout                            ;
-; line_drawer:circleTesting|y[9,10]        ; Lost fanout                            ;
-; line_drawer:circleTesting|x[10]          ; Lost fanout                            ;
-; line_drawer:circleTesting|counter[0..23] ; Lost fanout                            ;
-; line_drawer:circleTesting|done           ; Stuck at GND due to stuck port data_in ;
-; Click:onepress2|ps[2..31]                ; Stuck at GND due to stuck port data_in ;
-; Click:onepress1|ps[2..31]                ; Stuck at GND due to stuck port data_in ;
-; y1[0..10]                                ; Lost fanout                            ;
-; y0[9,10]                                 ; Lost fanout                            ;
-; x1[0..10]                                ; Lost fanout                            ;
-; x0[10]                                   ; Lost fanout                            ;
-; x_paddle1_right[0]                       ; Stuck at GND due to stuck port data_in ;
-; x_paddle1_left[0]                        ; Stuck at GND due to stuck port data_in ;
-; y0[0..8]                                 ; Stuck at GND due to stuck port data_in ;
-; x0[0..9]                                 ; Stuck at GND due to stuck port data_in ;
-; line_drawer:circleTesting|y[0..8]        ; Stuck at GND due to stuck port data_in ;
-; line_drawer:circleTesting|x[0..9]        ; Stuck at GND due to stuck port data_in ;
-; b[1..7]                                  ; Merged with b[0]                       ;
-; g[0..7]                                  ; Merged with b[0]                       ;
-; r[0..7]                                  ; Merged with b[0]                       ;
-; video_driver:v1|bout[1..7]               ; Merged with video_driver:v1|bout[0]    ;
-; video_driver:v1|gout[0..7]               ; Merged with video_driver:v1|bout[0]    ;
-; video_driver:v1|rout[0..7]               ; Merged with video_driver:v1|bout[0]    ;
-; Total Number of Removed Registers = 229  ;                                        ;
-+------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; y_paddle1_top[0,1]                      ; Stuck at GND due to stuck port data_in ;
+; y_paddle1_top[2,3]                      ; Stuck at VCC due to stuck port data_in ;
+; y_paddle1_top[4,5]                      ; Stuck at GND due to stuck port data_in ;
+; y_paddle1_top[6..8]                     ; Stuck at VCC due to stuck port data_in ;
+; y_paddle1_bottom[0..4]                  ; Stuck at VCC due to stuck port data_in ;
+; y_paddle1_bottom[5]                     ; Stuck at GND due to stuck port data_in ;
+; y_paddle1_bottom[6..8]                  ; Stuck at VCC due to stuck port data_in ;
+; ps[2..31]                               ; Stuck at GND due to stuck port data_in ;
+; Click:onepress2|ps[2..31]               ; Stuck at GND due to stuck port data_in ;
+; Click:onepress1|ps[2..31]               ; Stuck at GND due to stuck port data_in ;
+; x_paddle1_right[0]                      ; Stuck at GND due to stuck port data_in ;
+; x_paddle1_left[0]                       ; Stuck at GND due to stuck port data_in ;
+; b[1..7]                                 ; Merged with b[0]                       ;
+; g[0..7]                                 ; Merged with b[0]                       ;
+; r[1..7]                                 ; Merged with r[0]                       ;
+; video_driver:v1|rout[1..7]              ; Merged with video_driver:v1|rout[0]    ;
+; video_driver:v1|bout[1..7]              ; Merged with video_driver:v1|bout[0]    ;
+; video_driver:v1|gout[0..7]              ; Merged with video_driver:v1|bout[0]    ;
+; x0[7]                                   ; Merged with x0[10]                     ;
+; y0[0,2..5,9,10]                         ; Merged with x0[10]                     ;
+; x0[1..5,9]                              ; Merged with x0[0]                      ;
+; y0[1,6..8]                              ; Merged with x0[8]                      ;
+; x1[7]                                   ; Merged with x1[10]                     ;
+; y1[0,2..5,9,10]                         ; Merged with x1[10]                     ;
+; x1[1..5,9]                              ; Merged with x1[0]                      ;
+; y1[1,6..8]                              ; Merged with x1[8]                      ;
+; x1[10]                                  ; Stuck at GND due to stuck port data_in ;
+; x0[10]                                  ; Stuck at GND due to stuck port data_in ;
+; x1[6]                                   ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 193 ;                                        ;
++-----------------------------------------+----------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                       ;
-+-------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------+
-; Register name                       ; Reason for Removal        ; Registers Removed due to This Register                                                                          ;
-+-------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------+
-; line_drawer:circleTesting|done      ; Stuck at GND              ; y1[0], y1[1], y1[2], y1[3], y1[4], y1[5], y1[6], y1[7], y1[8], y1[9], y1[10], x1[0], x1[1], x1[2], x1[3],       ;
-;                                     ; due to stuck port data_in ; x1[4], x1[5], x1[6], x1[7], y0[0], y0[1], y0[2], y0[3], y0[4], y0[5], y0[6], y0[7], y0[8], x0[0], x0[1], x0[2], ;
-;                                     ;                           ; x0[3], x0[4], x0[5], x0[6], x0[7], x0[8], x0[9], line_drawer:circleTesting|y[0],                                ;
-;                                     ;                           ; line_drawer:circleTesting|y[1], line_drawer:circleTesting|y[2],                                                 ;
-;                                     ;                           ; line_drawer:circleTesting|y[3], line_drawer:circleTesting|y[4],                                                 ;
-;                                     ;                           ; line_drawer:circleTesting|y[5], line_drawer:circleTesting|y[6],                                                 ;
-;                                     ;                           ; line_drawer:circleTesting|y[7], line_drawer:circleTesting|y[8],                                                 ;
-;                                     ;                           ; line_drawer:circleTesting|x[0], line_drawer:circleTesting|x[1],                                                 ;
-;                                     ;                           ; line_drawer:circleTesting|x[2], line_drawer:circleTesting|x[3],                                                 ;
-;                                     ;                           ; line_drawer:circleTesting|x[4], line_drawer:circleTesting|x[5],                                                 ;
-;                                     ;                           ; line_drawer:circleTesting|x[6], line_drawer:circleTesting|x[7],                                                 ;
-;                                     ;                           ; line_drawer:circleTesting|x[8], line_drawer:circleTesting|x[9]                                                  ;
-; line_drawer:circleTesting|error[11] ; Lost Fanouts              ; x1[8], x1[9], x1[10], x0[10]                                                                                    ;
-; Click:onepress2|ps[3]               ; Stuck at GND              ; x_paddle1_right[0], x_paddle1_left[0]                                                                           ;
-;                                     ; due to stuck port data_in ;                                                                                                                 ;
-; line_drawer:circleTesting|y[10]     ; Lost Fanouts              ; y0[10]                                                                                                          ;
-; line_drawer:circleTesting|y[9]      ; Lost Fanouts              ; y0[9]                                                                                                           ;
-+-------------------------------------+---------------------------+-----------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                ;
++-----------------------+---------------------------+----------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register ;
++-----------------------+---------------------------+----------------------------------------+
+; Click:onepress2|ps[3] ; Stuck at GND              ; x_paddle1_right[0], x_paddle1_left[0]  ;
+;                       ; due to stuck port data_in ;                                        ;
++-----------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -335,28 +326,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 137   ;
-; Number of registers using Synchronous Clear  ; 68    ;
-; Number of registers using Synchronous Load   ; 25    ;
+; Total registers                              ; 205   ;
+; Number of registers using Synchronous Clear  ; 92    ;
+; Number of registers using Synchronous Load   ; 49    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 63    ;
+; Number of registers using Clock Enable       ; 100   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE1_SoC|video_driver:v1|yt[0] ;
-; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|x_paddle1_right[3]    ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|x[5]  ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|xd[6] ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|y[3]  ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|yd[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE1_SoC|video_driver:v1|yt[3]                 ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|x_paddle1_right[5]                    ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |DE1_SoC|line_drawer:circleTesting|counter[17] ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |DE1_SoC|line_drawer:circleTesting|x[0]        ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|line_drawer:circleTesting|x[10]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|x1[8]                                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |DE1_SoC|x0[8]                                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|line_drawer:circleTesting|y[1]        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |DE1_SoC|line_drawer:circleTesting|y[2]        ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|x[0]                  ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|xd[8]                 ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|y[5]                  ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|yd[3]                 ;
+; 6:1                ; 11 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |DE1_SoC|line_drawer:circleTesting|error[1]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------+
 
 
 +--------------------------------------------------------------+
@@ -646,7 +645,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port     ; Type   ; Severity ; Details                                                                             ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
-; start    ; Input  ; Info     ; Explicitly unconnected                                                              ;
 ; x[10]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; y[10..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------+--------+----------+-------------------------------------------------------------------------------------+
@@ -694,33 +692,41 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 137                         ;
+; arriav_ff             ; 205                         ;
+;     ENA               ; 15                          ;
 ;     ENA SCLR          ; 38                          ;
-;     ENA SLD           ; 25                          ;
-;     SCLR              ; 30                          ;
-;     plain             ; 44                          ;
-; arriav_lcell_comb     ; 217                         ;
-;     arith             ; 127                         ;
-;         1 data inputs ; 79                          ;
-;         2 data inputs ; 48                          ;
+;     ENA SLD           ; 47                          ;
+;     SCLR              ; 54                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 49                          ;
+; arriav_lcell_comb     ; 443                         ;
+;     arith             ; 238                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 123                         ;
+;         2 data inputs ; 50                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 26                          ;
+;         5 data inputs ; 16                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 75                          ;
+;     normal            ; 169                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 28                          ;
-;         5 data inputs ; 12                          ;
-;         6 data inputs ; 17                          ;
-;     shared            ; 14                          ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 20                          ;
+;         3 data inputs ; 13                          ;
+;         4 data inputs ; 41                          ;
+;         5 data inputs ; 33                          ;
+;         6 data inputs ; 55                          ;
+;     shared            ; 35                          ;
+;         0 data inputs ; 2                           ;
+;         2 data inputs ; 19                          ;
 ;         3 data inputs ; 14                          ;
 ; arriav_mac            ; 4                           ;
 ; boundary_port         ; 96                          ;
 ; generic_pll           ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.11                        ;
+; Max LUT depth         ; 6.10                        ;
+; Average LUT depth     ; 3.29                        ;
 +-----------------------+-----------------------------+
 
 
@@ -739,7 +745,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Jun 01 12:12:06 2022
+    Info: Processing started: Wed Jun 01 13:01:27 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file video_driver.sv
@@ -756,17 +762,12 @@ Info (12021): Found 1 design units, including 1 entities, in source file click.s
     Info (12023): Found entity 1: Click File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/Click.sv Line: 3
 Info (12021): Found 2 design units, including 2 entities, in source file line_drawer.sv
     Info (12023): Found entity 1: line_drawer File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/line_drawer.sv Line: 19
-    Info (12023): Found entity 2: line_drawer_testbench File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/line_drawer.sv Line: 103
-Warning (10236): Verilog HDL Implicit Net warning at DE1_SoC.sv(39): created implicit net for "moveUp" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at DE1_SoC.sv(40): created implicit net for "moveDown" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 40
+    Info (12023): Found entity 2: line_drawer_testbench File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/line_drawer.sv Line: 104
 Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at DE1_SoC.sv(39): object "moveUp" assigned a value but never read File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 39
-Warning (10036): Verilog HDL or VHDL warning at DE1_SoC.sv(40): object "moveDown" assigned a value but never read File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 40
-Warning (10036): Verilog HDL or VHDL warning at DE1_SoC.sv(36): object "start" assigned a value but never read File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 36
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(88): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 88
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(89): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 89
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(91): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 91
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(92): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 92
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(116): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 116
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(117): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 117
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(119): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 119
+Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(120): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 120
 Info (12128): Elaborating entity "video_driver" for hierarchy "video_driver:v1" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 26
 Info (12128): Elaborating entity "CLOCK25_PLL" for hierarchy "video_driver:v1|CLOCK25_PLL:c25_gen" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/video_driver.sv Line: 47
 Info (12128): Elaborating entity "CLOCK25_PLL_0002" for hierarchy "video_driver:v1|CLOCK25_PLL:c25_gen|CLOCK25_PLL_0002:clock25_pll_inst" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/CLOCK25_PLL.v Line: 20
@@ -835,30 +836,29 @@ Info (12133): Instantiated megafunction "video_driver:v1|CLOCK25_PLL:c25_gen|CLO
     Info (12134): Parameter "pll_type" = "General"
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "altera_up_avalon_video_vga_timing" for hierarchy "video_driver:v1|altera_up_avalon_video_vga_timing:video" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/video_driver.sv Line: 147
-Info (12128): Elaborating entity "Click" for hierarchy "Click:onepress1" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 44
-Info (12128): Elaborating entity "line_drawer" for hierarchy "line_drawer:circleTesting" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 66
+Info (12128): Elaborating entity "Click" for hierarchy "Click:onepress1" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 42
+Info (12128): Elaborating entity "line_drawer" for hierarchy "line_drawer:circleTesting" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 94
 Warning (10230): Verilog HDL assignment warning at line_drawer.sv(39): truncated value with size 32 to match size of target (3) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/line_drawer.sv Line: 39
 Warning (10230): Verilog HDL assignment warning at line_drawer.sv(40): truncated value with size 32 to match size of target (3) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/line_drawer.sv Line: 40
 Warning (10230): Verilog HDL assignment warning at line_drawer.sv(41): truncated value with size 32 to match size of target (13) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/line_drawer.sv Line: 41
 Warning (10230): Verilog HDL assignment warning at line_drawer.sv(66): truncated value with size 32 to match size of target (24) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/line_drawer.sv Line: 66
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 64 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance video_driver:v1|CLOCK25_PLL:c25_gen|CLOCK25_PLL_0002:clock25_pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Info (21057): Implemented 343 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 570 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 242 logic cells
+    Info (21061): Implemented 469 logic cells
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4890 megabytes
-    Info: Processing ended: Wed Jun 01 12:12:14 2022
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 4894 megabytes
+    Info: Processing ended: Wed Jun 01 13:01:35 2022
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+

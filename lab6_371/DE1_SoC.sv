@@ -36,8 +36,6 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 	logic done, start;
 	
 	assign rst = SW[0];
-	assign moveUp = ~KEY[0];
-	assign moveDown = ~KEY[1];
 	
 	logic moveLeft, moveRight;
 	
@@ -45,32 +43,56 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 	Click onepress2(.clock(CLOCK_50), .reset(rst), .in(~KEY[2]), .out(moveRight));
 	
 
-	always_comb begin
-		
-		
+	/* Enumerations for the controller block */
+	enum { draw, updateReg1, updateReg2 } ps, ns;
 	
+	/**
+	 * Controller for the animation, directing the states in proper order
+	 * The clear state is responsible for directing how long to stay in it and draw the blank line across the VGA
+	 * The draw state draws the specified line in the color white
+	 * The two buffer states are simply for updating the registers, and giving the machine enough clock cycles to update values in line_buffer
+	 */
+	always_comb begin 
+		case(ps)
+			
+			draw: begin start = 1;
+					if (done) begin ns = updateReg1; start = 0; end
+					else ns = draw;
+					end // draw
+	
+			updateReg1: begin start = 0; ns = updateReg2;
+												  end // updateReg1
+			updateReg2: begin start = 0;
+							ns = draw;
+						   end // updateReg2
+		endcase // case(ps)
+	end // always_comb
+	
+	always_ff @(posedge CLOCK_50) begin
+		if (rst)
+			ps <= updateReg1;
+		else
+			ps <= ns;
 	end
 	
 	always_ff @(posedge CLOCK_50) begin
-		start <= 1;
 		if (rst) begin
 			x0 <= 0;
 			x1 <= 320;
 			y0 <= 0;
 			y1 <= 450;
-			start <= 0;
 		end
 		else if (done) begin
 			x0 <= x1;
 			x1 <= 639;
 			y0 <= y1;
 			y1 <= 0;
-			start <= 0;
 		end
 	end
 	
 	
-	line_drawer circleTesting(.clk(CLOCK_50), .reset(rst), .start(), .x0, .y0, .x1, .y1, .x(circle_width), .y(circle_height), .done);
+	line_drawer circleTesting(.clk(CLOCK_50), .reset(rst), .start, .x0, .y0, .x1, .y1, .x(circle_width), .y(circle_height), .done);
+	testRAM smallteste(.address_a(), .address_b(), .clock(), .data_a(), .data_b(), .wren_a(), .wren_b(), .q_a(), .q_b() );
 	
 	
 	always_ff @(posedge CLOCK_50) begin
@@ -99,7 +121,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 			x_paddle1_right <= x_paddle1_right + 10;
 		end
 		
-		if ((x >= x_paddle1_left) && (x <= x_paddle1_right) && (y >= y_paddle1_top) && (y <= y_paddle1_bottom)) begin
+		if ((x >= x_paddle1_left) && (x <= x_paddle1_right) && (y >= y_paddle1_top) && (y <= y_paddle1_bottom)) begin // the good guy
 			r <= 8'd255;
 			g <= 8'd255;
 			b <= 8'd255;
@@ -111,6 +133,12 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 			b <= 8'd255;
 		end
 		
+		if ((y >= 9'd0) && (y <= 9'd20) && (x >= (circle_width - 10'd45)) && (x <= circle_width + 10'd45)) begin // the villain argghhh
+			r <= 8'd255;
+			g <= 8'd0;
+			b <= 8'd0;
+		end
+
 	end
 	
 	assign HEX0 = '1;

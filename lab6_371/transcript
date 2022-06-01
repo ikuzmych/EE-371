@@ -1,0 +1,110 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:45:20 on Jun 01,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:45:20 on Jun 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:45:20 on Jun 01,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# WARNING: No extended dataflow license exists
+# ** Error: Cannot open macro file: line_drawer_wave.do
+# Error in macro ./runlab.do line 17
+# Cannot open macro file: line_drawer_wave.do
+#     while executing
+# "do line_drawer_wave.do"
+add wave -position end  sim:/line_drawer_testbench/clk
+add wave -position end  sim:/line_drawer_testbench/reset
+add wave -position end  sim:/line_drawer_testbench/x0
+add wave -position end  sim:/line_drawer_testbench/y0
+add wave -position end  sim:/line_drawer_testbench/x1
+add wave -position end  sim:/line_drawer_testbench/y1
+add wave -position end  sim:/line_drawer_testbench/done
+add wave -position end  sim:/line_drawer_testbench/start
+add wave -position end  sim:/line_drawer_testbench/x
+add wave -position end  sim:/line_drawer_testbench/y
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/line_drawer_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:45:43 on Jun 01,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:45:43 on Jun 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:45:44 on Jun 01,2022, Elapsed time: 0:00:24
+# Errors: 3, Warnings: 1
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:45:44 on Jun 01,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# WARNING: No extended dataflow license exists
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(165)
+#    Time: 830 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 165
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:47:34 on Jun 01,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:47:34 on Jun 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:47:36 on Jun 01,2022, Elapsed time: 0:01:52
+# Errors: 0, Warnings: 1
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:47:36 on Jun 01,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(165)
+#    Time: 830 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 165
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:47:56 on Jun 01,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:47:56 on Jun 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:47:57 on Jun 01,2022, Elapsed time: 0:00:21
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:47:57 on Jun 01,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(165)
+#    Time: 4030 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 165

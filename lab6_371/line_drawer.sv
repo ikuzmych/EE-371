@@ -71,6 +71,7 @@ module line_drawer(clk, reset, start, x0, y0, x1, y1, x, y, done);
 			error <= dx + dy;
 			counter <= 0;
 		end // if
+		// else begin
 		else if (counter == 24'd1000000) begin
 			counter <= 0;
 			if ((x == x1) && (y == y1))
@@ -121,43 +122,43 @@ module line_drawer_testbench();
 	 */
 	initial begin
 		/* right-down for gradual slope */
-		reset <= 1; start <= 1; x0 <= 0; y0 <= 0; x1 <= 5; y1 <= 5; @(posedge clk);
-		reset <= 0; repeat(8) @(posedge clk);
+		reset <= 1; start <= 1; x0 <= 0; y0 <= 0; x1 <= 10; y1 <= 10; @(posedge clk);
+		reset <= 0; repeat(75) @(posedge clk);
 		/* right-up for gradual slope */
-		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 105; y1 <= 95; @(posedge clk);
-		reset <= 0; repeat(8) @(posedge clk);
+		start <= 0; x0 <= x1; y0 <= y1; x1 <= 20; y1 <= 0; @(posedge clk);
+		start <= 1; repeat(125) @(posedge clk);
 		
-		
-		/* left-up for gradual slope */
-		reset <= 1; x0 <= 5; y0 <= 5; x1 <= 0; y1 <= 0; @(posedge clk);
-		reset <= 0; repeat(8) @(posedge clk);
-		/* left-down for gradual slope */
-		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 90; y1 <= 105; @(posedge clk);
-		reset <= 0; repeat(20) @(posedge clk);
-		
-		/* right-down for steep slope */
-		reset <= 1; x0 <= 0; y0 <= 0; x1 <= 5; y1 <= 20; @(posedge clk);
-		reset <= 0; repeat(30) @(posedge clk);
-		/* right-up for steep slope */
-		reset <= 1; x0 <= 0; y0 <= 20; x1 <= 5; y1 <= 0; @(posedge clk);
-		reset <= 0; repeat(30) @(posedge clk);
-		
-		
-		/* left-up for steep slope */
-		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 95; y1 <= 80; @(posedge clk);
-		reset <= 0; repeat(30) @(posedge clk);
-		/* left-down for steep slope */
-		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 95; y1 <= 120; @(posedge clk);
-		reset <= 0; repeat(30) @(posedge clk);
-		
-		
-		
-		/* vertical line drawing straight down */
-		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 100; y1 <= 105; @(posedge clk);
-		reset <= 0; repeat(8) @(posedge clk);
-		/* horizontal line drawing towards the right */
-		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 105; y1 <= 100; @(posedge clk);
-		reset <= 0; repeat(8) @(posedge clk);
+//		
+//		/* left-up for gradual slope */
+//		reset <= 1; x0 <= 5; y0 <= 5; x1 <= 0; y1 <= 0; @(posedge clk);
+//		reset <= 0; repeat(8) @(posedge clk);
+//		/* left-down for gradual slope */
+//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 90; y1 <= 105; @(posedge clk);
+//		reset <= 0; repeat(20) @(posedge clk);
+//		
+//		/* right-down for steep slope */
+//		reset <= 1; x0 <= 0; y0 <= 0; x1 <= 5; y1 <= 20; @(posedge clk);
+//		reset <= 0; repeat(30) @(posedge clk);
+//		/* right-up for steep slope */
+//		reset <= 1; x0 <= 0; y0 <= 20; x1 <= 5; y1 <= 0; @(posedge clk);
+//		reset <= 0; repeat(30) @(posedge clk);
+//		
+//		
+//		/* left-up for steep slope */
+//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 95; y1 <= 80; @(posedge clk);
+//		reset <= 0; repeat(30) @(posedge clk);
+//		/* left-down for steep slope */
+//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 95; y1 <= 120; @(posedge clk);
+//		reset <= 0; repeat(30) @(posedge clk);
+//		
+//		
+//		
+//		/* vertical line drawing straight down */
+//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 100; y1 <= 105; @(posedge clk);
+//		reset <= 0; repeat(8) @(posedge clk);
+//		/* horizontal line drawing towards the right */
+//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 105; y1 <= 100; @(posedge clk);
+//		reset <= 0; repeat(8) @(posedge clk);
 
 
 
