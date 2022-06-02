@@ -1,10 +1,15 @@
 module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose); 
 	input logic clk, reset;
-	output logic signed [10:0] x, y;
+	output logic [9:0] x; 
+	output logic [8:0] y;
 	input logic [9:0] paddleXLeft, paddleXRight; // gets you the center of the circle
 	
 
 	output logic lose;
+	
+	assign x = xLineDrawer;
+	assign y = yLineDrawer;
+	
 	
 	logic signed [10:0] x0, y0; // new variables to pass into line_drawer
 	logic clock;
@@ -17,6 +22,8 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 	
 	logic collisionTrue;
 	logic [9:0] paddlePositionChecker;
+	
+	logic signed [10:0] xLineDrawer, yLineDrawer;
 	
 	assign circleX = x; assign circleY = y;
 	assign clock = clk;
@@ -34,11 +41,11 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 	 * The draw state draws the specified line in the color white
 	 * The two buffer states are simply for updating the registers, and giving the machine enough clock cycles to update values in line_buffer
 	 */
-	always_comb begin 
+	always_comb begin
 		case(ps)
 			
 			draw: begin start = 1;
-					if (done || collisionTrue) begin ns = updateReg1; start = 0; end
+					if (done || collisionTrue || reset) begin ns = updateReg1; start = 0; end
 					else ns = draw;
 					end // draw
 	
@@ -49,7 +56,7 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 						   end // updateReg2
 		endcase // case(ps)
 	end // always_comb
-	
+
 	always_ff @(posedge clk) begin
 		if (reset)
 			ps <= updateReg1;
@@ -62,7 +69,7 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 		collisionTrue <= 0;
 
 		if (reset) begin
-			currentSlope <= 1;
+			currentSlope <= -1;
 			lose <= 0;
 			x0 <= 100;
 			y0 <= 100;
@@ -98,7 +105,7 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 	
 	paddlePositionsROM ranges(.address(rdAddress), .clock, .q(ROMSlope));
 	
-	line_drawer drawCircle(.clk, .reset, .start, .slope(currentSlope), .x0, .y0, .x, .y, .done);
+	line_drawer drawCircle(.clk, .reset, .start, .slope(currentSlope), .x0, .y0, .x(xLineDrawer), .y(yLineDrawer), .done);
 	
 	
 endmodule

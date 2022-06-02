@@ -859,6 +859,7 @@ clk => ps[29].CLK
 clk => ps[30].CLK
 clk => ps[31].CLK
 clk => paddlePositionsROM:ranges.clock
+reset => always0.IN1
 reset => ps.OUTPUTSELECT
 reset => ps.OUTPUTSELECT
 reset => currentSlope.OUTPUTSELECT
@@ -919,7 +920,6 @@ x[6] <= line_drawer:drawCircle.x[6]
 x[7] <= line_drawer:drawCircle.x[7]
 x[8] <= line_drawer:drawCircle.x[8]
 x[9] <= line_drawer:drawCircle.x[9]
-x[10] <= line_drawer:drawCircle.x[10]
 y[0] <= line_drawer:drawCircle.y[0]
 y[1] <= line_drawer:drawCircle.y[1]
 y[2] <= line_drawer:drawCircle.y[2]
@@ -929,8 +929,6 @@ y[5] <= line_drawer:drawCircle.y[5]
 y[6] <= line_drawer:drawCircle.y[6]
 y[7] <= line_drawer:drawCircle.y[7]
 y[8] <= line_drawer:drawCircle.y[8]
-y[9] <= line_drawer:drawCircle.y[9]
-y[10] <= line_drawer:drawCircle.y[10]
 lose <= lose~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
