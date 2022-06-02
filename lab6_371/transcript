@@ -1476,3 +1476,5 @@ do runlab.do
 # ** Note: $stop    : ./collisions.sv(140)
 #    Time: 80010 ps  Iteration: 1  Instance: /collisions_testbench
 # Break in Module collisions_testbench at ./collisions.sv line 140
+# End time: 16:26:51 on Jun 02,2022, Elapsed time: 0:20:46
+# Errors: 0, Warnings: 0
