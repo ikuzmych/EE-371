@@ -4,7 +4,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 	output logic [9:0] LEDR;
 	input logic [3:0] KEY;
 	input logic [9:0] SW;
-
+	
 	input CLOCK_50;
 	output [7:0] VGA_R;
 	output [7:0] VGA_G;
@@ -31,88 +31,57 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 	logic unsigned [8:0] circle_height, y_paddle1_bottom, y_paddle1_top;
 	logic rst;
 	
-	logic signed [10:0] x0, x1;
-	logic signed [10:0] y0, y1;
+	logic signed [10:0] x0;
+	logic signed [10:0] y0;
 	logic done, start;
 	
 	assign rst = SW[0];
 	
 	logic moveLeft, moveRight;
 	
+	/** x0 = 619 -> x1 = 639  
+	 *  y0 = 0   -> y1 = 20
+	 
+	 // if edge pixels of circle reach x1 = 639  ** current coordinate (639, 20)
+	 // x0 = x1 and 0 = y1
+	 // x1 = 639 - (479 - 20)
+	 */
 	Click onepress1(.clock(CLOCK_50), .reset(rst), .in(~KEY[3]), .out(moveLeft));
 	Click onepress2(.clock(CLOCK_50), .reset(rst), .in(~KEY[2]), .out(moveRight));
 	
 
-	/* Enumerations for the controller block */
-	enum { draw, updateReg1, updateReg2 } ps, ns;
-	
-	/**
-	 * Controller for the animation, directing the states in proper order
-	 * The clear state is responsible for directing how long to stay in it and draw the blank line across the VGA
-	 * The draw state draws the specified line in the color white
-	 * The two buffer states are simply for updating the registers, and giving the machine enough clock cycles to update values in line_buffer
-	 */
-	always_comb begin 
-		case(ps)
-			
-			draw: begin start = 1;
-					if (done) begin ns = updateReg1; start = 0; end
-					else ns = draw;
-					end // draw
-	
-			updateReg1: begin start = 0; ns = updateReg2;
-												  end // updateReg1
-			updateReg2: begin start = 0;
-							ns = draw;
-						   end // updateReg2
-		endcase // case(ps)
-	end // always_comb
-	
-	always_ff @(posedge CLOCK_50) begin
-		if (rst)
-			ps <= updateReg1;
-		else
-			ps <= ns;
-	end
 	
 	always_ff @(posedge CLOCK_50) begin
 		if (rst) begin
 			x0 <= 0;
-			x1 <= 320;
 			y0 <= 0;
-			y1 <= 450;
 		end
 		else if (done) begin
-			x0 <= x1;
-			x1 <= 639;
-			y0 <= y1;
-			y1 <= 0;
+			x0 <= 20;
+			y0 <= 20;
 		end
 	end
 	
 	
-	line_drawer circleTesting(.clk(CLOCK_50), .reset(rst), .start, .x0, .y0, .x1, .y1, .x(circle_width), .y(circle_height), .done);
-	testRAM smallteste(.address_a(), .address_b(), .clock(), .data_a(), .data_b(), .wren_a(), .wren_b(), .q_a(), .q_b() );
+	line_drawer circleTesting(.clk(CLOCK_50), .reset(rst), .start, .x0, .y0, .slope(1), .x(circle_width), .y(circle_height), .done);
 	
+	logic lose;
+	logic [9:0] xCirclePosition;
+	logic [8:0] yCirclePosition;
 	
 	always_ff @(posedge CLOCK_50) begin
-		counter <= counter + 24'd1;	
 		r <= 8'd0;
 		g <= 8'd0;
 		b <= 8'd0;
 		
 		if (rst) begin
-			counter <= 24'd0;
 			y_paddle1_bottom <= 9'd479;
 			y_paddle1_top <= 9'd460;
-			x_paddle1_right <= 10'd280;
+			x_paddle1_right <= 10'd274; // 90 pixels wide
 			x_paddle1_left <= 10'd190;
 		end
 		
-		if (counter == 24'd1000000) begin
-			counter <= 24'd0;
-		end
-		
+
 		if (moveLeft && (x_paddle1_left > 0)) begin 
 			x_paddle1_left <= x_paddle1_left - 10;
 			x_paddle1_right <= x_paddle1_right - 10;
@@ -127,19 +96,33 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 			b <= 8'd255;
 		end
 
-		if ((((x - circle_width)**2) + ((y - circle_height)**2)) <= (10**2)) begin
+		if ((((x - xCirclePosition)**2) + ((y - yCirclePosition)**2)) <= (10**2)) begin
 			r <= 8'd255;
 			g <= 8'd255;
 			b <= 8'd255;
 		end
 		
-		if ((y >= 9'd0) && (y <= 9'd20) && (x >= (circle_width - 10'd45)) && (x <= circle_width + 10'd45)) begin // the villain argghhh
+		if ((y >= 9'd0) && (y <= 9'd20) && (x >= (xCirclePosition - 10'd45)) && (x <= xCirclePosition + 10'd45)) begin // the villain argghhh
 			r <= 8'd255;
 			g <= 8'd0;
 			b <= 8'd0;
 		end
-
+		
+		if (lose) begin
+			r <= 8'd0;
+			g <= 8'd0;
+			b <= 8'd0;
+		end
 	end
+	
+	 
+	
+	
+	
+	collisions ballsLogicShrek(.clk(CLOCK_50), .reset(rst), .paddleXLeft(x_paddle1_left), .paddleXRight(x_paddle1_right), .x(xCirclePosition), .y(yCirclePosition), .lose); 
+	
+	
+	
 	
 	assign HEX0 = '1;
 	assign HEX1 = '1;

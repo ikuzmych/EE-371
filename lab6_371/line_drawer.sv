@@ -16,9 +16,10 @@
  *   done	- flag that line has finished drawing
  *
  */
-module line_drawer(clk, reset, start, x0, y0, x1, y1, x, y, done);
+module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 	input logic clk, reset;
-	input logic signed [10:0]	x0, y0, x1, y1;
+	input logic signed [10:0]	x0, y0;
+	input logic signed [3:0] slope;
 	input logic start;
 	
 	
@@ -33,13 +34,34 @@ module line_drawer(clk, reset, start, x0, y0, x1, y1, x, y, done);
 	logic signed [12:0] e2;
 	logic signed [11:0] dx, dy;
 	logic signed [2:0] sx, sy;
-	
+	logic signed x1, y1;
 	
 	/* assigned values of sx and sy */
 	assign sx = x0 < x1 ? 1: -1;
 	assign sy = y0 < y1 ? 1: -1;
 	assign e2 = 2 * error;
+
+
+	/* greatest algorithm ever conjured */
+	/* probably does not work */
 	
+	always_ff @(posedge clk) begin
+		if (~start) begin
+			if (x0 == 639) begin
+				x1 <= 0; y1 <= y0 + 639 * slope;
+			end else if (x0 == 0) begin
+				x1 <= 639; y1 <= y0 - 639 * slope;
+			end
+			else if (y0 == 469) begin
+				y1 <= 10; x1 <= x0 + 459 / slope;
+			end else if (y0 == 10) begin
+				y1 <= 469; x1 <= x0 - 459 / slope;
+			end
+		end
+	end
+
+
+
 	/**
 	 * always_comb block to determine the signed values
 	 */
@@ -103,7 +125,8 @@ endmodule  // line_drawer
 /* line_drawer testbench */
 module line_drawer_testbench();
 	logic clk, reset;
-	logic signed [10:0]	x0, y0, x1, y1;
+	logic signed [10:0]	x0, y0;
+	logic signed [3:0] slope;
 	logic done, start;
 	logic signed [10:0] x, y;
 
@@ -121,13 +144,13 @@ module line_drawer_testbench();
 	 * in drawing angled and vertical lines
 	 */
 	initial begin
-		/* right-down for gradual slope */
-		reset <= 1; start <= 1; x0 <= 0; y0 <= 0; x1 <= 10; y1 <= 10; @(posedge clk);
-		reset <= 0; repeat(75) @(posedge clk);
-		/* right-up for gradual slope */
-		start <= 0; x0 <= x1; y0 <= y1; x1 <= 20; y1 <= 0; @(posedge clk);
-		start <= 1; repeat(125) @(posedge clk);
-		
+//		/* right-down for gradual slope */
+//		reset <= 1; start <= 1; x0 <= 0; y0 <= 0; x1 <= 10; y1 <= 10; @(posedge clk);
+//		reset <= 0; repeat(75) @(posedge clk);
+//		/* right-up for gradual slope */
+//		start <= 0; x0 <= x1; y0 <= y1; x1 <= 20; y1 <= 0; @(posedge clk);
+//		start <= 1; repeat(125) @(posedge clk);
+//		
 //		
 //		/* left-up for gradual slope */
 //		reset <= 1; x0 <= 5; y0 <= 5; x1 <= 0; y1 <= 0; @(posedge clk);
