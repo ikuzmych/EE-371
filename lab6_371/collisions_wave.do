@@ -12,12 +12,14 @@ add wave -noupdate -radix decimal /collisions_testbench/dut/drawCircle/y0
 add wave -noupdate /collisions_testbench/dut/drawCircle/x1
 add wave -noupdate /collisions_testbench/dut/drawCircle/y1
 add wave -noupdate -radix decimal /collisions_testbench/dut/drawCircle/slope
-add wave -noupdate -radix decimal /collisions_testbench/dut/drawCircle/start
+add wave -noupdate -radix binary /collisions_testbench/dut/drawCircle/start
 add wave -noupdate -radix decimal /collisions_testbench/dut/drawCircle/x
 add wave -noupdate -radix decimal /collisions_testbench/dut/drawCircle/y
 add wave -noupdate /collisions_testbench/dut/check
+add wave -noupdate -radix decimal /collisions_testbench/dut/paddlePositionChecker
+add wave -noupdate -radix decimal /collisions_testbench/dut/ranges/q
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {63550 ps} 0}
+WaveRestoreCursors {{Cursor 1} {43130 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -33,4 +35,4 @@ configure wave -griddelta 2
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {0 ps} {84011 ps}
+WaveRestoreZoom {36386 ps} {46888 ps}

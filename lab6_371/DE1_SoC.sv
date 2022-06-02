@@ -54,7 +54,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 		
 		if (rst) begin
 			y_paddle1_bottom <= 9'd479;
-			y_paddle1_top <= 9'd460;
+			y_paddle1_top <= 9'd470;
 			x_paddle1_right <= 10'd274; // 90 pixels wide
 			x_paddle1_left <= 10'd190;
 		end
@@ -80,7 +80,15 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 			b <= 8'd255;
 		end
 		
-		if ((y >= 9'd0) && (y <= 9'd20) && (x >= (xCirclePosition - 10'd45)) && (x <= xCirclePosition + 10'd45)) begin // the villain argghhh
+		if (xCirclePosition <= 42) begin
+			if ((y >= 9'd0) && (y <= 9'd10) && (x >= 0) && (x <= 84)) begin
+				r <= 8'd255;
+				g <= 8'd0;
+				b <= 8'd0;				
+			end
+		end
+		
+		else if ((y >= 9'd0) && (y <= 9'd10) && (x >= (xCirclePosition - 10'd42)) && (x <= xCirclePosition + 10'd42)) begin // the villain argghhh
 			r <= 8'd255;
 			g <= 8'd0;
 			b <= 8'd0;

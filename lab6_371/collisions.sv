@@ -28,8 +28,8 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 	
 	assign circleX = x; assign circleY = y;
 	assign clock = clk;
-	assign paddlePositionChecker = (circleX - paddleXLeft) / 7;
-	
+	assign paddlePositionChecker = (circleX - paddleXLeft) / 12;
+	assign rdAddress = paddlePositionChecker;	
 	
 	
 	
@@ -77,28 +77,28 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 			check <= 0;
 		end
 
-		if ((((circleX == 629) || (circleX == 10) || (circleY == 20)) || (circleY == 459)) && check) begin
+		if ((((circleX == 629) || (circleX == 10) || (circleY == 20))) && check) begin
 			currentSlope <= currentSlope * -1;
 			x0 <= circleX;
 			y0 <= circleY;
 			check <= 0;
 			collisionTrue <= 1;
-			
 		end
 		
 		if ((circleX >= 30) && (circleX <= 620) && (circleY < 455) && (circleY > 20)) begin
 			check <= 1;
 		end
 
-		if (circleY == 459) begin
-			if ((paddlePositionChecker < 0) || (paddlePositionChecker > 6)) begin
-				lose <= 1;
-			end else begin
+		if ((circleY == 459) && check) begin
+			check <= 0;
+			lose <= 1;
+			
+			if (((paddlePositionChecker >= 0) && (paddlePositionChecker <= 6))) begin
+				lose <= 0;
 				collisionTrue <= 1;
-				rdAddress <= paddlePositionChecker;
+				
 				x0 <= circleX;
 				y0 <= circleY;
-
 				if (paddlePositionChecker < 3) begin
 					currentSlope <= ROMSlope * -1;
 				end else if (paddlePositionChecker == 3) begin
@@ -106,7 +106,6 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 				end else begin
 					currentSlope <= ROMSlope;
 				end
-
 			end
 		end
 	end
@@ -135,7 +134,7 @@ module collisions_testbench();
 	end
 	
 	initial begin
-		reset <= 1; paddleXLeft <= 190; paddleXRight <= 274; @(posedge clk);
+		reset <= 1; paddleXLeft <= 176; paddleXRight <= 250; @(posedge clk);
 		reset <= 0; repeat(4000) @(posedge clk);
 		
 	$stop;

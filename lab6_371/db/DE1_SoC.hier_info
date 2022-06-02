@@ -793,11 +793,6 @@ out <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 
 |DE1_SoC|collisions:ballsLogicShrek
 clk => line_drawer:drawCircle.clk
-clk => rdAddress[0].CLK
-clk => rdAddress[1].CLK
-clk => rdAddress[2].CLK
-clk => rdAddress[3].CLK
-clk => rdAddress[4].CLK
 clk => check.CLK
 clk => y0[0].CLK
 clk => y0[1].CLK

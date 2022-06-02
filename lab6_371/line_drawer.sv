@@ -52,7 +52,7 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 			if (x0 == 629) begin
 				x1 <= 0; y1 <= y0 + 629 * slope;
 			end else if (x0 == 10) begin
-				x1 <= 629; y1 <= y0 + 619 * slope;
+				x1 <= 629; y1 <= y0 - 619 * slope;
 			end
 			else if (y0 == 459) begin
 				y1 <= 10; x1 <= x0 + 449 / slope;
@@ -96,7 +96,7 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 			counter <= 0;
 		end // if
 		// else begin
-		else if (counter == 24'd1000000) begin
+		else if (counter == 24'd500000) begin
 			counter <= 0;
 			if ((x == x1) && (y == y1))
 				done <= 1;
