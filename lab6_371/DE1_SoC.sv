@@ -25,15 +25,9 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 			 .VGA_R, .VGA_G, .VGA_B, .VGA_BLANK_N,
 			 .VGA_CLK, .VGA_HS, .VGA_SYNC_N, .VGA_VS);
 			 
-	
-	logic [23:0] counter;
-	logic unsigned [9:0] circle_width, x_paddle1_left, x_paddle1_right;
-	logic unsigned [8:0] circle_height, y_paddle1_bottom, y_paddle1_top;
+	logic unsigned [9:0] x_paddle1_left, x_paddle1_right;
+	logic unsigned [8:0] y_paddle1_bottom, y_paddle1_top;
 	logic rst;
-	
-	logic signed [10:0] x0;
-	logic signed [10:0] y0;
-	logic done, start;
 	
 	assign rst = SW[0];
 	
@@ -48,22 +42,6 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 	 */
 	Click onepress1(.clock(CLOCK_50), .reset(rst), .in(~KEY[3]), .out(moveLeft));
 	Click onepress2(.clock(CLOCK_50), .reset(rst), .in(~KEY[2]), .out(moveRight));
-	
-
-	
-	always_ff @(posedge CLOCK_50) begin
-		if (rst) begin
-			x0 <= 0;
-			y0 <= 0;
-		end
-		else if (done) begin
-			x0 <= 20;
-			y0 <= 20;
-		end
-	end
-	
-	
-	line_drawer circleTesting(.clk(CLOCK_50), .reset(rst), .start, .x0, .y0, .slope(1), .x(circle_width), .y(circle_height), .done);
 	
 	logic lose;
 	logic [9:0] xCirclePosition;
