@@ -34,7 +34,7 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 	logic signed [12:0] e2;
 	logic signed [11:0] dx, dy;
 	logic signed [2:0] sx, sy;
-	logic signed [10:0] x1, y1;
+	logic signed [12:0] x1, y1;
 	
 	/* assigned values of sx and sy */
 	assign sx = x0 < x1 ? 1: -1;
@@ -47,17 +47,17 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 	
 	always_ff @(posedge clk) begin
 		if (~start || reset) begin
-			x1 <= 680;
-			y1 = 480;
-			if (x0 == 639) begin
-				x1 <= 0; y1 <= y0 + 639 * slope;
-			end else if (x0 == 0) begin
-				x1 <= 639; y1 <= y0 - 639 * slope;
+			x1 <= 240;
+			y1 = 459;
+			if (x0 == 629) begin
+				x1 <= 0; y1 <= y0 + 629 * slope;
+			end else if (x0 == 10) begin
+				x1 <= 629; y1 <= y0 + 619 * slope;
 			end
-			else if (y0 == 469) begin
-				y1 <= 10; x1 <= x0 + 459 / slope;
+			else if (y0 == 459) begin
+				y1 <= 10; x1 <= x0 + 449 / slope;
 			end else if (y0 == 10) begin
-				y1 <= 469; x1 <= x0 - 459 / slope;
+				y1 <= 459; x1 <= x0 - 449 / slope;
 			end
 		end
 	end
@@ -96,7 +96,7 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 			counter <= 0;
 		end // if
 		// else begin
-		else if (counter == 24'd5) begin
+		else if (counter == 24'd1000000) begin
 			counter <= 0;
 			if ((x == x1) && (y == y1))
 				done <= 1;

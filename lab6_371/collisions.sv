@@ -1,15 +1,9 @@
 module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose); 
 	input logic clk, reset;
-	output logic [9:0] x; 
-	output logic [8:0] y;
+	output logic [10:0] x; 
+	output logic [10:0] y;
 	input logic [9:0] paddleXLeft, paddleXRight; // gets you the center of the circle
-	
-
 	output logic lose;
-	
-	assign x = xLineDrawer;
-	assign y = yLineDrawer;
-	
 	
 	logic signed [10:0] x0, y0; // new variables to pass into line_drawer
 	logic clock;
@@ -24,6 +18,13 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 	logic [9:0] paddlePositionChecker;
 	
 	logic signed [10:0] xLineDrawer, yLineDrawer;
+	logic check;
+	
+	assign x = xLineDrawer;
+	assign y = yLineDrawer;
+	
+	
+
 	
 	assign circleX = x; assign circleY = y;
 	assign clock = clk;
@@ -64,25 +65,32 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 			ps <= ns;
 	end
 
-
+	
 	always_ff @(posedge clk) begin
 		collisionTrue <= 0;
-
+		
 		if (reset) begin
 			currentSlope <= -1;
 			lose <= 0;
 			x0 <= 100;
 			y0 <= 100;
+			check <= 0;
 		end
 
-		if ((circleX == 629) || (circleX == 0) || (circleY == 10)) begin
+		if ((((circleX == 629) || (circleX == 10) || (circleY == 20)) || (circleY == 459)) && check) begin
 			currentSlope <= currentSlope * -1;
 			x0 <= circleX;
 			y0 <= circleY;
+			check <= 0;
 			collisionTrue <= 1;
+			
+		end
+		
+		if ((circleX >= 30) && (circleX <= 620) && (circleY < 455) && (circleY > 20)) begin
+			check <= 1;
 		end
 
-		if (circleY == 469) begin
+		if (circleY == 459) begin
 			if ((paddlePositionChecker < 0) || (paddlePositionChecker > 6)) begin
 				lose <= 1;
 			end else begin
@@ -109,3 +117,32 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 	
 	
 endmodule
+
+`timescale 1 ps / 1 ps
+module collisions_testbench();
+	logic clk, reset;
+	logic [10:0] x; 
+	logic [10:0] y;
+	logic [9:0] paddleXLeft, paddleXRight; // gets you the center of the circle
+	logic lose;
+	
+	collisions dut(.*);
+	
+	
+	initial begin
+		clk <= 0;
+		forever #10 clk <= ~clk;
+	end
+	
+	initial begin
+		reset <= 1; paddleXLeft <= 190; paddleXRight <= 274; @(posedge clk);
+		reset <= 0; repeat(4000) @(posedge clk);
+		
+	$stop;
+	end
+	
+
+endmodule
+
+
+
