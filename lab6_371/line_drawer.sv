@@ -47,17 +47,17 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 	
 	always_ff @(posedge clk) begin
 		if (~start || reset) begin
-			x1 <= 240;
-			y1 = 459;
+			// x1 <= 240;
+			// y1 = 459;
 			if (x0 == 629) begin
-				x1 <= 0; y1 <= y0 + 629 * slope;
+				x1 <= 10; y1 <= y0 + 609 * slope;
 			end else if (x0 == 10) begin
 				x1 <= 629; y1 <= y0 - 619 * slope;
 			end
 			else if (y0 == 459) begin
-				y1 <= 10; x1 <= x0 + 449 / slope;
-			end else if (y0 == 10) begin
-				y1 <= 459; x1 <= x0 - 449 / slope;
+				y1 <= 20; x1 <= x0 + 439 / slope;
+			end else if (y0 == 20) begin
+				y1 <= 459; x1 <= x0 - 439 / slope;
 			end
 		end
 	end

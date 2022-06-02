@@ -72,8 +72,8 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 		if (reset) begin
 			currentSlope <= -1;
 			lose <= 0;
-			x0 <= 100;
-			y0 <= 100;
+			x0 <= 20;
+			y0 <= 20;
 			check <= 0;
 		end
 

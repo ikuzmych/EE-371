@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Thu Jun 02 16:20:47 2022
+Thu Jun 02 16:47:49 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jun 02 16:20:47 2022       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jun 02 16:47:49 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
@@ -238,14 +238,14 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 461            ;
+; Estimate of Logic utilization (ALMs needed) ; 463            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 848            ;
+; Combinational ALUT usage for logic          ; 851            ;
 ;     -- 7 input functions                    ; 3              ;
-;     -- 6 input functions                    ; 67             ;
-;     -- 5 input functions                    ; 158            ;
-;     -- 4 input functions                    ; 102            ;
-;     -- <=3 input functions                  ; 518            ;
+;     -- 6 input functions                    ; 69             ;
+;     -- 5 input functions                    ; 162            ;
+;     -- 4 input functions                    ; 106            ;
+;     -- <=3 input functions                  ; 511            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 251            ;
 ;                                             ;                ;
@@ -260,7 +260,7 @@ agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 147            ;
-; Total fan-out                               ; 4028           ;
+; Total fan-out                               ; 4047           ;
 ; Average fan-out                             ; 3.08           ;
 +---------------------------------------------+----------------+
 
@@ -270,11 +270,11 @@ agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                     ; Entity Name                       ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |DE1_SoC                                        ; 848 (159)           ; 251 (20)                  ; 320               ; 7          ; 96   ; 0            ; |DE1_SoC                                                                                                                                                ; DE1_SoC                           ; work         ;
+; |DE1_SoC                                        ; 851 (159)           ; 251 (20)                  ; 320               ; 7          ; 96   ; 0            ; |DE1_SoC                                                                                                                                                ; DE1_SoC                           ; work         ;
 ;    |Click:onepress1|                            ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|Click:onepress1                                                                                                                                ; Click                             ; work         ;
 ;    |Click:onepress2|                            ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|Click:onepress2                                                                                                                                ; Click                             ; work         ;
-;    |collisions:ballsLogicShrek|                 ; 571 (80)            ; 112 (28)                  ; 320               ; 3          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek                                                                                                                     ; collisions                        ; work         ;
-;       |line_drawer:drawCircle|                  ; 395 (295)           ; 84 (84)                   ; 0                 ; 2          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle                                                                                              ; line_drawer                       ; work         ;
+;    |collisions:ballsLogicShrek|                 ; 574 (80)            ; 112 (28)                  ; 320               ; 3          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek                                                                                                                     ; collisions                        ; work         ;
+;       |line_drawer:drawCircle|                  ; 398 (298)           ; 84 (84)                   ; 0                 ; 2          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle                                                                                              ; line_drawer                       ; work         ;
 ;          |lpm_divide:Div0|                      ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|lpm_divide:Div0                                                                              ; lpm_divide                        ; work         ;
 ;             |lpm_divide_6po:auto_generated|     ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|lpm_divide:Div0|lpm_divide_6po:auto_generated                                                ; lpm_divide_6po                    ; work         ;
 ;                |abs_divider_fbg:divider|        ; 100 (20)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|lpm_divide:Div0|lpm_divide_6po:auto_generated|abs_divider_fbg:divider                        ; abs_divider_fbg                   ; work         ;
@@ -378,7 +378,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 251   ;
-; Number of registers using Synchronous Clear  ; 104   ;
+; Number of registers using Synchronous Clear  ; 102   ;
 ; Number of registers using Synchronous Load   ; 44    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -393,20 +393,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|r[0]                                                         ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE1_SoC|video_driver:v1|yt[6]                                        ;
-; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|x_paddle1_left[8]                                            ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|counter[0] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|x[5]       ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|y[5]       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE1_SoC|video_driver:v1|yt[0]                                        ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|x_paddle1_left[7]                                            ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|counter[3] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|x[2]       ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|y[8]       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|y[10]      ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|y1[12]     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|y1[8]      ;
 ; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|x[7]                                         ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|xd[4]                                        ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|x0[9]                             ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|y[0]                                         ;
-; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|yd[3]                                        ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|x1[9]      ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|xd[7]                                        ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 19 LEs               ; 19 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|x0[5]                             ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|y[1]                                         ;
+; 5:1                ; 9 bits    ; 27 LEs        ; 0 LEs                ; 27 LEs                 ; Yes        ; |DE1_SoC|video_driver:v1|yd[5]                                        ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|y1[1]      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|x1[3]      ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|x1[9]      ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|currentSlope[3]                   ;
 ; 6:1                ; 12 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|error[9]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
@@ -883,29 +883,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 251                         ;
-;     ENA               ; 49                          ;
-;     ENA SCLR          ; 50                          ;
+;     ENA               ; 51                          ;
+;     ENA SCLR          ; 48                          ;
 ;     ENA SLD           ; 44                          ;
 ;     SCLR              ; 54                          ;
 ;     plain             ; 54                          ;
-; arriav_lcell_comb     ; 849                         ;
-;     arith             ; 369                         ;
-;         0 data inputs ; 25                          ;
+; arriav_lcell_comb     ; 852                         ;
+;     arith             ; 372                         ;
+;         0 data inputs ; 28                          ;
 ;         1 data inputs ; 153                         ;
 ;         2 data inputs ; 53                          ;
-;         3 data inputs ; 36                          ;
-;         4 data inputs ; 16                          ;
-;         5 data inputs ; 86                          ;
+;         3 data inputs ; 37                          ;
+;         4 data inputs ; 19                          ;
+;         5 data inputs ; 82                          ;
 ;     extend            ; 3                           ;
 ;         7 data inputs ; 3                           ;
 ;     normal            ; 371                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 10                          ;
 ;         2 data inputs ; 83                          ;
-;         3 data inputs ; 52                          ;
-;         4 data inputs ; 85                          ;
-;         5 data inputs ; 72                          ;
-;         6 data inputs ; 67                          ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 86                          ;
+;         5 data inputs ; 80                          ;
+;         6 data inputs ; 69                          ;
 ;     shared            ; 106                         ;
 ;         0 data inputs ; 6                           ;
 ;         1 data inputs ; 18                          ;
@@ -918,7 +918,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 10                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 24.60                       ;
-; Average LUT depth     ; 8.57                        ;
+; Average LUT depth     ; 8.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -937,7 +937,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Jun 02 16:20:38 2022
+    Info: Processing started: Thu Jun 02 16:47:41 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file video_driver.sv
@@ -1117,18 +1117,18 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 5 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance video_driver:v1|CLOCK25_PLL:c25_gen|CLOCK25_PLL_0002:clock25_pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v Line: 749
     Info: Must be connected
-Info (21057): Implemented 988 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 991 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 81 output pins
-    Info (21061): Implemented 874 logic cells
+    Info (21061): Implemented 877 logic cells
     Info (21064): Implemented 10 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 7 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4914 megabytes
-    Info: Processing ended: Thu Jun 02 16:20:47 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4912 megabytes
+    Info: Processing ended: Thu Jun 02 16:47:49 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+
