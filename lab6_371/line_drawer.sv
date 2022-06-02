@@ -34,7 +34,7 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 	logic signed [12:0] e2;
 	logic signed [11:0] dx, dy;
 	logic signed [2:0] sx, sy;
-	logic signed x1, y1;
+	logic signed [10:0] x1, y1;
 	
 	/* assigned values of sx and sy */
 	assign sx = x0 < x1 ? 1: -1;
@@ -46,7 +46,9 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 	/* probably does not work */
 	
 	always_ff @(posedge clk) begin
-		if (~start) begin
+		if (~start || reset) begin
+			x1 <= 680;
+			y1 = 480;
 			if (x0 == 639) begin
 				x1 <= 0; y1 <= y0 + 639 * slope;
 			end else if (x0 == 0) begin
@@ -94,7 +96,7 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 			counter <= 0;
 		end // if
 		// else begin
-		else if (counter == 24'd1000000) begin
+		else if (counter == 24'd5) begin
 			counter <= 0;
 			if ((x == x1) && (y == y1))
 				done <= 1;
@@ -144,13 +146,14 @@ module line_drawer_testbench();
 	 * in drawing angled and vertical lines
 	 */
 	initial begin
-//		/* right-down for gradual slope */
-//		reset <= 1; start <= 1; x0 <= 0; y0 <= 0; x1 <= 10; y1 <= 10; @(posedge clk);
-//		reset <= 0; repeat(75) @(posedge clk);
-//		/* right-up for gradual slope */
-//		start <= 0; x0 <= x1; y0 <= y1; x1 <= 20; y1 <= 0; @(posedge clk);
-//		start <= 1; repeat(125) @(posedge clk);
-//		
+		/* right-down for gradual slope */
+		reset <= 1; start <= 0; x0 <= 20; y0 <= 20; slope <= 1; @(posedge clk);
+		reset <= 0; repeat(2) @(posedge clk);
+		start <= 1; repeat(75) @(posedge clk);
+		/* right-up for gradual slope */
+		start <= 0; @(posedge clk);
+		start <= 1; repeat(125) @(posedge clk);
+		
 //		
 //		/* left-up for gradual slope */
 //		reset <= 1; x0 <= 5; y0 <= 5; x1 <= 0; y1 <= 0; @(posedge clk);
