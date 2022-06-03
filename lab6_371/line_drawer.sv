@@ -6,9 +6,8 @@
  *   reset  - resets the module and starts over the drawing process
  *   start  - signal that tells the algorithm to perform the process
  *	 x0 	- x coordinate of the first end point
- *   y0 	- y coordinate of the first end point
- *   x1 	- x coordinate of the second end point
- *   y1 	- y coordinate of the second end point
+ *  y0 	- y coordinate of the first end point
+ *  slope - 4-bit signed input that tells the program in which direction to draw a line
  *
  * Outputs:
  *   x 		- x coordinate of the pixel to color
@@ -42,25 +41,36 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 	assign e2 = 2 * error;
 
 
-	/* greatest algorithm ever conjured */
-	/* probably does not work */
+	/**
+	 * always_ff block which changes behavior of line_drawer completely from lab 5.
+	 * Now, x1 and y1 are generated internally rather than being input. The provided slope allows 
+	 * x1 and y1 be generated.
+	 */
 	
 	always_ff @(posedge clk) begin
+		
+		/**
+	    * Start being signaled low indicates a collision, 
+		 * so x1 and y1 are updated based on the provided new slope and x0 and y0 coordinates
+		 */
 		if (~start || reset) begin
-			// x1 <= 240;
-			// y1 = 459;
 			if (x0 == 629) begin
 				x1 <= 10; y1 <= y0 + 609 * slope;
-			end else if (x0 == 10) begin
+			end // if (x0 == 629)
+			
+			else if (x0 == 10) begin
 				x1 <= 629; y1 <= y0 - 619 * slope;
-			end
+			end // else if (x0 == 10)
+			
 			else if (y0 == 459) begin
 				y1 <= 20; x1 <= x0 + 439 / slope;
-			end else if (y0 == 20) begin
+			end // else if (y0 == 459)
+			
+			else if (y0 == 20) begin
 				y1 <= 459; x1 <= x0 - 439 / slope;
-			end
-		end
-	end
+			end // else if (y0 == 20)
+		end // if (~start || reset)
+	end // always_ff
 
 
 

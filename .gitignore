@@ -13,3 +13,7 @@ lab6_371/vsim.wlf
 lab6_371/transcript
 lab6_371/DE1_SoC.qws
 lab6_371/transcript
+*.hdb
+*.cdb
+*.tmw_info
+*.cdb
