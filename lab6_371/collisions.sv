@@ -1,10 +1,29 @@
-module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose); 
+/* Given two points on the screen this module draws a line between
+ * those two points by coloring necessary pixels
+ *
+ * Inputs:
+ *   clk    - should be connected to a 50 MHz clock
+ *   reset  - resets the module and starts over the drawing process
+ *   start  - signal that tells the algorithm to perform the process
+ *	 x0 	- x coordinate of the first end point
+ *   y0 	- y coordinate of the first end point
+ *   x1 	- x coordinate of the second end point
+ *   y1 	- y coordinate of the second end point
+ *
+ * Outputs:
+ *   x 		- x coordinate of the pixel to color
+ *   y 		- y coordinate of the pixel to color
+ *   done	- flag that line has finished drawing
+ *
+ */
+module collisions(clk, reset, paddleXLeft, paddleXRight, score, x, y, lose); 
 	input logic clk, reset;
 	output logic [10:0] x; 
 	output logic [10:0] y;
 	input logic [9:0] paddleXLeft, paddleXRight; // gets you the center of the circle
 	output logic lose;
-	
+	output logic [7:0] score;
+
 	logic signed [10:0] x0, y0; // new variables to pass into line_drawer
 	logic clock;
 	logic [9:0] ROMSlope;
@@ -75,6 +94,7 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 			x0 <= 20;
 			y0 <= 20;
 			check <= 0;
+			score <= 0;
 		end
 
 		if ((((circleX == 629) || (circleX == 10) || (circleY == 20))) && check) begin
@@ -96,7 +116,7 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 			if (((paddlePositionChecker >= 0) && (paddlePositionChecker <= 6))) begin
 				lose <= 0;
 				collisionTrue <= 1;
-				
+				score <= score + 1;
 				x0 <= circleX;
 				y0 <= circleY;
 				if (paddlePositionChecker < 3) begin
@@ -124,6 +144,7 @@ module collisions_testbench();
 	logic [10:0] y;
 	logic [9:0] paddleXLeft, paddleXRight; // gets you the center of the circle
 	logic lose;
+	logic [7:0] score;
 	
 	collisions dut(.*);
 	

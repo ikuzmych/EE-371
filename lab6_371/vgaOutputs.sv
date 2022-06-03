@@ -6,13 +6,16 @@ module vgaOutputs(clk, reset, moveLeft, moveRight, lose, x, y, x_paddle1_left, x
 	input logic [8:0] yCirclePosition;
 	
 	output logic [7:0] r, g, b;
-	
-	
 	output logic unsigned [9:0] x_paddle1_left, x_paddle1_right;
+
+	
 	logic unsigned [8:0] y_paddle1_bottom, y_paddle1_top;	
 	
 	
-	
+	/** 
+	 *
+	 *
+	 */
 	always_ff @(posedge clk) begin
 		r <= 8'd0;
 		g <= 8'd0;
@@ -21,7 +24,7 @@ module vgaOutputs(clk, reset, moveLeft, moveRight, lose, x, y, x_paddle1_left, x
 		if (reset) begin
 			y_paddle1_bottom <= 9'd479;
 			y_paddle1_top <= 9'd470;
-			x_paddle1_right <= 10'd274; // 90 pixels wide
+			x_paddle1_right <= 10'd274;
 			x_paddle1_left <= 10'd190;
 		end
 		
