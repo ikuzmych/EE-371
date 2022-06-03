@@ -8,9 +8,6 @@ vlog "./line_drawer.sv"
 vlog "./collisions.sv"
 vlog "./paddlePositionsROM.v"
 vlog "./vgaOutputs.sv"
-vlog "./seg7.sv"
-vlog "./n8_driver.sv"
-vlog "./serial_driver.sv"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the

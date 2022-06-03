@@ -1,5 +1,5 @@
-/* This module is entirely responsible for the behavior of the game upon reaching any collision, including:
- * 1. hitting left or right wall. 2. hitting AI paddle. 3. hitting the user's paddle
+/* This module is responsible for the generation and behavior of: 1. user paddle. 2. villain paddle. and the generation of
+ * the circle based on a specified equation and the current x and y scanned pixels by the VGA
  *
  * Inputs:
  *   clk    - 1-bit clock input hooked up to CLOCK_50 in the top-level module
@@ -26,7 +26,7 @@ module vgaOutputs(clk, reset, moveLeft, moveRight, lose, x, y, x_paddle1_left, x
 	output logic [7:0] r, g, b;
 	output logic unsigned [9:0] x_paddle1_left, x_paddle1_right;
 
-	
+	/* y positions of the user paddle. remains constant throughout */
 	logic unsigned [8:0] y_paddle1_bottom, y_paddle1_top;	
 	
 	
@@ -80,7 +80,7 @@ module vgaOutputs(clk, reset, moveLeft, moveRight, lose, x, y, x_paddle1_left, x
 			end // if ((y >= 9'd0) && (y <= 9'd10) && (x >= 0) && (x <= 84))
 		end // if (xCirclePosition <= 42)
 		
-		else if ((y >= 9'd0) && (y <= 9'd10) && (x >= (xCirclePosition - 10'd42)) && (x <= xCirclePosition + 10'd42)) begin // the villain argghhh
+		else if ((y >= 9'd0) && (y <= 9'd10) && (x >= (xCirclePosition - 10'd42)) && (x <= xCirclePosition + 10'd42)) begin // computer-controlled paddle
 			r <= 8'd255;
 			g <= 8'd0;
 			b <= 8'd0;
@@ -95,6 +95,7 @@ module vgaOutputs(clk, reset, moveLeft, moveRight, lose, x, y, x_paddle1_left, x
 	
 endmodule // vgaOutputs
 
+/* vgaOutputs testbench */
 module vgaOutputs_testbench();
 	logic clk, reset, moveLeft, moveRight, lose;
 	logic [9:0] x;
@@ -118,8 +119,6 @@ module vgaOutputs_testbench();
 		moveLeft <= 1; repeat (5) @(posedge clk);
 		moveLeft <= 0; moveRight <= 1; repeat(5) @(posedge clk);
 		
-		/* showing the rgb colors activate when in the area of the circle */
-		x <= x + 1; y <= y + 1; repeat (50) @(posedge clk);
 		
 		/* white rgb values for player paddle */
 		x <= 200; y <= 475; repeat(2) @(posedge clk); 
@@ -129,10 +128,4 @@ module vgaOutputs_testbench();
 	$stop;
 	end // initial
 	
-endmodule
-
-
-
-
-
-
+endmodule // vgaOutputs_testbench
