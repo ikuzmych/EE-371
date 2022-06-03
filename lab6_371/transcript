@@ -2,299 +2,712 @@
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:24 on Jun 03,2022
+# Start time: 11:31:34 on Jun 03,2022
 # vlog -reportprogress 300 ./line_drawer.sv 
 # -- Compiling module line_drawer
 # -- Compiling module line_drawer_testbench
 # 
 # Top level modules:
 # 	line_drawer_testbench
-# End time: 00:46:24 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:31:35 on Jun 03,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:24 on Jun 03,2022
+# Start time: 11:31:35 on Jun 03,2022
 # vlog -reportprogress 300 ./collisions.sv 
 # -- Compiling module collisions
 # -- Compiling module collisions_testbench
 # 
 # Top level modules:
 # 	collisions_testbench
-# End time: 00:46:24 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:31:35 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:24 on Jun 03,2022
+# Start time: 11:31:35 on Jun 03,2022
 # vlog -reportprogress 300 ./paddlePositionsROM.v 
 # -- Compiling module paddlePositionsROM
 # 
 # Top level modules:
 # 	paddlePositionsROM
-# End time: 00:46:24 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:31:35 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:24 on Jun 03,2022
+# Start time: 11:31:35 on Jun 03,2022
 # vlog -reportprogress 300 ./vgaOutputs.sv 
 # -- Compiling module vgaOutputs
 # -- Compiling module vgaOutputs_testbench
 # 
 # Top level modules:
 # 	vgaOutputs_testbench
-# End time: 00:46:24 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:31:35 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:24 on Jun 03,2022
-# vlog -reportprogress 300 ./seg7.sv 
-# -- Compiling module seg7
-# 
-# Top level modules:
-# 	seg7
-# End time: 00:46:24 on Jun 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:24 on Jun 03,2022
-# vlog -reportprogress 300 ./n8_driver.sv 
-# -- Compiling module n8_driver
-# 
-# Top level modules:
-# 	n8_driver
-# End time: 00:46:24 on Jun 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:24 on Jun 03,2022
-# vlog -reportprogress 300 ./serial_driver.sv 
-# -- Compiling module serial_driver
-# ** Error: ./serial_driver.sv(26): (vlog-2730) Undefined variable: 'count'.
-# End time: 00:46:24 on Jun 03,2022, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 13
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog "./serial_driver.sv""
+# vsim -voptargs=""+acc"" -t 1ps -lib work collisions_testbench 
+# Start time: 11:31:35 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.collisions_testbench
+# Loading work.collisions
+# Loading work.paddlePositionsROM
+# ** Error: (vsim-3033) ./paddlePositionsROM.v(59): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /collisions_testbench/dut/ranges File: ./paddlePositionsROM.v
+#         Searched libraries:
+#             C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/work
+# Loading work.line_drawer
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 15
+vsim -voptargs=\"+acc\" -t 1ps -lib work work.collisions_testbench -Lf altera_mf_ver
+# vsim -voptargs=""+acc"" -t 1ps -lib work work.collisions_testbench -Lf altera_mf_ver 
+# Start time: 11:31:35 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.collisions_testbench
+# Loading work.collisions
+# Loading work.paddlePositionsROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.line_drawer
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -position end  sim:/collisions_testbench/clk
+add wave -position end  sim:/collisions_testbench/reset
+add wave -position end  sim:/collisions_testbench/x
+add wave -position end  sim:/collisions_testbench/y
+add wave -position end  sim:/collisions_testbench/paddleXLeft
+add wave -position end  sim:/collisions_testbench/paddleXRight
+add wave -position end  sim:/collisions_testbench/lose
+add wave -position end  sim:/collisions_testbench/score
+add wave -position end  sim:/collisions_testbench/sw
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlft7hg696".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7hg696
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/collisions_wave.do
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:41 on Jun 03,2022
+# Start time: 11:34:34 on Jun 03,2022
 # vlog -reportprogress 300 ./line_drawer.sv 
 # -- Compiling module line_drawer
 # -- Compiling module line_drawer_testbench
 # 
 # Top level modules:
 # 	line_drawer_testbench
-# End time: 00:46:41 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:34:34 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:41 on Jun 03,2022
+# Start time: 11:34:34 on Jun 03,2022
 # vlog -reportprogress 300 ./collisions.sv 
 # -- Compiling module collisions
 # -- Compiling module collisions_testbench
 # 
 # Top level modules:
 # 	collisions_testbench
-# End time: 00:46:41 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:34:34 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:41 on Jun 03,2022
+# Start time: 11:34:34 on Jun 03,2022
 # vlog -reportprogress 300 ./paddlePositionsROM.v 
 # -- Compiling module paddlePositionsROM
 # 
 # Top level modules:
 # 	paddlePositionsROM
-# End time: 00:46:41 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:34:34 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:46:41 on Jun 03,2022
+# Start time: 11:34:34 on Jun 03,2022
 # vlog -reportprogress 300 ./vgaOutputs.sv 
 # -- Compiling module vgaOutputs
 # -- Compiling module vgaOutputs_testbench
 # 
 # Top level modules:
 # 	vgaOutputs_testbench
-# End time: 00:46:41 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:34:34 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work vgaOutputs_testbench 
-# Start time: 00:46:42 on Jun 03,2022
+# End time: 11:34:34 on Jun 03,2022, Elapsed time: 0:02:59
+# Errors: 1, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work collisions_testbench -Lf altera_mf_ver 
+# Start time: 11:34:34 on Jun 03,2022
 # Loading sv_std.std
-# Loading work.vgaOutputs_testbench
-# Loading work.vgaOutputs
-# ** Error: Cannot open macro file: vgaOutputs_wave.do
-# Error in macro ./runlab.do line 20
-# Cannot open macro file: vgaOutputs_wave.do
-#     while executing
-# "do vgaOutputs_wave.do"
-add wave -position end  sim:/vgaOutputs_testbench/clk
-add wave -position end  sim:/vgaOutputs_testbench/reset
-add wave -position end  sim:/vgaOutputs_testbench/moveLeft
-add wave -position end  sim:/vgaOutputs_testbench/moveRight
-add wave -position end  sim:/vgaOutputs_testbench/lose
-add wave -position end  sim:/vgaOutputs_testbench/x
-add wave -position end  sim:/vgaOutputs_testbench/y
-add wave -position end  sim:/vgaOutputs_testbench/xCirclePosition
-add wave -position end  sim:/vgaOutputs_testbench/yCirclePosition
-add wave -position end  sim:/vgaOutputs_testbench/r
-add wave -position end  sim:/vgaOutputs_testbench/g
-add wave -position end  sim:/vgaOutputs_testbench/b
-add wave -position end  sim:/vgaOutputs_testbench/x_paddle1_left
-add wave -position end  sim:/vgaOutputs_testbench/x_paddle1_right
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/vgaOutputs_wave.do}
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:47:31 on Jun 03,2022
-# vlog -reportprogress 300 ./line_drawer.sv 
-# -- Compiling module line_drawer
-# -- Compiling module line_drawer_testbench
-# 
-# Top level modules:
-# 	line_drawer_testbench
-# End time: 00:47:31 on Jun 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:47:31 on Jun 03,2022
-# vlog -reportprogress 300 ./collisions.sv 
-# -- Compiling module collisions
-# -- Compiling module collisions_testbench
-# 
-# Top level modules:
-# 	collisions_testbench
-# End time: 00:47:31 on Jun 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:47:31 on Jun 03,2022
-# vlog -reportprogress 300 ./paddlePositionsROM.v 
-# -- Compiling module paddlePositionsROM
-# 
-# Top level modules:
-# 	paddlePositionsROM
-# End time: 00:47:31 on Jun 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:47:31 on Jun 03,2022
-# vlog -reportprogress 300 ./vgaOutputs.sv 
-# -- Compiling module vgaOutputs
-# -- Compiling module vgaOutputs_testbench
-# 
-# Top level modules:
-# 	vgaOutputs_testbench
-# End time: 00:47:31 on Jun 03,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 00:47:32 on Jun 03,2022, Elapsed time: 0:00:50
-# Errors: 3, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work vgaOutputs_testbench 
-# Start time: 00:47:32 on Jun 03,2022
-# Loading sv_std.std
-# Loading work.vgaOutputs_testbench
-# Loading work.vgaOutputs
+# Loading work.collisions_testbench
+# Loading work.collisions
+# Loading work.paddlePositionsROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.line_drawer
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlft1r1cts".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1r1cts
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./vgaOutputs.sv(129)
-#    Time: 6550 ps  Iteration: 1  Instance: /vgaOutputs_testbench
-# Break in Module vgaOutputs_testbench at ./vgaOutputs.sv line 129
+# ** Note: $stop    : ./collisions.sv(224)
+#    Time: 80010 ps  Iteration: 1  Instance: /collisions_testbench
+# Break in Module collisions_testbench at ./collisions.sv line 224
+add wave -position end  sim:/collisions_testbench/dut/collisionTrue
+add wave -position end  sim:/collisions_testbench/dut/currentSlope
+add wave -position end  sim:/collisions_testbench/dut/ps
+add wave -position end  sim:/collisions_testbench/dut/ns
+add wave -position 4  sim:/collisions_testbench/dut/circleX
+add wave -position 5  sim:/collisions_testbench/dut/circleY
+add wave -position end  sim:/collisions_testbench/dut/start
+add wave -position end  sim:/collisions_testbench/dut/done
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/collisions_wave.do
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:48:15 on Jun 03,2022
+# Start time: 11:42:40 on Jun 03,2022
 # vlog -reportprogress 300 ./line_drawer.sv 
 # -- Compiling module line_drawer
 # -- Compiling module line_drawer_testbench
 # 
 # Top level modules:
 # 	line_drawer_testbench
-# End time: 00:48:15 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:42:40 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:48:15 on Jun 03,2022
+# Start time: 11:42:40 on Jun 03,2022
 # vlog -reportprogress 300 ./collisions.sv 
 # -- Compiling module collisions
 # -- Compiling module collisions_testbench
 # 
 # Top level modules:
 # 	collisions_testbench
-# End time: 00:48:15 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:42:40 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:48:15 on Jun 03,2022
+# Start time: 11:42:40 on Jun 03,2022
 # vlog -reportprogress 300 ./paddlePositionsROM.v 
 # -- Compiling module paddlePositionsROM
 # 
 # Top level modules:
 # 	paddlePositionsROM
-# End time: 00:48:15 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:42:41 on Jun 03,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:48:15 on Jun 03,2022
+# Start time: 11:42:41 on Jun 03,2022
 # vlog -reportprogress 300 ./vgaOutputs.sv 
 # -- Compiling module vgaOutputs
 # -- Compiling module vgaOutputs_testbench
 # 
 # Top level modules:
 # 	vgaOutputs_testbench
-# End time: 00:48:15 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 11:42:41 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 00:48:18 on Jun 03,2022, Elapsed time: 0:00:46
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work vgaOutputs_testbench 
-# Start time: 00:48:18 on Jun 03,2022
+# End time: 11:42:41 on Jun 03,2022, Elapsed time: 0:08:07
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work collisions_testbench -Lf altera_mf_ver 
+# Start time: 11:42:42 on Jun 03,2022
 # Loading sv_std.std
-# Loading work.vgaOutputs_testbench
-# Loading work.vgaOutputs
+# Loading work.collisions_testbench
+# Loading work.collisions
+# Loading work.paddlePositionsROM
+# Loading altera_mf_ver.altsyncram
+# Loading work.line_drawer
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlfts7qjit".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts7qjit
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./vgaOutputs.sv(129)
-#    Time: 6550 ps  Iteration: 1  Instance: /vgaOutputs_testbench
-# Break in Module vgaOutputs_testbench at ./vgaOutputs.sv line 129
+# ** Note: $stop    : ./collisions.sv(224)
+#    Time: 80010 ps  Iteration: 1  Instance: /collisions_testbench
+# Break in Module collisions_testbench at ./collisions.sv line 224
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:49:03 on Jun 03,2022
+# Start time: 12:27:02 on Jun 03,2022
 # vlog -reportprogress 300 ./line_drawer.sv 
 # -- Compiling module line_drawer
 # -- Compiling module line_drawer_testbench
 # 
 # Top level modules:
 # 	line_drawer_testbench
-# End time: 00:49:03 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 12:27:02 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:49:03 on Jun 03,2022
+# Start time: 12:27:02 on Jun 03,2022
 # vlog -reportprogress 300 ./collisions.sv 
 # -- Compiling module collisions
 # -- Compiling module collisions_testbench
 # 
 # Top level modules:
 # 	collisions_testbench
-# End time: 00:49:03 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 12:27:02 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:49:03 on Jun 03,2022
+# Start time: 12:27:02 on Jun 03,2022
 # vlog -reportprogress 300 ./paddlePositionsROM.v 
 # -- Compiling module paddlePositionsROM
 # 
 # Top level modules:
 # 	paddlePositionsROM
-# End time: 00:49:03 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 12:27:02 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:49:03 on Jun 03,2022
+# Start time: 12:27:02 on Jun 03,2022
 # vlog -reportprogress 300 ./vgaOutputs.sv 
 # -- Compiling module vgaOutputs
 # -- Compiling module vgaOutputs_testbench
 # 
 # Top level modules:
 # 	vgaOutputs_testbench
-# End time: 00:49:03 on Jun 03,2022, Elapsed time: 0:00:00
+# End time: 12:27:02 on Jun 03,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 00:49:07 on Jun 03,2022, Elapsed time: 0:00:49
-# Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work vgaOutputs_testbench 
-# Start time: 00:49:07 on Jun 03,2022
+# End time: 12:27:05 on Jun 03,2022, Elapsed time: 0:44:23
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:27:05 on Jun 03,2022
 # Loading sv_std.std
-# Loading work.vgaOutputs_testbench
-# Loading work.vgaOutputs
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlftxf6057".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxf6057
+# ** Error: (vish-4014) No objects found matching '/line_drawer_testbench/x1'.
+# Executing ONERROR command at macro ./line_drawer_wave.do line 7
+# ** Error: (vish-4014) No objects found matching '/line_drawer_testbench/y1'.
+# Executing ONERROR command at macro ./line_drawer_wave.do line 8
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# ** Note: $stop    : ./vgaOutputs.sv(127)
-#    Time: 1550 ps  Iteration: 1  Instance: /vgaOutputs_testbench
-# Break in Module vgaOutputs_testbench at ./vgaOutputs.sv line 127
+# ** Note: $stop    : ./line_drawer.sv(179)
+#    Time: 3070 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 179
+add wave -position 4  sim:/line_drawer_testbench/dut/x1
+add wave -position 5  sim:/line_drawer_testbench/dut/y1
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/line_drawer_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:23 on Jun 03,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:28:23 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:23 on Jun 03,2022
+# vlog -reportprogress 300 ./collisions.sv 
+# -- Compiling module collisions
+# -- Compiling module collisions_testbench
+# 
+# Top level modules:
+# 	collisions_testbench
+# End time: 12:28:23 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:23 on Jun 03,2022
+# vlog -reportprogress 300 ./paddlePositionsROM.v 
+# -- Compiling module paddlePositionsROM
+# 
+# Top level modules:
+# 	paddlePositionsROM
+# End time: 12:28:23 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:28:23 on Jun 03,2022
+# vlog -reportprogress 300 ./vgaOutputs.sv 
+# -- Compiling module vgaOutputs
+# -- Compiling module vgaOutputs_testbench
+# 
+# Top level modules:
+# 	vgaOutputs_testbench
+# End time: 12:28:23 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:28:24 on Jun 03,2022, Elapsed time: 0:01:19
+# Errors: 6, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:28:24 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlftjy32rs".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjy32rs
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(179)
+#    Time: 3070 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 179
+add wave -position 4  sim:/line_drawer_testbench/dut/slope
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/line_drawer_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:40 on Jun 03,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:29:40 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:40 on Jun 03,2022
+# vlog -reportprogress 300 ./collisions.sv 
+# -- Compiling module collisions
+# -- Compiling module collisions_testbench
+# 
+# Top level modules:
+# 	collisions_testbench
+# End time: 12:29:40 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:40 on Jun 03,2022
+# vlog -reportprogress 300 ./paddlePositionsROM.v 
+# -- Compiling module paddlePositionsROM
+# 
+# Top level modules:
+# 	paddlePositionsROM
+# End time: 12:29:40 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:29:40 on Jun 03,2022
+# vlog -reportprogress 300 ./vgaOutputs.sv 
+# -- Compiling module vgaOutputs
+# -- Compiling module vgaOutputs_testbench
+# 
+# Top level modules:
+# 	vgaOutputs_testbench
+# End time: 12:29:40 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:29:41 on Jun 03,2022, Elapsed time: 0:01:17
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:29:41 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlftjhfiyb".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjhfiyb
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(179)
+#    Time: 3070 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 179
+add wave -position end  sim:/line_drawer_testbench/dut/counter
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/line_drawer_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:52 on Jun 03,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:31:52 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:52 on Jun 03,2022
+# vlog -reportprogress 300 ./collisions.sv 
+# -- Compiling module collisions
+# -- Compiling module collisions_testbench
+# 
+# Top level modules:
+# 	collisions_testbench
+# End time: 12:31:52 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:52 on Jun 03,2022
+# vlog -reportprogress 300 ./paddlePositionsROM.v 
+# -- Compiling module paddlePositionsROM
+# 
+# Top level modules:
+# 	paddlePositionsROM
+# End time: 12:31:52 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:31:52 on Jun 03,2022
+# vlog -reportprogress 300 ./vgaOutputs.sv 
+# -- Compiling module vgaOutputs
+# -- Compiling module vgaOutputs_testbench
+# 
+# Top level modules:
+# 	vgaOutputs_testbench
+# End time: 12:31:52 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:31:53 on Jun 03,2022, Elapsed time: 0:02:12
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:31:53 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlftqbw772".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqbw772
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(179)
+#    Time: 3070 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 179
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/line_drawer_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:09 on Jun 03,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:32:09 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:09 on Jun 03,2022
+# vlog -reportprogress 300 ./collisions.sv 
+# -- Compiling module collisions
+# -- Compiling module collisions_testbench
+# 
+# Top level modules:
+# 	collisions_testbench
+# End time: 12:32:09 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:09 on Jun 03,2022
+# vlog -reportprogress 300 ./paddlePositionsROM.v 
+# -- Compiling module paddlePositionsROM
+# 
+# Top level modules:
+# 	paddlePositionsROM
+# End time: 12:32:09 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:09 on Jun 03,2022
+# vlog -reportprogress 300 ./vgaOutputs.sv 
+# -- Compiling module vgaOutputs
+# -- Compiling module vgaOutputs_testbench
+# 
+# Top level modules:
+# 	vgaOutputs_testbench
+# End time: 12:32:09 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:32:10 on Jun 03,2022, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:32:10 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlft14dz7v".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft14dz7v
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(179)
+#    Time: 3070 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 179
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/line_drawer_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:39 on Jun 03,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:32:39 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:39 on Jun 03,2022
+# vlog -reportprogress 300 ./collisions.sv 
+# -- Compiling module collisions
+# -- Compiling module collisions_testbench
+# 
+# Top level modules:
+# 	collisions_testbench
+# End time: 12:32:39 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:39 on Jun 03,2022
+# vlog -reportprogress 300 ./paddlePositionsROM.v 
+# -- Compiling module paddlePositionsROM
+# 
+# Top level modules:
+# 	paddlePositionsROM
+# End time: 12:32:39 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:39 on Jun 03,2022
+# vlog -reportprogress 300 ./vgaOutputs.sv 
+# -- Compiling module vgaOutputs
+# -- Compiling module vgaOutputs_testbench
+# 
+# Top level modules:
+# 	vgaOutputs_testbench
+# End time: 12:32:39 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:32:40 on Jun 03,2022, Elapsed time: 0:00:30
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:32:40 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlft8k7znz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8k7znz
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(179)
+#    Time: 3070 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 179
+add wave -position 9  sim:/line_drawer_testbench/dut/x
+add wave -position 10  sim:/line_drawer_testbench/dut/y
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/stlp/Documents/GitHub/EE-371/lab6_371/line_drawer_wave.do
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:33:27 on Jun 03,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:33:27 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:33:27 on Jun 03,2022
+# vlog -reportprogress 300 ./collisions.sv 
+# -- Compiling module collisions
+# -- Compiling module collisions_testbench
+# 
+# Top level modules:
+# 	collisions_testbench
+# End time: 12:33:27 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:33:27 on Jun 03,2022
+# vlog -reportprogress 300 ./paddlePositionsROM.v 
+# -- Compiling module paddlePositionsROM
+# 
+# Top level modules:
+# 	paddlePositionsROM
+# End time: 12:33:27 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:33:27 on Jun 03,2022
+# vlog -reportprogress 300 ./vgaOutputs.sv 
+# -- Compiling module vgaOutputs
+# -- Compiling module vgaOutputs_testbench
+# 
+# Top level modules:
+# 	vgaOutputs_testbench
+# End time: 12:33:27 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:33:28 on Jun 03,2022, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:33:28 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlftnta2zw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftnta2zw
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(179)
+#    Time: 3070 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 179
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:20 on Jun 03,2022
+# vlog -reportprogress 300 ./line_drawer.sv 
+# -- Compiling module line_drawer
+# -- Compiling module line_drawer_testbench
+# 
+# Top level modules:
+# 	line_drawer_testbench
+# End time: 12:34:20 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:20 on Jun 03,2022
+# vlog -reportprogress 300 ./collisions.sv 
+# -- Compiling module collisions
+# -- Compiling module collisions_testbench
+# 
+# Top level modules:
+# 	collisions_testbench
+# End time: 12:34:20 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:20 on Jun 03,2022
+# vlog -reportprogress 300 ./paddlePositionsROM.v 
+# -- Compiling module paddlePositionsROM
+# 
+# Top level modules:
+# 	paddlePositionsROM
+# End time: 12:34:20 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:34:20 on Jun 03,2022
+# vlog -reportprogress 300 ./vgaOutputs.sv 
+# -- Compiling module vgaOutputs
+# -- Compiling module vgaOutputs_testbench
+# 
+# Top level modules:
+# 	vgaOutputs_testbench
+# End time: 12:34:20 on Jun 03,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 12:34:22 on Jun 03,2022, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work line_drawer_testbench 
+# Start time: 12:34:22 on Jun 03,2022
+# Loading sv_std.std
+# Loading work.line_drawer_testbench
+# Loading work.line_drawer
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Illya Kuzmych  Hostname: DESKTOP-A34POL5  ProcessID: 26792
+#           Attempting to use alternate WLF file "./wlft0zdfrk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft0zdfrk
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./line_drawer.sv(179)
+#    Time: 3070 ps  Iteration: 1  Instance: /line_drawer_testbench
+# Break in Module line_drawer_testbench at ./line_drawer.sv line 179
+# End time: 12:51:26 on Jun 03,2022, Elapsed time: 0:17:04
+# Errors: 0, Warnings: 2

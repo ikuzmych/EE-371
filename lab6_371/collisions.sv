@@ -14,11 +14,12 @@
  *   lose   - 1-bit signal to indicate that the player has "lost" the game, and that the game should now to be manually reset in order to play again
  *
  */
-module collisions(clk, reset, paddleXLeft, paddleXRight, score, x, y, lose); 
+module collisions(clk, reset, paddleXLeft, paddleXRight, sw, score, x, y, lose); 
 	input logic clk, reset;
 	output logic [10:0] x;
 	output logic [10:0] y;
 	input logic [9:0] paddleXLeft, paddleXRight; // gets you the center of the circle
+	input logic [1:0] sw;
 	output logic lose;
 	output logic [7:0] score;
 
@@ -194,7 +195,7 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, score, x, y, lose);
 	
 	/* instantiations required for functionality of the collisions module */
 	paddlePositionsROM ranges(.address(rdAddress), .clock, .q(ROMSlope));
-	line_drawer drawCircle(.clk, .reset, .start, .slope(currentSlope), .x0, .y0, .x(xLineDrawer), .y(yLineDrawer), .done);
+	line_drawer drawCircle(.clk, .reset, .start, .slope(currentSlope), .sw, .x0, .y0, .x(xLineDrawer), .y(yLineDrawer), .done);
 
 endmodule // collisions
 
@@ -207,20 +208,22 @@ module collisions_testbench();
 	logic [9:0] paddleXLeft, paddleXRight; // gets you the center of the circle
 	logic lose;
 	logic [7:0] score;
+	logic [1:0] sw;
 	
 	collisions dut(.*);
 	
-
+	/* simulated clock */
 	initial begin
 		clk <= 0;
 		forever #10 clk <= ~clk;
-	end
+	end // initial
 	
+	/* testbench to show collision with the paddle and the ball */
 	initial begin
-		reset <= 1; paddleXLeft <= 176; paddleXRight <= 250; @(posedge clk);
+		reset <= 1; paddleXLeft <= 400; paddleXRight <= 484; @(posedge clk);
 		reset <= 0; repeat(4000) @(posedge clk);
 	$stop;
-	end
+	end // initial
 	
 
 endmodule // collisions_testbench

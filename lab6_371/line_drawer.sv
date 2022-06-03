@@ -15,11 +15,12 @@
  *   done	- flag that line has finished drawing
  *
  */
-module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
+module line_drawer(clk, reset, start, slope, sw, x0, y0, x, y, done);
 	input logic clk, reset;
 	input logic signed [10:0]	x0, y0;
 	input logic signed [3:0] slope;
 	input logic start;
+	input logic [1:0] sw;
 	
 	
 	output logic done;
@@ -34,13 +35,25 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 	logic signed [11:0] dx, dy;
 	logic signed [2:0] sx, sy;
 	logic signed [12:0] x1, y1;
+	logic [23:0] difficulty;
 	
 	/* assigned values of sx and sy */
 	assign sx = x0 < x1 ? 1: -1;
 	assign sy = y0 < y1 ? 1: -1;
 	assign e2 = 2 * error;
 
-
+	
+	/** 
+	 * always_comb block to set difficulty based on player's choice
+	 *
+	 */
+	always_comb begin
+		if (sw[1]) difficulty = 24'd500000;
+		else if (sw[0]) difficulty = 24'd750000;
+		else difficulty = 24'd1000000;
+		
+	end // always_comb
+	 
 	/**
 	 * always_ff block which changes behavior of line_drawer completely from lab 5.
 	 * Now, x1 and y1 are generated internally rather than being input. The provided slope allows 
@@ -106,7 +119,7 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 			counter <= 0;
 		end // if
 		// else begin
-		else if (counter == 24'd750000) begin
+		else if (counter == 2) begin
 			counter <= 0;
 			if ((x == x1) && (y == y1))
 				done <= 1;
@@ -141,7 +154,7 @@ module line_drawer_testbench();
 	logic signed [3:0] slope;
 	logic done, start;
 	logic signed [10:0] x, y;
-
+	logic [1:0] sw;
 
 	line_drawer dut(.*);
 
@@ -153,50 +166,15 @@ module line_drawer_testbench();
 
 	/**
 	 * Simple testbench for line_drawer algorithm to showcase its functionality
-	 * in drawing angled and vertical lines
+	 * in drawing angled lines and generating endpoints based on the slope
 	 */
 	initial begin
 		/* right-down for gradual slope */
-		reset <= 1; start <= 0; x0 <= 20; y0 <= 20; slope <= 1; @(posedge clk);
-		reset <= 0; repeat(2) @(posedge clk);
-		start <= 1; repeat(75) @(posedge clk);
-		/* right-up for gradual slope */
-		start <= 0; @(posedge clk);
-		start <= 1; repeat(125) @(posedge clk);
+		reset <= 1; start <= 0; x0 <= 20; y0 <= 20; slope <= -1; @(posedge clk);
+		reset <= 0; start <= 1; repeat(50) @(posedge clk);
+		start <= 0; repeat(3) @(posedge clk);
+		start <= 1; x0 <= 629; y0 <= 400; slope <= 3; repeat(100) @(posedge clk);
 		
-//		
-//		/* left-up for gradual slope */
-//		reset <= 1; x0 <= 5; y0 <= 5; x1 <= 0; y1 <= 0; @(posedge clk);
-//		reset <= 0; repeat(8) @(posedge clk);
-//		/* left-down for gradual slope */
-//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 90; y1 <= 105; @(posedge clk);
-//		reset <= 0; repeat(20) @(posedge clk);
-//		
-//		/* right-down for steep slope */
-//		reset <= 1; x0 <= 0; y0 <= 0; x1 <= 5; y1 <= 20; @(posedge clk);
-//		reset <= 0; repeat(30) @(posedge clk);
-//		/* right-up for steep slope */
-//		reset <= 1; x0 <= 0; y0 <= 20; x1 <= 5; y1 <= 0; @(posedge clk);
-//		reset <= 0; repeat(30) @(posedge clk);
-//		
-//		
-//		/* left-up for steep slope */
-//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 95; y1 <= 80; @(posedge clk);
-//		reset <= 0; repeat(30) @(posedge clk);
-//		/* left-down for steep slope */
-//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 95; y1 <= 120; @(posedge clk);
-//		reset <= 0; repeat(30) @(posedge clk);
-//		
-//		
-//		
-//		/* vertical line drawing straight down */
-//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 100; y1 <= 105; @(posedge clk);
-//		reset <= 0; repeat(8) @(posedge clk);
-//		/* horizontal line drawing towards the right */
-//		reset <= 1; x0 <= 100; y0 <= 100; x1 <= 105; y1 <= 100; @(posedge clk);
-//		reset <= 0; repeat(8) @(posedge clk);
-
-
 
 	$stop;
 	end // initial

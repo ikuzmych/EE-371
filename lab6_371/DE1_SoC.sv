@@ -105,7 +105,7 @@ module DE1_SoC (HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW,
 	
 	/* instantiations of all external modules */
 	vgaOutputs colorCoding(.clk(CLOCK_50), .reset(rst), .moveLeft, .moveRight, .x, .y, .xCirclePosition, .x_paddle1_left, .x_paddle1_right, .yCirclePosition, .lose, .r, .g, .b);
-	collisions ballsLogicShrek(.clk(CLOCK_50), .reset(rst), .paddleXLeft(x_paddle1_left), .score, .paddleXRight(x_paddle1_right), .x(xCirclePosition), .y(yCirclePosition), .lose); 
+	collisions ballsLogicShrek(.clk(CLOCK_50), .reset(rst), .sw(SW[9:8]), .paddleXLeft(x_paddle1_left), .score, .paddleXRight(x_paddle1_right), .x(xCirclePosition), .y(yCirclePosition), .lose); 
 	
 	/* module for ensuring that the fast clock will not glitch out and allow a single press to move the paddle more than we expect. One increment per button press */
 	Click onepress1(.clock(CLOCK_50), .reset(rst), .in(left), .out(moveLeft));
