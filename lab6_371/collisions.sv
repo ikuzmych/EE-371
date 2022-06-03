@@ -4,8 +4,8 @@
  * Inputs:
  *   clk    - should be connected to a 50 MHz clock
  *   reset  - resets the module and starts over the drawing process
- *   start  - signal that tells the algorithm to perform the process
- *	 x0 	- x coordinate of the first end point
+ *   paddleXLeft  - signal that tells the algorithm to perform the process
+ *	  paddleXRight 	- x coordinate of the first end point
  *   y0 	- y coordinate of the first end point
  *   x1 	- x coordinate of the second end point
  *   y1 	- y coordinate of the second end point
@@ -18,7 +18,7 @@
  */
 module collisions(clk, reset, paddleXLeft, paddleXRight, score, x, y, lose); 
 	input logic clk, reset;
-	output logic [10:0] x; 
+	output logic [10:0] x;
 	output logic [10:0] y;
 	input logic [9:0] paddleXLeft, paddleXRight; // gets you the center of the circle
 	output logic lose;
@@ -35,18 +35,21 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, score, x, y, lose);
 	
 	logic collisionTrue;
 	logic [9:0] paddlePositionChecker;
-	
 	logic signed [10:0] xLineDrawer, yLineDrawer;
 	logic check;
 	
+	/* */
 	assign x = xLineDrawer;
 	assign y = yLineDrawer;
-	
-	
 
+	/* */
+	assign circleX = x; 
+	assign circleY = y;
 	
-	assign circleX = x; assign circleY = y;
+	/* */
 	assign clock = clk;
+	
+	/* */
 	assign paddlePositionChecker = (circleX - paddleXLeft) / 12;
 	assign rdAddress = paddlePositionChecker;	
 	
@@ -56,10 +59,10 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, score, x, y, lose);
 	enum { draw, updateReg1, updateReg2 } ps, ns;
 
 	/**
-	 * Controller for the animation, directing the states in proper order
-	 * The clear state is responsible for directing how long to stay in it and draw the blank line across the VGA
-	 * The draw state draws the specified line in the color white
-	 * The two buffer states are simply for updating the registers, and giving the machine enough clock cycles to update values in line_buffer
+	 *
+	 *
+	 *
+	 *
 	 */
 	always_comb begin
 		case(ps)
@@ -84,7 +87,7 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, score, x, y, lose);
 			ps <= ns;
 	end
 
-	
+	/* */
 	always_ff @(posedge clk) begin
 		collisionTrue <= 0;
 		
