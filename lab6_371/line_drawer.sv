@@ -96,7 +96,7 @@ module line_drawer(clk, reset, start, slope, x0, y0, x, y, done);
 			counter <= 0;
 		end // if
 		// else begin
-		else if (counter == 24'd500000) begin
+		else if (counter == 24'd750000) begin
 			counter <= 0;
 			if ((x == x1) && (y == y1))
 				done <= 1;

@@ -85,7 +85,7 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 			collisionTrue <= 1;
 		end
 		
-		if ((circleX >= 30) && (circleX <= 620) && (circleY < 455) && (circleY > 20)) begin
+		if ((circleX > 10) && (circleX < 629) && (circleY < 458) && (circleY > 20)) begin
 			check <= 1;
 		end
 
@@ -113,8 +113,8 @@ module collisions(clk, reset, paddleXLeft, paddleXRight, x, y, lose);
 	paddlePositionsROM ranges(.address(rdAddress), .clock, .q(ROMSlope));
 	
 	line_drawer drawCircle(.clk, .reset, .start, .slope(currentSlope), .x0, .y0, .x(xLineDrawer), .y(yLineDrawer), .done);
-	
-	
+
+
 endmodule
 
 `timescale 1 ps / 1 ps
@@ -127,7 +127,7 @@ module collisions_testbench();
 	
 	collisions dut(.*);
 	
-	
+
 	initial begin
 		clk <= 0;
 		forever #10 clk <= ~clk;
@@ -136,7 +136,6 @@ module collisions_testbench();
 	initial begin
 		reset <= 1; paddleXLeft <= 176; paddleXRight <= 250; @(posedge clk);
 		reset <= 0; repeat(4000) @(posedge clk);
-		
 	$stop;
 	end
 	

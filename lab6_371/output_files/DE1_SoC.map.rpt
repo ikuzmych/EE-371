@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Thu Jun 02 16:47:49 2022
+Thu Jun 02 22:17:31 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jun 02 16:47:49 2022       ;
+; Analysis & Synthesis Status     ; Successful - Thu Jun 02 22:17:31 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; DE1_SoC                                     ;
@@ -208,6 +208,7 @@ agreement for further details.
 ; paddlePositions.mif                 ; yes             ; User Memory Initialization File  ; C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/paddlePositions.mif                 ;             ;
 ; paddlePositionsROM.v                ; yes             ; User Wizard-Generated File       ; C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/paddlePositionsROM.v                ;             ;
 ; collisions.sv                       ; yes             ; User SystemVerilog HDL File      ; C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/collisions.sv                       ;             ;
+; vgaOutputs.sv                       ; yes             ; User SystemVerilog HDL File      ; C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/vgaOutputs.sv                       ;             ;
 ; altera_pll.v                        ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altera_pll.v                                                        ;             ;
 ; altsyncram.tdf                      ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf                                                      ;             ;
 ; stratix_ram_block.inc               ; yes             ; Megafunction                     ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                               ;             ;
@@ -240,12 +241,12 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Estimate of Logic utilization (ALMs needed) ; 463            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 851            ;
-;     -- 7 input functions                    ; 3              ;
-;     -- 6 input functions                    ; 69             ;
-;     -- 5 input functions                    ; 162            ;
-;     -- 4 input functions                    ; 106            ;
-;     -- <=3 input functions                  ; 511            ;
+; Combinational ALUT usage for logic          ; 850            ;
+;     -- 7 input functions                    ; 2              ;
+;     -- 6 input functions                    ; 70             ;
+;     -- 5 input functions                    ; 166            ;
+;     -- 4 input functions                    ; 102            ;
+;     -- <=3 input functions                  ; 510            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 251            ;
 ;                                             ;                ;
@@ -260,8 +261,8 @@ agreement for further details.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 147            ;
-; Total fan-out                               ; 4047           ;
-; Average fan-out                             ; 3.08           ;
+; Total fan-out                               ; 4048           ;
+; Average fan-out                             ; 3.09           ;
 +---------------------------------------------+----------------+
 
 
@@ -270,10 +271,10 @@ agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                     ; Entity Name                       ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |DE1_SoC                                        ; 851 (159)           ; 251 (20)                  ; 320               ; 7          ; 96   ; 0            ; |DE1_SoC                                                                                                                                                ; DE1_SoC                           ; work         ;
+; |DE1_SoC                                        ; 850 (1)             ; 251 (0)                   ; 320               ; 7          ; 96   ; 0            ; |DE1_SoC                                                                                                                                                ; DE1_SoC                           ; work         ;
 ;    |Click:onepress1|                            ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|Click:onepress1                                                                                                                                ; Click                             ; work         ;
 ;    |Click:onepress2|                            ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|Click:onepress2                                                                                                                                ; Click                             ; work         ;
-;    |collisions:ballsLogicShrek|                 ; 574 (80)            ; 112 (28)                  ; 320               ; 3          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek                                                                                                                     ; collisions                        ; work         ;
+;    |collisions:ballsLogicShrek|                 ; 573 (79)            ; 112 (28)                  ; 320               ; 3          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek                                                                                                                     ; collisions                        ; work         ;
 ;       |line_drawer:drawCircle|                  ; 398 (298)           ; 84 (84)                   ; 0                 ; 2          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle                                                                                              ; line_drawer                       ; work         ;
 ;          |lpm_divide:Div0|                      ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|lpm_divide:Div0                                                                              ; lpm_divide                        ; work         ;
 ;             |lpm_divide_6po:auto_generated|     ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|lpm_divide:Div0|lpm_divide_6po:auto_generated                                                ; lpm_divide_6po                    ; work         ;
@@ -287,6 +288,7 @@ agreement for further details.
 ;       |paddlePositionsROM:ranges|               ; 0 (0)               ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|paddlePositionsROM:ranges                                                                                           ; paddlePositionsROM                ; work         ;
 ;          |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|paddlePositionsROM:ranges|altsyncram:altsyncram_component                                                           ; altsyncram                        ; work         ;
 ;             |altsyncram_a0j1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 320               ; 0          ; 0    ; 0            ; |DE1_SoC|collisions:ballsLogicShrek|paddlePositionsROM:ranges|altsyncram:altsyncram_component|altsyncram_a0j1:auto_generated                            ; altsyncram_a0j1                   ; work         ;
+;    |vgaOutputs:colorCoding|                     ; 158 (158)           ; 20 (20)                   ; 0                 ; 4          ; 0    ; 0            ; |DE1_SoC|vgaOutputs:colorCoding                                                                                                                         ; vgaOutputs                        ; work         ;
 ;    |video_driver:v1|                            ; 114 (72)            ; 115 (60)                  ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1                                                                                                                                ; video_driver                      ; work         ;
 ;       |CLOCK25_PLL:c25_gen|                     ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1|CLOCK25_PLL:c25_gen                                                                                                            ; CLOCK25_PLL                       ; CLOCK25_PLL  ;
 ;          |CLOCK25_PLL_0002:clock25_pll_inst|    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|video_driver:v1|CLOCK25_PLL:c25_gen|CLOCK25_PLL_0002:clock25_pll_inst                                                                          ; CLOCK25_PLL_0002                  ; CLOCK25_PLL  ;
@@ -335,23 +337,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+----------------------------------------------------------------------+
 ; Register name                                            ; Reason for Removal                                                   ;
 +----------------------------------------------------------+----------------------------------------------------------------------+
-; y_paddle1_top[0]                                         ; Stuck at GND due to stuck port data_in                               ;
-; y_paddle1_top[1,2]                                       ; Stuck at VCC due to stuck port data_in                               ;
-; y_paddle1_top[3]                                         ; Stuck at GND due to stuck port data_in                               ;
-; y_paddle1_top[4]                                         ; Stuck at VCC due to stuck port data_in                               ;
-; y_paddle1_top[5]                                         ; Stuck at GND due to stuck port data_in                               ;
-; y_paddle1_top[6..8]                                      ; Stuck at VCC due to stuck port data_in                               ;
-; y_paddle1_bottom[0..4]                                   ; Stuck at VCC due to stuck port data_in                               ;
-; y_paddle1_bottom[5]                                      ; Stuck at GND due to stuck port data_in                               ;
-; y_paddle1_bottom[6..8]                                   ; Stuck at VCC due to stuck port data_in                               ;
 ; collisions:ballsLogicShrek|ps[2..31]                     ; Stuck at GND due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_top[0]                  ; Stuck at GND due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_top[1,2]                ; Stuck at VCC due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_top[3]                  ; Stuck at GND due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_top[4]                  ; Stuck at VCC due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_top[5]                  ; Stuck at GND due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_top[6..8]               ; Stuck at VCC due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_bottom[0..4]            ; Stuck at VCC due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_bottom[5]               ; Stuck at GND due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|y_paddle1_bottom[6..8]            ; Stuck at VCC due to stuck port data_in                               ;
 ; Click:onepress2|ps[2..31]                                ; Stuck at GND due to stuck port data_in                               ;
 ; Click:onepress1|ps[2..31]                                ; Stuck at GND due to stuck port data_in                               ;
-; x_paddle1_left[0]                                        ; Stuck at GND due to stuck port data_in                               ;
-; x_paddle1_right[0]                                       ; Stuck at GND due to stuck port data_in                               ;
-; b[1..7]                                                  ; Merged with b[0]                                                     ;
-; g[0..7]                                                  ; Merged with b[0]                                                     ;
-; r[1..7]                                                  ; Merged with r[0]                                                     ;
+; vgaOutputs:colorCoding|x_paddle1_left[0]                 ; Stuck at GND due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|x_paddle1_right[0]                ; Stuck at GND due to stuck port data_in                               ;
+; vgaOutputs:colorCoding|g[0..7]                           ; Merged with vgaOutputs:colorCoding|b[0]                              ;
+; vgaOutputs:colorCoding|b[1..7]                           ; Merged with vgaOutputs:colorCoding|b[0]                              ;
+; vgaOutputs:colorCoding|r[1..7]                           ; Merged with vgaOutputs:colorCoding|r[0]                              ;
 ; video_driver:v1|rout[1..7]                               ; Merged with video_driver:v1|rout[0]                                  ;
 ; video_driver:v1|bout[1..7]                               ; Merged with video_driver:v1|bout[0]                                  ;
 ; video_driver:v1|gout[0..7]                               ; Merged with video_driver:v1|bout[0]                                  ;
@@ -362,14 +364,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------+----------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                  ;
-+-----------------------+---------------------------+--------------------------------------------------------------------------+
-; Register name         ; Reason for Removal        ; Registers Removed due to This Register                                   ;
-+-----------------------+---------------------------+--------------------------------------------------------------------------+
-; Click:onepress2|ps[3] ; Stuck at GND              ; x_paddle1_left[0], x_paddle1_right[0], collisions:ballsLogicShrek|x0[10] ;
-;                       ; due to stuck port data_in ;                                                                          ;
-+-----------------------+---------------------------+--------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                      ;
++-----------------------+---------------------------+------------------------------------------------------------------------------+
+; Register name         ; Reason for Removal        ; Registers Removed due to This Register                                       ;
++-----------------------+---------------------------+------------------------------------------------------------------------------+
+; Click:onepress2|ps[3] ; Stuck at GND              ; vgaOutputs:colorCoding|x_paddle1_left[0],                                    ;
+;                       ; due to stuck port data_in ; vgaOutputs:colorCoding|x_paddle1_right[0], collisions:ballsLogicShrek|x0[10] ;
++-----------------------+---------------------------+------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -392,9 +394,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|r[0]                                                         ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|vgaOutputs:colorCoding|r[0]                                  ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |DE1_SoC|video_driver:v1|yt[0]                                        ;
-; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|x_paddle1_left[7]                                            ;
+; 3:1                ; 18 bits   ; 36 LEs        ; 18 LEs               ; 18 LEs                 ; Yes        ; |DE1_SoC|vgaOutputs:colorCoding|x_paddle1_left[7]                     ;
 ; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|counter[3] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|x[2]       ;
 ; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |DE1_SoC|collisions:ballsLogicShrek|line_drawer:drawCircle|y[8]       ;
@@ -888,7 +890,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 44                          ;
 ;     SCLR              ; 54                          ;
 ;     plain             ; 54                          ;
-; arriav_lcell_comb     ; 852                         ;
+; arriav_lcell_comb     ; 851                         ;
 ;     arith             ; 372                         ;
 ;         0 data inputs ; 28                          ;
 ;         1 data inputs ; 153                         ;
@@ -896,16 +898,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 37                          ;
 ;         4 data inputs ; 19                          ;
 ;         5 data inputs ; 82                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
 ;     normal            ; 371                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 10                          ;
-;         2 data inputs ; 83                          ;
-;         3 data inputs ; 41                          ;
-;         4 data inputs ; 86                          ;
-;         5 data inputs ; 80                          ;
-;         6 data inputs ; 69                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 84                          ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 82                          ;
+;         5 data inputs ; 84                          ;
+;         6 data inputs ; 70                          ;
 ;     shared            ; 106                         ;
 ;         0 data inputs ; 6                           ;
 ;         1 data inputs ; 18                          ;
@@ -937,7 +939,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Jun 02 16:47:41 2022
+    Info: Processing started: Thu Jun 02 22:17:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file video_driver.sv
@@ -960,11 +962,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file paddlep
 Info (12021): Found 2 design units, including 2 entities, in source file collisions.sv
     Info (12023): Found entity 1: collisions File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/collisions.sv Line: 1
     Info (12023): Found entity 2: collisions_testbench File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/collisions.sv Line: 121
+Info (12021): Found 1 design units, including 1 entities, in source file vgaoutputs.sv
+    Info (12023): Found entity 1: vgaOutputs File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/vgaOutputs.sv Line: 1
 Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(64): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 64
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(65): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 65
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(67): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 67
-Warning (10230): Verilog HDL assignment warning at DE1_SoC.sv(68): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 68
 Info (12128): Elaborating entity "video_driver" for hierarchy "video_driver:v1" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 26
 Info (12128): Elaborating entity "CLOCK25_PLL" for hierarchy "video_driver:v1|CLOCK25_PLL:c25_gen" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/video_driver.sv Line: 47
 Info (12128): Elaborating entity "CLOCK25_PLL_0002" for hierarchy "video_driver:v1|CLOCK25_PLL:c25_gen|CLOCK25_PLL_0002:clock25_pll_inst" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/CLOCK25_PLL.v Line: 20
@@ -1034,6 +1034,11 @@ Info (12133): Instantiated megafunction "video_driver:v1|CLOCK25_PLL:c25_gen|CLO
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "altera_up_avalon_video_vga_timing" for hierarchy "video_driver:v1|altera_up_avalon_video_vga_timing:video" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/video_driver.sv Line: 147
 Info (12128): Elaborating entity "Click" for hierarchy "Click:onepress1" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 43
+Info (12128): Elaborating entity "vgaOutputs" for hierarchy "vgaOutputs:colorCoding" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 107
+Warning (10230): Verilog HDL assignment warning at vgaOutputs.sv(30): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/vgaOutputs.sv Line: 30
+Warning (10230): Verilog HDL assignment warning at vgaOutputs.sv(31): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/vgaOutputs.sv Line: 31
+Warning (10230): Verilog HDL assignment warning at vgaOutputs.sv(33): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/vgaOutputs.sv Line: 33
+Warning (10230): Verilog HDL assignment warning at vgaOutputs.sv(34): truncated value with size 32 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/vgaOutputs.sv Line: 34
 Info (12128): Elaborating entity "collisions" for hierarchy "collisions:ballsLogicShrek" File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/DE1_SoC.sv Line: 108
 Warning (10230): Verilog HDL assignment warning at collisions.sv(29): truncated value with size 11 to match size of target (10) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/collisions.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at collisions.sv(29): truncated value with size 11 to match size of target (9) File: C:/Users/Illya Kuzmych/OneDrive - Green River College/Documents/GitHub/EE-371/lab6_371/collisions.sv Line: 29
@@ -1125,10 +1130,10 @@ Info (21057): Implemented 991 device resources after synthesis - the final resou
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 7 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4912 megabytes
-    Info: Processing ended: Thu Jun 02 16:47:49 2022
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Thu Jun 02 22:17:31 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:18
 
 
 +------------------------------------------+
