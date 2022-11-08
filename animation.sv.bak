@@ -1,7 +1,0 @@
-module animation(clk, reset, clearScreen, clearState, x, y);
-	input logic clk, reset;
-	input logic clearScreen;
-	output logic clearState;
-	output logic []
-
-endmodule
